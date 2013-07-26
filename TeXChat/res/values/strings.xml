@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">TeXChat</string>
+    <string name="hello_world">-_-</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_xmppclient">XMPPClient</string>
+    <string name="send">Send</string>
+    <string name="title_activity_login_page">LoginPage</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="cancel">cancel</string>
+    <string name="login">Login</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="textview">TextView</string>
+    <string name="button">Button</string>
+
+</resources>
