@@ -7,12 +7,12 @@
     <TextView 
          android:layout_width="match_parent"
          android:layout_height="match_parent"
-         android:id = "@+id/contactView" >
+         android:id = "@+id/FromBox" >
 	</TextView>
 	<TextView
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
-	    android:id = "@+id/statusView" >
+	    android:id = "@+id/messageView" >
 	</TextView>
     
 </LinearLayout>

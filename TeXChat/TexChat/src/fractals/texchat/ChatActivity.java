@@ -5,8 +5,14 @@ import java.util.ArrayList;
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.ChatManager;
 import org.jivesoftware.smack.MessageListener;
+import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.filter.MessageTypeFilter;
+import org.jivesoftware.smack.filter.PacketFilter;
 import org.jivesoftware.smack.packet.Message;
+import org.jivesoftware.smack.packet.Packet;
+
+import fractals.texchat.R.id;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -18,13 +24,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-import fractals.texchat.R.id;
 
 public class ChatActivity extends Activity {
 
 	String contact;
-	ArrayList<Message> messages;
 	ListView messageLV;
+	ArrayList<Message> messages = new ArrayList<Message>();
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,14 +38,12 @@ public class ChatActivity extends Activity {
         Bundle extras = this.getIntent().getExtras();
         contact = extras.getString("contact");
         
-        messages = new ArrayList<Message>();
-        messageLV = (ListView) findViewById(R.id.messageView);
+        messageLV = (ListView)findViewById(id.messageView);
         messageLV.setAdapter(new messageAdapter(this, messages));
         
         MessageListener ml = new MessageListener() {
 			public void processMessage(Chat chat, Message mess) {
 				messages.add(mess);
-				
 			}
 		};
         
@@ -60,6 +63,14 @@ public class ChatActivity extends Activity {
 			}
 		};
 		
+		PacketFilter filter = new MessageTypeFilter(Message.Type.chat);
+		MainActivity.conn.addPacketListener(new PacketListener() {
+			
+			public void processPacket(Packet arg0) {
+				Message message = (Message)arg0;
+				Log.i("message" , message.getBody());
+			}
+		}, filter);
         
         Button sendButton = (Button)findViewById(R.id.sendButton);
         Log.i("debug..",sendButton.toString());
