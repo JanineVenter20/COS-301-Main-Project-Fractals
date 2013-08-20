@@ -1,0 +1,2 @@
+set solib-search-path ./obj/local/armeabi
+directory C:/Users/Janine/Downloads/android-ndk-r9-windows-x86_64/android-ndk-r9/platforms/android-8/arch-arm/usr/include jni C:/Users/Janine/Downloads/android-ndk-r9-windows-x86_64/android-ndk-r9/sources/cxx-stl/system
