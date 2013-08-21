@@ -27,15 +27,15 @@ public class LoginPage extends Activity {
 			EditText userE = (EditText)findViewById(id.usernameEdit);
 			EditText passE = (EditText)findViewById(id.passwordEdit);
 			
-			 XMPPClient.username = userE.getText().toString();
-			 XMPPClient.password = passE.getText().toString();
+			 MainActivity.username = userE.getText().toString();
+			 MainActivity.password = passE.getText().toString();
 			 finish();
 		}
 	};
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_login_page, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
