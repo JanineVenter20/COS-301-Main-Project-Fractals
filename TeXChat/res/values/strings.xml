@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="defaultUser">eminating</string>
+    <string name="defaultPass">Kalahar1</string>
+    
     <string name="app_name">TexChat</string>
     <string name="action_settings">Settings</string>
+    <string name="action_exit">Exit</string>
     <string name="hello_world">Hello world!</string>
     <string name="contactView">contactView</string>
     <string name="Login">Login</string>
@@ -11,7 +15,6 @@
     <string name="rememberMe">Remember me</string>
     <string name="cancel">Cancel</string>
     <string name="menu_settings">settings</string>
-    <string name="defaultUser">meis</string>
-    <string name="defaultPass">meis</string>
+
 
 </resources>

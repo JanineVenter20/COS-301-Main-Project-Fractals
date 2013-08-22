@@ -3,6 +3,7 @@ package fractals.texchat;
 import java.util.ArrayList;
 
 import org.jivesoftware.smack.RosterEntry;
+import org.jivesoftware.smack.packet.RosterPacket.ItemStatus;
 
 import android.content.Context;
 import android.content.Intent;
@@ -53,11 +54,20 @@ public class contactAdapter extends BaseAdapter {
         TextView contact = (TextView) itemView.findViewById(R.id.contactView);  
         TextView status = (TextView) itemView.findViewById(R.id.statusView);
                
-        String contactS = entries.get(position).getName().toString();
-        final String userS = entries.get(position).getUser().toString();
+        String contactS = entries.get(position).getName();
+        ItemStatus statusO = entries.get(position).getStatus();
+        final String userS = entries.get(position).getUser();
+        
+        String statusS;
+        
+        if (contactS == null || contactS.equals("")) 
+        	contactS = "Anonymous";
+        if (statusO == null)
+        	statusS = "No status...";
+        else statusS = statusO.toString();
         
         contact.setText(contactS);
-        status.setText(userS);
+        status.setText(statusS);
 
         itemView.setOnClickListener(new OnClickListener() {
 			
