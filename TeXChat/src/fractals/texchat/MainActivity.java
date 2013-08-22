@@ -16,6 +16,10 @@ import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Presence;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ListView;
@@ -23,9 +27,9 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
-	public static String username = "eminating";
-	public static String password = "Kalahar1";
-	final static String hostName = "192.168.2.103";
+	public static String username = "";
+	public static String password = "";
+	final static String hostName = "192.168.137.1";
 	final static String service = "stephanlaptop";
 	final static int port = 5222;
 	
@@ -34,8 +38,9 @@ public class MainActivity extends Activity {
 	Roster roster;
 	Chat activeChat;
 	ChatManager cm;
-
 	ListView contactLV;
+	Context context = this;
+	boolean done = false;
 	
 	ChatManagerListener cml = new ChatManagerListener() {			 
 		public void chatCreated(Chat chat, boolean locally) {
@@ -52,18 +57,25 @@ public class MainActivity extends Activity {
 		}
 	};
 	
+	class LoginTask extends AsyncTask<String, String, String> {
+		
+		@Override
+			protected String doInBackground(String... params) {
+				if (!conn.isConnected()) login();
+				return null;
+		}
+		
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		if (!filledIn()) {
-			setTitle("NOT LOGGED IN");
-        	//Intent login = new Intent(this, LoginPage.class);
-        	//startActivityForResult(login, 1);       
-        }
-        else {
-        	login();
-        }
+			startActivityForResult(new Intent(this, LoginPage.class), 1);
+		} else {
+			getNames();
+		}
 	}
 
 	@Override
@@ -77,7 +89,15 @@ public class MainActivity extends Activity {
     	if (username.equals("") || password.equals(""))
     			return false;
     	else return true;
-    } 
+    }
+	
+	public void getNames() {
+		roster = conn.getRoster();
+	   	Collection<RosterEntry> entries = roster.getEntries();
+	   	ArrayList<RosterEntry> entryList = new ArrayList<RosterEntry>(entries);
+	   	contactLV = (ListView)findViewById(R.id.ContactListView);
+	   	contactLV.setAdapter(new contactAdapter(this, entryList)) ;	
+	}
 	
 	public void login() {
         ccf.setCompressionEnabled(false);
@@ -87,19 +107,30 @@ public class MainActivity extends Activity {
 			conn.connect();
 			conn.login(username, password);
 			conn.sendPacket(new Presence(Presence.Type.available));
-			Toast.makeText(this, "presence set to \"online\"", Toast.LENGTH_SHORT).show();
 			
-		   			   	
-		   	roster = conn.getRoster();
-		   	Collection<RosterEntry> entries = roster.getEntries();
-		   	ArrayList<RosterEntry> entryList = new ArrayList<RosterEntry>(entries);
-		   	contactLV = (ListView)findViewById(R.id.ContactListView);
-		   	contactLV.setAdapter(new contactAdapter(this, entryList)) ;		   	
+			//getNames();
+			
 		} catch (XMPPException e) {
 			e.printStackTrace();
 		}
+        done = true;
     }
 	
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		getNames();
+	}
 	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		Toast.makeText(context, "presence set to \"online\"", Toast.LENGTH_SHORT).show();
+		if (resultCode == 1) {
+			new LoginTask().execute("someText");
+			while(!done) {}
+				getNames();
+		}
+	}
 	
 }
