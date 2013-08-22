@@ -10,10 +10,10 @@ import org.jivesoftware.smack.packet.Message;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -33,7 +33,9 @@ public class ChatActivity extends Activity {
         setContentView(R.layout.activity_chat);
         Bundle extras = this.getIntent().getExtras();
         
-        //System.loadLibrary("mimetex");
+        System.loadLibrary("mimetex");
+        
+        
         
         contact = extras.getString("contact");
         
@@ -44,14 +46,14 @@ public class ChatActivity extends Activity {
         MessageListener ml = new MessageListener() {
 			public void processMessage(Chat chat, Message mess) {
 				messages.add(mess);
-				((BaseAdapter)messageLV.getAdapter()).notifyDataSetChanged();
+				
 			}
 		};
         
         ChatManager chatMan = MainActivity.conn.getChatManager();
         final Chat chat = chatMan.createChat(contact, ml);
         
-        Toast.makeText(this, "chatting with "+ chat.getParticipant() , Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "chatting with " + contact , Toast.LENGTH_SHORT).show();
         
         OnClickListener ocl = new OnClickListener() {
 			public void onClick(View v) {
@@ -63,15 +65,18 @@ public class ChatActivity extends Activity {
 				}
 			}
 		};
-
+		
+        
         Button sendButton = (Button)findViewById(R.id.sendButton);
-        //Log.i("debug..",sendButton.toString());
+        Log.i("debug..",sendButton.toString());
         sendButton.setOnClickListener(ocl);
+        
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.layout.activity_chat, menu);
         return true;
     }
 

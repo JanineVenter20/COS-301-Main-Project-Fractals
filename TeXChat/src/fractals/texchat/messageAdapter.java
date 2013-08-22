@@ -54,12 +54,8 @@ public class messageAdapter extends BaseAdapter {
 		TextView from = (TextView) messageView.findViewById(R.id.fromBox);
 		TextView body = (TextView) messageView.findViewById(R.id.bodyBox);
 		
-		String fromS = messages.get(position).getFrom();
-		String bodyS = messages.get(position).getBody();
-		
-		if (bodyS == null) {
-			bodyS = "empty";
-		}
+		String fromS = messages.get(position).getFrom().toString();
+		String bodyS = messages.get(position).getBody().toString();
 		
 		from.setText(fromS);
 		body.setText(bodyS);

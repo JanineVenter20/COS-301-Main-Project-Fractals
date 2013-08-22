@@ -51,25 +51,20 @@ public class contactAdapter extends BaseAdapter {
            itemView = (LinearLayout) convertView;
         }
         TextView contact = (TextView) itemView.findViewById(R.id.contactView);  
-        TextView status = (TextView) itemView.findViewById(R.id.statusView); // to be used later
-        
-        final String contactS;
-        if (entries.isEmpty()) {
-        	contactS = "You have no contacts... ";
-        } else {
-        	contactS = entries.get(position).getUser().toString();
-        }
+        TextView status = (TextView) itemView.findViewById(R.id.statusView);
+               
+        String contactS = entries.get(position).getName().toString();
+        final String userS = entries.get(position).getUser().toString();
         
         contact.setText(contactS);
+        status.setText(userS);
 
-        //System.out.println(userS);
-        
         itemView.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				Bundle b = new Bundle();
-				b.putString("contact", contactS);
+				b.putString("contact", userS);
 				Intent chatIntent = new Intent(context, ChatActivity.class);
 				chatIntent.putExtras(b);
 				context.startActivity(chatIntent);

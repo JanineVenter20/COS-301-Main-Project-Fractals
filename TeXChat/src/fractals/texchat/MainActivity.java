@@ -16,17 +16,16 @@ import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Presence;
 
 import android.app.Activity;
-import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
-	public static String username = "meis";
-	public static String password = "meis";
-	final static String hostName = "192.168.137.1";
+	public static String username = "eminating";
+	public static String password = "Kalahar1";
+	final static String hostName = "192.168.2.103";
 	final static String service = "stephanlaptop";
 	final static int port = 5222;
 	
@@ -35,9 +34,8 @@ public class MainActivity extends Activity {
 	Roster roster;
 	Chat activeChat;
 	ChatManager cm;
+
 	ListView contactLV;
-	Context context = this;
-	boolean done = false;
 	
 	ChatManagerListener cml = new ChatManagerListener() {			 
 		public void chatCreated(Chat chat, boolean locally) {
@@ -53,31 +51,19 @@ public class MainActivity extends Activity {
 			
 		}
 	};
-	class loginTask extends AsyncTask<String, String, String> {
-
-		 @Override
-			protected String doInBackground(String... params) {
-			 	if (conn.isConnected()) {} else
-				login();
-				return null;
-			}
-   	}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
 		if (!filledIn()) {
 			setTitle("NOT LOGGED IN");
         	//Intent login = new Intent(this, LoginPage.class);
         	//startActivityForResult(login, 1);       
         }
         else {
-        	new loginTask().execute("someText");  
-        } 
-		while (!done) {}
-		getNames();
+        	login();
+        }
 	}
 
 	@Override
@@ -93,15 +79,7 @@ public class MainActivity extends Activity {
     	else return true;
     } 
 	
-	public void getNames() {
-		roster = conn.getRoster();
-		Collection<RosterEntry> entries = roster.getEntries();
-		ArrayList<RosterEntry> entryList = new ArrayList<RosterEntry>(entries);
-		contactLV = (ListView)findViewById(R.id.ContactListView);
-		contactLV.setAdapter(new contactAdapter(context, entryList));
-	}
-	
-	public boolean login() {
+	public void login() {
         ccf.setCompressionEnabled(false);
         ccf.setSASLAuthenticationEnabled(false);
         	
@@ -109,16 +87,17 @@ public class MainActivity extends Activity {
 			conn.connect();
 			conn.login(username, password);
 			conn.sendPacket(new Presence(Presence.Type.available));
-			//Toast.makeText(context, "presence set to \"online\"", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "presence set to \"online\"", Toast.LENGTH_SHORT).show();
 			
-			getNames();
-			
+		   			   	
+		   	roster = conn.getRoster();
+		   	Collection<RosterEntry> entries = roster.getEntries();
+		   	ArrayList<RosterEntry> entryList = new ArrayList<RosterEntry>(entries);
+		   	contactLV = (ListView)findViewById(R.id.ContactListView);
+		   	contactLV.setAdapter(new contactAdapter(this, entryList)) ;		   	
 		} catch (XMPPException e) {
 			e.printStackTrace();
-			return false;
 		}
-        done = true;
-        return true;
     }
 	
 	
