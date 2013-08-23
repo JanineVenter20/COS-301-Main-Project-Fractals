@@ -10,6 +10,7 @@ import org.jivesoftware.smack.packet.Message;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -19,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+import fractals.texchat.DatabaseHandler.MessageDetail;
 import fractals.texchat.R.id;
 
 public class ChatActivity extends Activity {
@@ -28,32 +30,45 @@ public class ChatActivity extends Activity {
 	ListView messageLV;
 	messageAdapter mad;
 	Context c = this;
+
+	
 	
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+    	 messages = new ArrayList<Message>();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         Bundle extras = this.getIntent().getExtras();
         
         final Activity ac = this;
-        
         contact = extras.getString("contact");
+        ArrayList<MessageDetail> messagesGotFromDB = MainActivity.dbHandler.selectMessages(contact);
+        Message mess;
+        for (int i = 0; i < messagesGotFromDB.size(); i++) {
+        	mess = new Message();
+        	mess.addBody("", messagesGotFromDB.get(i).getMessageBody());
+        	if (messagesGotFromDB.get(i).getSentReceived()) {
+        		mess.setFrom("you");
+        	} else {
+        		mess.setFrom(contact);
+        	}
+        	messages.add(mess);
+        }
         
-        messages = new ArrayList<Message>();
+       
         messageLV = (ListView) findViewById(R.id.messageView);
         mad = new messageAdapter(this, messages);
         messageLV.setAdapter(mad);
-        
         MessageListener ml = new MessageListener() {
 			public void processMessage(Chat chat, Message mess) {
 				messages.add(mess);
+				System.out.println(mess.getFrom());
+				MainActivity.dbHandler.addToMessages(new Packet(contact,mess.getBody(), false));
 				ac.runOnUiThread(new Runnable() {
-					
 					@Override
 					public void run() {
 						mad.notifyDataSetChanged();
-						
 					}
 				});
 			}
@@ -73,6 +88,7 @@ public class ChatActivity extends Activity {
 					ms.setTo(contact);
 					chat.sendMessage(ms);
 					messages.add(ms);
+					MainActivity.dbHandler.addToMessages(new Packet(ms.getTo(), ms.getBody(), true));
 					mad.notifyDataSetChanged();
 				} catch (XMPPException e) {
 					e.printStackTrace();
@@ -87,6 +103,12 @@ public class ChatActivity extends Activity {
         
 
     }
+    
+    @Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		
+	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

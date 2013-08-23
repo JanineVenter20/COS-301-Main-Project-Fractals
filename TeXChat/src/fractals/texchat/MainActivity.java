@@ -13,7 +13,6 @@ import org.jivesoftware.smack.RosterEntry;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Message;
-import org.jivesoftware.smack.packet.Presence;
 
 import android.app.Activity;
 import android.content.Context;
@@ -22,6 +21,7 @@ import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
 	ListView contactLV;
 	Context context = this;
 	boolean done = false;
+	public static DatabaseHandler dbHandler;
 	
 	ChatManagerListener cml = new ChatManagerListener() {			 
 		public void chatCreated(Chat chat, boolean locally) {
@@ -70,6 +71,8 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//ccf.setSendPresence(false);
+		dbHandler = new DatabaseHandler(this);
 		setContentView(R.layout.activity_main);
 		if (!filledIn()) {
 			startActivityForResult(new Intent(this, LoginPage.class), 1);
@@ -80,8 +83,20 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_exit:
+			System.exit(0);
+			break;
+
+		default:
+			break;
+		}
 		return true;
 	}
 
@@ -105,10 +120,7 @@ public class MainActivity extends Activity {
         	
         try {
 			conn.connect();
-			conn.login(username, password);
-			conn.sendPacket(new Presence(Presence.Type.available));
-			
-			//getNames();
+			conn.login(username, password );
 			
 		} catch (XMPPException e) {
 			e.printStackTrace();
@@ -125,9 +137,9 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		Toast.makeText(context, "presence set to \"online\"", Toast.LENGTH_SHORT).show();
 		if (resultCode == 1) {
-			new LoginTask().execute("someText");
+			new LoginTask().execute("useless text");
+			Toast.makeText(context, "presence set to \"online\"", Toast.LENGTH_SHORT).show();
 			while(!done) {}
 				getNames();
 		}

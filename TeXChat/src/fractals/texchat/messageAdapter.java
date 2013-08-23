@@ -55,10 +55,11 @@ public class messageAdapter extends BaseAdapter {
 		TextView body = (TextView) messageView.findViewById(R.id.bodyBox);
 		String bodyS = "";
 		String fromS = messages.get(position).getFrom().toString();
-		if (body == null || body.equals("")) {
+		if (messages.get(position).getBody() == null || messages.get(position).getBody().equals("")) {
 			 bodyS = "empty";
 		} else {
-			bodyS = messages.get(position).getBody().toString();
+			System.out.println(messages.get(position).getBody());
+			bodyS = messages.get(position).getBody();
 		}
 		
 		from.setText(fromS);
