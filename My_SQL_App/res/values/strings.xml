@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">My_SQL_App</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="user_1">USER 1 : Alice</string>
+    <string name="user_2">USER 2 : Bob</string>
+    <string name="sendbutton_text">Send Message!</string>
+    <string name="view_data">View</string>
+
+</resources>
