@@ -1,0 +1,193 @@
+\documentclass[29pt,a4paper]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[green]{banking}                % idem
+
+\usepackage[T1]{fontenc}
+% character encoding
+\usepackage[utf8x]{inputenc}               	% replace by the encoding you are using
+\usepackage[italian]{babel}
+\usepackage{color}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths                          	% required when changes are made to page layout lengths
+
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L,RO]{\thepage}           		% page number in "outer" position of footer line
+\fancyfoot[R,LO]{\footnotesize} 			% other info in 
+
+
+\begin{document}
+
+\section{\textbf{Change History:}}
+\begin{tabbing}
+\\\textbf{Date:} ~~~~~~~~~~~~~~~~~\= \textbf{Version Update:}~~~~~~~~~~~~~~~~\= \textbf{Description:}\\
+2013/08/22\> 1.0 \> Document created.\\
+2013/08/24 \> 1.1 \> References Updated\\
+2013/08/24 \> 1.2 \> Outstanding Risks/Challenges added\\
+2013/08/24 \> 1.3 \> Support for Latex and Mimetex Libraries updated\\
+2013/08/24 \> 1.4 \> System Description updated\\
+2013/08/24 \> 1.5 \> Team Portfolio added. \\
+2013/08/24 \> 1.6 \> Responsibilities added for: Michelle Peens\\
+2013/08/24 \> 1.7 \> Responsibilities added for: Stephan Botha\\	
+2013/08/24 \> 1.8 \> Responsibilities added for: Janine Venter\\
+2013/08/24 \> 1.9 \> Issue Management Plan updated\\
+2013/08/24 \> 2.0 \> Software Development Process updated\\
+2013/08/24 \> 2.1 \> Project Progress updated\\
+2013/08/24 \> 2.2 \> Software Development Process updated\\
+2013/08/24 \> 2.3 \> Project Progress updated\\
+\end{tabbing}
+
+\newpage
+\section{\textbf{Table of Contents:}}
+\begin{tabbing}
+\\\textbf{Subject}: ~~~~~\= ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\= \textbf{Page}:
+\\\newline
+1. Introduction \> \> 3\\							
+\> 1.1 Purpose 	\> 3\\							
+\> 1.2 Document Conventions\> 3 					\\
+\> 1.3 Project Scope \> 3							\\
+\> 1.4 References \> 3							\\
+2. System Description \> \> 4					\\
+3. Software Development Process \> \> 5				\\
+4. Team Profile\> \> 6 				\\
+5. Issue Management Plan \> \> 7 	\\
+6. Project Progress \> \> 8 	\\
+7. Outstanding Risks/Challenges \> \> 9 	\\
+8. Open Issues \> \> 10 	\\
+9. Glossary \> \> 11 	\\
+\end{tabbing}
+
+\newpage
+	%\maketitle
+	%\vspace{-10mm}
+	%Section
+	\section*{\textbf{1. Introduction}}
+	\vspace{4mm}
+	
+		\textbf{1.1 Purpose}
+			\\The purpose of this document is to provide our client with a high level overview of the architectural strategies or tactics and patterns that will form a basis for the development of the Latex Chat Application. The overall outline of these concepts and how they are implemented will provide our team with a means to achieve the given set of requirements as previously agreed upon in the Requirements and Design document.\\
+		\vspace{1mm}
+		
+		\noindent \textbf{1.2 Document Conventions}
+			\begin{itemize}
+				\item Document Formatting: LaTeX
+			\end{itemize}
+		\vspace{5mm}
+		%Section
+		
+		\noindent \textbf{1.3 Project Scope}
+			\\The aim of the project is to develop an open source android XMPP chat client which supports the embedded LaTeX base equations which are rendered as images. LaTeX based equations will be rendered on the handset to produce mathematical equations. Our system will also provide the ability to edit and correct equations before sending.
+			
+			\parindent 5mm The application will provide a similar functionality to yaxim. Exchange of images and mathematical expressions will be possible through our software solution. The TeXchat application will have the ability to show a preview of the entered text and also export conversations accompanied by their mathematical expressions into a LaTeX file.
+			
+		\vspace{5mm}
+		
+	\noindent \textbf{1.4 References}
+		\begin{itemize}
+		\item Mr. Will van Heerden.
+		\end{itemize}
+		\vspace{5mm}
+		
+	%Section
+\newpage
+	\section*{\textbf{2. System Description}}
+	\vspace{4mm}
+		\noindent The goal of the application is to provide a chat service that will allow the users to exchange message and also to send mathematical equations in a rendered format. The application is intended to provide a better and more usable mobile version of LaTeX chat applications.\\ 
+		
+		\noindent\textbf{Support for Latex and Mimetex Libraries}
+		\\The final application will have to make use of a Latex based library for the rendering of equations as images on the handheld device. For this reason we have implemented support for a Mimetex library, through the use of the Android NDK (Native Development Kit), which allows us to embed the native C/C++ code of the Mimetext library, in the source code of this release.\\
+		
+		
+		\noindent\textbf{Messaging}
+		\\Our final goal is for messaging to be possible between multiple clients, and the support for sending Latex based equations, rendered on the client side and displayed as images on the handheld device. In this release however, our server should support two initial users, and have capabilities for them to send plain text messages and display these in a easy to understand manner.  These messages should be stored statically on the device for later retrieval.  For this purpose a SQLite database was implemented.\\
+		
+		\noindent\textbf{Login}
+		\\A user should be authenticated by some type of login component.  This has been implemented during the initial phases of development of this application.  The server that our application uses provides the basic functionality for this authentication component, and uses a username and password based authentication method.
+		
+\newpage
+	\section*{3. Software Development Process}
+	\vspace{4mm}
+	\\The process/methodology we are using throughout the development of our software solution for the Latex Chat Application will be a scaled down version of RUP, to accommodate our smaller group size, in conjunction with agile approaches, to accommodate the initial assumptions that the clients requirements for the application will change during the development of the application.
+	
+	This approach of combining the structured methods of RUP software development with agile approaches will allow us a structure for developing our software solution in an iterative manner, which will allow for changes, while still being able to design, code and test each version of its release in a controlled manner against the requirements set out for that specific release.
+	
+	Each release will have requirements, design, implementation, testing and integration phases, which are in line with the RUP process, and since this approach is based on regular and consistent user or client involvement, it will allow for changes in the requirements by the client during each release, which is in line with our agile approach.
+	
+	\vspace{5mm}
+
+\newpage
+	\section*{4. Team Profile}
+	\noindent\textbf{Michelle Peens}
+		\begin{itemize}
+			\item Documentation
+			\item Designing of the database
+			\item Development of the system.
+			\item Project management
+			\item Problem solving\\
+		\end{itemize}
+	
+	\noindent\textbf{Stephan Botha}
+		\begin{itemize}
+			\item Documentation
+			\item Development of the system
+			\item Testing
+			\item Project management
+			\item Problem solving\\
+		\end{itemize}
+	
+	\noindent\textbf{Janine Venter}
+		\begin{itemize}
+			\item Setting up meetings with the client and daily group meetings
+			\item Documentation and converting documentation to LaTeX documentation.
+			\item Development of the system.
+			\item Project management
+			\item Problem solving
+		\end{itemize}
+\newpage
+		\section*{Issue Management Plan}
+		\begin{itemize}
+			\item Issues are handled by discussing them with our client, as well as trying to resolve the issues by either working on it together or by doing research on the internet.
+			\item All issues are resolved as quickly as possible except when it is a big hurdle. 
+			\item All issues are discussed openly.
+		\end{itemize}
+		
+\newpage
+		\section*{6. Project Progress}
+		During this release of our software solution we aimed to create the basis for further development phases.  This release is still in the initial phases of the overall development, and therefore only includes basic functionality as required for this release, namely:
+		
+		\begin{itemize}
+			\item The application supports user login, and status update to ‘online’ on the server side.
+			\item It allows the user to view messages that was previously sent, through making use of an SQLite database on the client side.
+			\item The application has basic client chat support, in that it allows for sending basic text messages between clients on the server through the XMPP protocol.
+			\item The Android NDK has also been included, so as to support the use of native code in the application.  This feature will be further developed in the next release to support the Mimetex libraries.	
+		\end{itemize}
+
+\newpage
+		\section*{7. Outstanding Risks/Challenges}
+		\begin{itemize}
+			\item Failure of the core feature of the application, this is the MimeTeX rendering.
+			\item Understanding the MimeTeX library is a challenge.
+			\item Using the MimeTeX library for the rendering of the images is a challenge as well.
+			\item The aesthetics of the application is less of a challenge, but making it usable and user friendly is more challenging.
+			
+		\end{itemize}
+\newpage		
+		\section*{8. Open Issues}
+		Open Issues are only relevant towards the Android application itself, there are no open issues in terms of project management.\\
+		Open Issues in the development of the application:
+				\begin{itemize}
+					\item Understanding the MimeTeX library.
+					\item Understanding how to render the LaTeX code using the MimeTeX library.
+					\item Rendering the image inline (with the normal message text before it).
+					
+				\end{itemize}	
+\newpage
+		\section*{9. Glossary}
+		\begin{itemize}
+			\item Agile - Development methodology
+			\item NDK - Native Development Kit
+		\end{itemize}
+\end{document}
