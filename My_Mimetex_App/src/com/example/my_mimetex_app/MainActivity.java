@@ -22,10 +22,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        String exp = "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}";
+        //String exp = "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}";
+        String exp = "x^2+y^2+z^2";
         ImageView img1 = (ImageView)findViewById(R.id.expression);
-        Mimetex mine = new Mimetex(this, img1, exp);
-		
+        
+        Mimetex mine = new Mimetex();
+        img1.setImageBitmap(mine.getBitmap(exp));	
     }
 
     @Override
