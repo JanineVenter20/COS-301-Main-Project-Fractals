@@ -40,6 +40,33 @@ public class DBHandlerUnitTest extends AndroidTestCase {
 		assertEquals("MESSAGE FAILED TO SAVE!", expected, result);	
 	}
 	
+	//CHECK IF CHAT DATA DELETES SUCCESSFULY
+	public void testdeleteMessages()
+	{
+		
+		DatabaseHandler mytestdb = new DatabaseHandler(getContext());
+		
+		//INSERT DUMMY DATA
+		final Packet sendPacket = new Packet("999un", "999un", true); 
+		boolean saveDummyData = mytestdb.addToMessages(sendPacket);
+		boolean result = false;
+		boolean expected = true;
+		
+		if(saveDummyData)
+		{
+			//DATA IS IN THE DB
+			//TRY TO DELETE IT
+			result = mytestdb.deleteMessages(sendPacket.getUser());
+		}
+		else
+		{
+			//DATA DID NOT SAVE - BUT THIS CASE IS TESTED ABOVE - SO IT WILL SAVE
+		}
+		
+		assertEquals("MESSAGES FAILED TO DELETE!", expected, result);
+		
+	}
+	
 	@Override
 	protected void setUp() throws Exception {
 		// TODO Auto-generated method stub

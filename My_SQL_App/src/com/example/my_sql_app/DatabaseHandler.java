@@ -143,7 +143,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					}
 			}
 			
-			//FOR TESTING PURPOSES ONLY
+			//TO DELETE A SPECIFIC MESSAGE
 			public void deleteLine(Packet todelete)
 			{
 					String mess = todelete.getMessage();
@@ -153,13 +153,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			}
 		
 			//VIEW THE SENT/RECEIVED MESSAGES BETWEEN YOU AND ANOTHER USER (u) - RETURNS AN ALREADY ORDERED ARRAYLIST OF THE CONVERSATION	
-			public ArrayList<MessageDetail> selectMessages(String u)
+			public ArrayList<MessageDetail> selectMessages(String u, int limit)
 			{	
 			
 				ArrayList<MessageDetail> messages = new ArrayList<MessageDetail>();
 			
 				Cursor c;
-				String query = "SELECT * FROM " + tbMESSAGES + " WHERE User = '" + u + "';" ;
+				String query = "SELECT * FROM " + tbMESSAGES + " WHERE User = '" + u + "' LIMIT '"+limit+"';" ;
 				
 				this.db.beginTransaction();
 				try
@@ -194,5 +194,26 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				}
 				c.close();
 				return messages;
+			}
+			
+			//DELETE ALL MESSAGES FOR A USER
+			public boolean deleteMessages(String user)
+			{
+					
+				db.delete(tbMESSAGES, "User = '" + user + "'", null);
+				Log.i("INFORMATION", "Messages deleted!");
+				
+				//TO BE SURE
+				ArrayList<MessageDetail> messages = new ArrayList<MessageDetail>();
+				messages = selectMessages(user, 10);
+				
+				if(messages.isEmpty())
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
 			}
 }

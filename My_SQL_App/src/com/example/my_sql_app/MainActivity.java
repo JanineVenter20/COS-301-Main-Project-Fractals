@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.util.Log;
 
 public class MainActivity extends Activity {
 	
@@ -15,6 +16,7 @@ public class MainActivity extends Activity {
 		Button sendBob;			// id = sendbutton2
 		EditText messageBob; 	// id = messagebox2
 		Button view;			// id = view
+		Button delete;
 		
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class MainActivity extends Activity {
 	        sendBob = (Button)findViewById(R.id.sendbutton2);
 	        messageBob = (EditText)findViewById(R.id.messagebox2);
 	        view = (Button)findViewById(R.id.view);
+	        delete = (Button)findViewById(R.id.delete);
 	       
 	        //CREATE THE DBHANDLER - ***********************************************
 	        final DatabaseHandler dbHandler = new DatabaseHandler(this);
@@ -60,10 +63,28 @@ public class MainActivity extends Activity {
 				public void onClick(View v) {
 					
 					//SELECT SENT MESSAGES FROM 'USER' - CURRENTLY BOB
-					dbHandler.selectMessages("Bob");
+					dbHandler.selectMessages("Bob", 10);
 					
 				}
-			});       
+			});
+	        
+	        //DELETE USER CHAT BUTTON
+	        delete.setOnClickListener(new View.OnClickListener() {
+				
+				public void onClick(View v) {
+
+					//DELETE CHAT HISTORY WITH USER
+					boolean result = dbHandler.deleteMessages("Bob");
+					if(result)
+					{
+						Log.i("INFORMATION", "DELETE [TRUE]");
+					}
+					else
+					{
+						Log.i("INFORMATION", "DELETE [FALSE]");						
+					}
+				}
+			});
     }
 
     @Override
