@@ -50,8 +50,6 @@ public class messageAdapterTest extends InstrumentationTestCase {
 		Message mess2 = new Message("Test 2");
 		messagesTest.add(mess2);
 		
-		System.out.println(messagesTest);
-		
 		messageAdapterTest = new messageAdapter(contextTest, messagesTest);
 		
 		context2 = messageAdapterTest.getContext();
