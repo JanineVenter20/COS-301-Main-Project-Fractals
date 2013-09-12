@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,33 +17,35 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="fractals.texchat.MainActivity"
-            android:label="@string/app_name" 
-            android:configChanges="orientation">
+            android:configChanges="orientation"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="fractals.texchat.ChatActivity"
-            android:label="@string/app_name" 
-            android:configChanges="orientation" >
+            android:configChanges="orientation"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.CHAT" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-      
         <activity
             android:name="fractals.texchat.LoginPage"
             android:label="@string/app_name" >
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-               
-        
+        <activity
+            android:name="fractals.texchat.TexActivity"
+            android:label="@string/title_activity_tex" >
+        </activity>
     </application>
 
 </manifest>

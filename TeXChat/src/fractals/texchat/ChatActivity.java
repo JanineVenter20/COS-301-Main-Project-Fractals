@@ -10,6 +10,7 @@ import org.jivesoftware.smack.packet.Message;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,13 +31,16 @@ public class ChatActivity extends Activity {
 	ListView messageLV;
 	messageAdapter mad;
 	Context c = this;
-
+	Mimetex mt = new Mimetex();
+//
+//	static {
+//		System.loadLibrary("mimetex");
+//	}
 	
-	
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
-    	 messages = new ArrayList<Message>();
+    	
+    	messages = new ArrayList<Message>();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         Bundle extras = this.getIntent().getExtras();
@@ -98,7 +102,17 @@ public class ChatActivity extends Activity {
 		
         
         Button sendButton = (Button)findViewById(R.id.sendButton);
-        Log.i("debug..",sendButton.toString());
+        
+        Button fxButton = (Button)findViewById(id.fxButton);
+        fxButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent fxIntent = new Intent(c, TexActivity.class);
+				c.startActivity(fxIntent);
+				
+			}
+		});
         sendButton.setOnClickListener(ocl);
         
 

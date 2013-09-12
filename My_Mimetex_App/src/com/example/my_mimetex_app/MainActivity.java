@@ -2,6 +2,7 @@ package com.example.my_mimetex_app;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
@@ -27,7 +28,12 @@ public class MainActivity extends Activity {
         ImageView img1 = (ImageView)findViewById(R.id.expression);
         
         Mimetex mine = new Mimetex();
-        img1.setImageBitmap(mine.getBitmap(exp));	
+        try {
+			img1.setImageBitmap(mine.getBitmap(exp));
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
     }
 
     @Override

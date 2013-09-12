@@ -2,12 +2,14 @@ package com.example.my_mimetex_app;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Xml.Encoding;
 
 public class Mimetex {
 	
@@ -27,15 +29,15 @@ public class Mimetex {
 	//SET THE EXPRESION
 	private void setExpression(String exp)
 	{
-		this.expression = exp;
+		expression = exp;
 	}
 	
 	//TO RETURN THE BITMAP FOR THE EXPRESSION
-	public Bitmap getBitmap(String exp)
+	public Bitmap getBitmap(String exp) throws UnsupportedEncodingException
 	{
 		//THE IP NEEDS TO REFERENCE YOUR OWN PC's IP (THE EMULATOR USES 127.0.0.1 WHILE RUNNING)
 		this.setExpression(exp);
-		bitmap = sendRequest("http://10.179.205.62/cgi-bin/mimetex.cgi?"+URLEncoder.encode(this.getExpresion()));
+		bitmap = sendRequest("http://192.168.137.1/cgi-bin/mimetex.cgi?"+URLEncoder.encode(exp, Encoding.UTF_8.toString()));
 		return bitmap;
 	}
 	

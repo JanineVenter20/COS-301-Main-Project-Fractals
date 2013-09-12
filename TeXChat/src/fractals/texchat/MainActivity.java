@@ -30,8 +30,13 @@ public class MainActivity extends Activity {
 	public static String username = "";
 	public static String password = "";
 	final static String hostName = "192.168.137.1";
-	final static String service = "stephanlaptop";
+	final static String service = "fractals.texchat";
 	final static int port = 5222;
+	
+	
+//	static {
+//		System.loadLibrary("chatTex") ;
+//	}
 	
 	public static final ConnectionConfiguration ccf = new ConnectionConfiguration(hostName, port, service);
 	public static final XMPPConnection conn = new XMPPConnection(ccf);
