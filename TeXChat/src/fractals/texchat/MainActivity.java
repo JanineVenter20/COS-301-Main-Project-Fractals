@@ -30,13 +30,14 @@ public class MainActivity extends Activity {
 	public static String username = "";
 	public static String password = "";
 	final static String hostName = "192.168.137.1";
-	final static String service = "stephanlaptop";
+	final static String service = "fractals.texchat";
 	final static int port = 5222;
+	
 	
 	public static final ConnectionConfiguration ccf = new ConnectionConfiguration(hostName, port, service);
 	public static final XMPPConnection conn = new XMPPConnection(ccf);
 	Roster roster;
-	Chat activeChat;
+	public static Chat activeChat;
 	ChatManager cm;
 	ListView contactLV;
 	Context context = this;
@@ -46,15 +47,15 @@ public class MainActivity extends Activity {
 	ChatManagerListener cml = new ChatManagerListener() {			 
 		public void chatCreated(Chat chat, boolean locally) {
 			if (!locally) {
-				activeChat = cm.createChat(chat.getParticipant(), "test", ml);
+				if (activeChat != null)
+				{
+					activeChat = chat;
+					System.out.println(activeChat.toString());
+					
+				} else {
+					activeChat = cm.createChat(chat.getParticipant(), null);
+				}
 			}
-		}
-	};
-	
-	MessageListener ml = new MessageListener() {			
-		@Override
-		public void processMessage(Chat arg0, Message arg1) {
-			
 		}
 	};
 	

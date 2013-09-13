@@ -49,5 +49,13 @@ OnClickListener ocl2 = new OnClickListener() {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
+    @Override
+    protected void onDestroy() {
+    		setResult(0);
+    		finish();
+    	super.onDestroy();
+    }
+    
 
 }

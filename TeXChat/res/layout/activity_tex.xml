@@ -8,31 +8,44 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".TexActivity" >
 
-    <SlidingDrawer
-        android:id="@+id/slidingDrawer1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="29dp"
-        android:layout_marginTop="122dp"
-        android:content="@+id/content"
-        android:handle="@+id/handle" >
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/ic_action_search" />
 
-        <Button
-            android:id="@+id/handle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Handle" />
+    <EditText
+        android:id="@+id/expEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="47dp"
+        android:layout_toRightOf="@+id/viewButton"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="\\fbox{x^2 + \\int x}" />
 
-        <LinearLayout
-            android:id="@+id/content"
-            android:layout_width="278dp"
-            android:layout_height="match_parent"
-            android:gravity="left"
-            android:orientation="horizontal" >
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/expEdit"
+        android:layout_alignBottom="@+id/expEdit"
+        android:layout_alignParentLeft="true"
+        android:text="View" />
 
-        </LinearLayout>
-    </SlidingDrawer>
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="OK" />
 
 </RelativeLayout>

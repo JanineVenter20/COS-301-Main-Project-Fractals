@@ -8,12 +8,9 @@ import org.jivesoftware.smack.MessageListener;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Message;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -30,11 +27,7 @@ public class ChatActivity extends Activity {
 	ArrayList<Message> messages;
 	ListView messageLV;
 	messageAdapter mad;
-	Context c = this;
-
-	static {
-		System.loadLibrary("mimetex");
-	}
+	Activity c = this;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,7 +37,6 @@ public class ChatActivity extends Activity {
         setContentView(R.layout.activity_chat);
         Bundle extras = this.getIntent().getExtras();
         
-        final Activity ac = this;
         contact = extras.getString("contact");
         ArrayList<MessageDetail> messagesGotFromDB = MainActivity.dbHandler.selectMessages(contact);
         Message mess;
@@ -68,7 +60,7 @@ public class ChatActivity extends Activity {
 				messages.add(mess);
 				System.out.println(mess.getFrom());
 				MainActivity.dbHandler.addToMessages(new Packet(contact,mess.getBody(), false));
-				ac.runOnUiThread(new Runnable() {
+				c.runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
 						mad.notifyDataSetChanged();
@@ -76,9 +68,22 @@ public class ChatActivity extends Activity {
 				});
 			}
 		};
+		//System.out.println(" !!!! "+contact);
         
         ChatManager chatMan = MainActivity.conn.getChatManager();
-        final Chat chat = chatMan.createChat(contact, ml);
+        Chat chat1;
+        final Chat chat;
+        if (MainActivity.activeChat != null) {
+        	if (MainActivity.activeChat.getParticipant().equals(contact)) {
+        		chat1 = MainActivity.activeChat;
+        		chat1.addMessageListener(ml);
+        	} else
+        		chat1 = chatMan.createChat(contact, ml);	
+        } else {
+        	chat1 = chatMan.createChat(contact, ml);
+        	MainActivity.activeChat = chat1;
+        }
+        chat = chat1;
         
         Toast.makeText(this, "chatting with " + contact , Toast.LENGTH_SHORT).show();
         
@@ -102,21 +107,19 @@ public class ChatActivity extends Activity {
         
         Button sendButton = (Button)findViewById(R.id.sendButton);
         
-        Button fxButton = (Button)findViewById(id.fxButton);
+        final Button fxButton = (Button)findViewById(id.fxButton);
         fxButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				Intent fxIntent = new Intent(c, TexActivity.class);
-				c.startActivity(fxIntent);
-				
+				c.startActivityForResult(fxIntent, 1);
 			}
 		});
-        Log.i("debug..",sendButton.toString());
         sendButton.setOnClickListener(ocl);
         
-
     }
+
     
     @Override
 	public void onConfigurationChanged(Configuration newConfig) {
@@ -128,6 +131,15 @@ public class ChatActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+    
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    	super.onActivityResult(requestCode, resultCode, data);
+    	if (resultCode == RESULT_OK) {
+    		EditText ed = (EditText)findViewById(id.messageInput);
+        	ed.append("$"+data.getExtras().getString("expression")+"$");
+    	}
     }
 
 
