@@ -16,6 +16,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     
 		//TABLE NAMES
     	private static final String tbMESSAGES = "messages";
+    	private static final String tbREMEMBERME = "rememberme";
     	Context context;
     	private SQLiteDatabase db;
     
@@ -84,7 +85,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 							"UsrUniqueKey TEXT," +
 							"Sent_1_Received_0 BOOLEAN);";
 					
-					db.execSQL(createMessagesTable);						
+					db.execSQL(createMessagesTable);	
+					
+					String createRememberMeTable = "CREATE TABLE " + tbREMEMBERME + "(" +
+							"PKUserLoggedIn INTEGER PRIMARY KEY, " +
+							"User TEXT, " +
+							"Password DATETIME";
+					
+					db.execSQL(createRememberMeTable);					
+					
 					Log.i("INFORMATION", "onCreate()");
 			}
 	
@@ -97,6 +106,57 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					Log.i("INFORMATION", "onUpgrade()");
 			}
 	
+			
+			//ADD LOGGED IN USER INFORMATION
+			public boolean addRememberMe(String user, String pass)
+			{
+				
+				boolean success = false;
+				
+				//PUT VALUES IN THE DB
+				this.db.beginTransaction();
+				try
+				{
+					
+					// |_ PKUserLoggedIn _|_ User _|_ Password _| //
+					String query = "INSERT INTO " + tbREMEMBERME + " (User, Password) VALUES ('"+ user +"', '"+ pass +"');"; 
+					db.execSQL(query);
+					
+					//CHECK IF THE LINE IS INDEED IN THE DB AFTER THE INSERT - IF YOU CAN SELECT IT ITS THERE, OTHERWISE IT FAILED
+					Cursor result;
+					String check = "SELECT * FROM " + tbREMEMBERME + " WHERE User = '" + user + "' AND Password = '" + pass + "';";
+					result = db.rawQuery(check, null);
+					
+					if(result.moveToFirst())
+					{
+						success = true;
+					}
+					else
+					{
+						success = false;
+					}	
+					result.close();
+					
+					db.setTransactionSuccessful();		
+				}
+				finally
+				{
+					db.endTransaction();
+				}
+				
+				if(success == true)
+				{
+					Log.i("INFORMATION", "Sent and in database!");
+					return true;
+				}
+				else
+				{
+					Log.i("INFORMATION", "Sent failed to save!");
+					return false;
+				}
+				
+			}
+			
 			//ADD MESSAGE PACKET TO MESSAGES TABLE
 			public boolean addToMessages(Packet packet) // To | Message | MessageNum | Sent/Received
 			{

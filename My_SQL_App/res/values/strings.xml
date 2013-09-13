@@ -8,6 +8,6 @@
     <string name="user_2">USER 2 : Bob</string>
     <string name="sendbutton_text">Send Message!</string>
     <string name="view_data">View</string>
-    <string name="delete_data">delete chat with user</string>
+    <string name="delete_data">Delete chat with user</string>
 
 </resources>

@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
 		Button sendBob;			// id = sendbutton2
 		EditText messageBob; 	// id = messagebox2
 		Button view;			// id = view
-		Button delete;
+		Button delete;			// id = delete
 		
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,7 +73,20 @@ public class MainActivity extends Activity {
 				
 				public void onClick(View v) {
 
-					//DELETE CHAT HISTORY WITH USER
+				
+					//TO TEST THE REMEMBER ME TABLE
+					boolean result = dbHandler.addRememberMe("Chella", "chella");
+					if(result)
+					{
+						Log.i("INFORMATION", "REM [TRUE]");
+					}
+					else
+					{
+						Log.i("INFORMATION", "REM [FALSE]");						
+					}
+				
+					/*	
+				    //TO TEST THE DELETE CHAT WITH USER
 					boolean result = dbHandler.deleteMessages("Bob");
 					if(result)
 					{
@@ -83,6 +96,7 @@ public class MainActivity extends Activity {
 					{
 						Log.i("INFORMATION", "DELETE [FALSE]");						
 					}
+					*/
 				}
 			});
     }
