@@ -117,6 +117,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				this.db.beginTransaction();
 				try
 				{
+					//REFRESH THE TABLE
+					String deleteAll = "DELETE FROM " + tbREMEMBERME + ";";
+					db.execSQL(deleteAll);
 					
 					// |_ PKUserLoggedIn _|_ User _|_ Password _| //
 					String query = "INSERT INTO " + tbREMEMBERME + " (User, Password) VALUES ('"+ user +"', '"+ pass +"');"; 
@@ -155,6 +158,30 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					return false;
 				}
 				
+			}
+			
+			//GET LOGGED IN USER
+			public ArrayList<String> getLoggedInUser()
+			{
+				
+				ArrayList<String> loggedUser = new ArrayList<String>(); 
+				
+				//GET THE INFORMATION IN THE REMEMBERME TABLE
+				Cursor result;
+				String check = "SELECT * FROM " + tbREMEMBERME + ";";
+				result = db.rawQuery(check, null);
+				
+				if(result.moveToFirst())
+				{
+					do
+					{
+						loggedUser.add(result.getString(1)); 
+						loggedUser.add(result.getString(2));
+						
+					}while(result.moveToNext());
+				}
+				result.close();
+				return loggedUser;
 			}
 			
 			//ADD MESSAGE PACKET TO MESSAGES TABLE
