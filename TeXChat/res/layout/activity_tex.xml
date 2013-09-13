@@ -39,4 +39,13 @@
         android:layout_alignParentLeft="true"
         android:text="View" />
 
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="OK" />
+
 </RelativeLayout>

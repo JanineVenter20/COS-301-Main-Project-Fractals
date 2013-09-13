@@ -3,15 +3,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-  	<TextView
-  	    android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:id = "@+id/fromBox" >
-  	</TextView>
-  	<TextView
-  	    android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:id = "@+id/bodyBox" >
-  	</TextView>
+  	<ListView 
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="fill_parent"
+  	    ></ListView>
 
 </LinearLayout>
