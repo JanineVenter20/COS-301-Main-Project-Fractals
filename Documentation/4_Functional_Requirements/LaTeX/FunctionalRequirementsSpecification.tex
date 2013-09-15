@@ -21,28 +21,41 @@
 \begin{document}
 \section{\textbf{Change History:}}
 \begin{tabbing}
-\\\textbf{Date:} ~~~~~~~~~~~~~~~~~\= \textbf{Version Update:}~~~~~~~~~~~~~~~~\= \textbf{Description:}\\
-2013/08/22\> 1.0 \> Document created.\\
-2013/08/24 \> 1.1 \> Technical Requirements added\\
-2013/08/24 \> 1.2 \> Non-Functional Requirements added\\
-2013/08/24 \> 1.3 \> Technical Specification added\\
-2013/08/24 \> 1.4 \> System Features added\\
-2013/08/24 \> 1.5 \> Use Cases added\\
-2013/08/24 \> 1.6 \> Entity Relationship Diagrams added.  \\
-2013/08/24 \> 1.7 \> Introduction added  \\
-2013/08/24 \> 1.8 \> Purpose added  \\
-2013/08/24 \> 1.9 \> Project Scope added  \\
-2013/08/24 \> 2.0 \> References added  \\
-2013/08/24 \> 2.1 \> System Description added  \\
-2013/08/24 \> 2.2 \> External Interface Requirements added  \\
-2013/08/24 \> 2.3 \> Open Issues added  \\
-2013/08/24 \> 2.4 \> Glossary added  \\
-2013/08/24 \> 2.5 \> Use Cases updated  \\
-2013/08/24 \> 2.6 \> Functional Requirements updated  \\
-2013/08/24 \> 2.7 \> Technical Requirements updated  \\
-2013/08/24 \> 2.8 \> Open Issues updated  \\
-2013/08/24 \> 2.9 \> Class Diagram added  \\
-2013/08/24 \> 3.0 \> Glossary updated  \\
+\\\textbf{Date:} ~~~~~~~~~~~~~~~~~\= \textbf{Version Update:}~~~~~~~~\= \textbf{Member:}~~~~~~~~~~~~~\= \textbf{Description:}\\
+2013/08/22\> 1.0 \> fractals \> Document created.\\
+2013/08/24 \> 1.1 \> fractals \>  Technical Requirements added\\
+2013/08/24 \> 1.2 \> fractals \> Non-Functional Requirements added\\
+2013/08/24 \> 1.3 \> fractals \>  Technical Specification added\\
+2013/08/24 \> 1.4 \> fractals \> System Features added\\
+2013/08/24 \> 1.5 \> fractals \> Use Cases added\\
+2013/08/24 \> 1.6 \> fractals \> Entity Relationship Diagrams added.  \\
+2013/08/24 \> 1.7 \> fractals \> Introduction added  \\
+2013/08/24 \> 1.8 \> fractals \> Purpose added  \\
+2013/08/24 \> 1.9 \> fractals \> Project Scope added  \\
+2013/08/24 \> 2.0 \> fractals \> References added  \\
+2013/08/24 \> 2.1 \> fractals \> System Description added  \\
+2013/08/24 \> 2.2 \> fractals \> External Interface Requirements added  \\
+2013/08/24 \> 2.3 \> fractals \> Open Issues added  \\
+2013/08/24 \> 2.4 \> fractals \> Glossary added  \\
+2013/08/24 \> 2.5 \> fractals \> Use Cases updated  \\
+2013/08/24 \> 2.6 \> fractals \> Functional Requirements updated  \\
+2013/08/24 \> 2.7 \> fractals \> Technical Requirements updated  \\
+2013/08/24 \> 2.8 \> fractals \> Open Issues updated  \\
+2013/08/24 \> 2.9 \> fractals \> Class Diagram added  \\
+2013/08/24 \> 3.0 \> fractals \> Glossary updated  \\
+2013/09/14 \> 2.9 \> Janine Venter \> Functional Features updated\\
+2013/09/15 \> 3.0 \>  Janine Venter \> Technical Specification updated\\
+2013/09/15 \> 3.1 \> Janine Venter \> Project Scope updated\\
+2013/09/15 \> 3.2 \>  Janine Venter \> System Description updated\\
+2013/09/15 \> 3.3\> Janine Venter \> Support for Latex and Mimetex libraries updated\\
+2013/09/15 \> 3.4 \> Janine Venter \> Messaging updated\\
+2013/09/15 \> 3.5 \>  Janine Venter \> Open Issues updated\\
+2013/09/15 \> 3.6 \> Janine Venter \> Authorization updated\\
+2013/09/15 \> 3.7 \> Janine Venter \> Scalability updated\\
+2013/09/15 \> 3.8 \> Michelle Peens \> Entity Relationship Diagram updated\\
+2013/09/15 \> 3.9 \> Janine Venter \> Use Cases updated\\
+2013/09/15 \> 4.0 \> Janine Venter \> Use case added for MimeTeX\\
+
 \end{tabbing}
 
 
@@ -90,9 +103,8 @@
 		%Section
 		
 		\noindent \textbf{1.3 Project Scope}
-			\\The aim of the project is to develop an open source android XMPP chat client which supports the embedded LaTeX base equations which are rendered as images. LaTeX based equations will be rendered on the handset to produce mathematical equations. Our system will also provide the ability to edit and correct equations before sending.
-			
-			\parindent 5mm The application will provide a similar functionality to yaxim. Exchange of images and mathematical expressions will be possible through our software solution. The TeXchat application will have the ability to show a preview of the entered text and also export conversations accompanied by their mathematical expressions into a LaTeX file.
+			\\The aim of the project is to develop an open source android XMPP chat client which supports the embedded LaTeX base equations which are rendered as images. LaTeX based equations will be rendered on the handset to produce mathematical equations. Our system will also provide the ability to view, edit and correct equations before sending.
+			\parindent 5mm The application will provide a similar functionality to yaxim. Exchange of images and mathematical expressions will be possible through our software solution. The TeXchat application will have the ability to show a preview of the entered text send the equation as LaTeX code and then render it on the receiving end on the client handset.
 			
 		\vspace{5mm}
 		
@@ -108,14 +120,16 @@
 \newpage
 	\section*{\textbf{2. System Description}}
 	\vspace{4mm}
-		\noindent The goal of the application is to provide a chat service that will allow the users to exchange message and also to send mathematical equations in a rendered format. The application is intended to provide a better and more usable mobile version of LaTeX chat applications.\\ 
+		\noindent The goal of our software application is to provide a chat service that will allow users to exchange messages and also to send mathematical equations in a rendered image format.  The application is intended to provide a service to users that require the ability and support for a chat client that allows them to communicate more efficiently and effortlessly in a scientific, and mathematical context.  It will provide a more usable mobile version of a Latex chat application.\\ 
 		
-		\noindent\textbf{Support for Latex and Mimetex Libraries}
-		\\The final application will have to make use of a Latex based library for the rendering of equations as images on the handheld device. For this reason we have implemented support for a Mimetex library, through the use of the Android NDK (Native Development Kit), which allows us to embed the native C/C++ code of the Mimetext library, in the source code of this release.\\
+		\noindent\textbf{Support for LaTeX and MimeTeX Libraries}
+		\\The final application will have to make use of a Latex based library for the rendering of equations as images on the mobile device. For this reason we have implemented support for the MimeTeX library, through the use of the Android NDK (Native Development Kit), which allows us to embed the native C/C++ code of the MimeTeX library, in the source code of this release. The library is compiled through Eclipse using a special makefile that sets specific compiler flags to indicate that it is in math mode and not text mode.\\
 		
 		
 		\noindent\textbf{Messaging}
-		\\Our final goal is for messaging to be possible between multiple clients, and the support for sending Latex based equations, rendered on the client side and displayed as images on the handheld device. In this release however, our server should support two initial users, and have capabilities for them to send plain text messages and display these in a easy to understand manner.  These messages should be stored statically on the device for later retrieval.  For this purpose a SQLite database was implemented.\\
+		\\Our final goal is for messaging to be possible between multiple clients, and the support for sending Latex based equations, rendered on the client side and displayed as images on the handheld device. In this release however, our server supports two initial users, and have capabilities for them to send plain text messages and display these in a easy to understand manner.  
+		\parindent 5mm The ability to create, render, view and send mathematical equations have been implemented and is currently working. It is now possible to send and receive these equations in image format between the two clients.
+		These messages should be stored statically on the device for later retrieval.  For this purpose a SQLite database was implemented.\\
 		
 		\noindent\textbf{Login}
 		\\A user should be authenticated by some type of login component.  This has been implemented during the initial phases of development of this application.  The server that our application uses provides the basic functionality for this authentication component, and uses a username and password based authentication method.
@@ -149,6 +163,15 @@
 				\item Retrieves old messages from the database.
 				\item Retrieves messages that were sent while the client was offline and displays them.
 				\item Retrieves new messages sent by one contact to the other instantly.\\
+			\end{itemize}
+			
+		\noindent \textbf{MimeTeX API}
+			\begin{itemize}
+				\item Allows rendering of mathematical equations.
+				\item Option to preview mathematical equation in image format.
+				\item Renders image on both devices, after it was received and after it was sent.
+				\item This API is used in the Message Sending API.
+				\\
 			\end{itemize}
 	
 	\noindent \left\textbf{3.2 Use Cases}\\
@@ -189,11 +212,12 @@
 			\end{figure*}
 	
 	\\ \noindent \textbf{3.4 Entity Relationship Diagram}
-	\\The system makes use of one SQLite database on the client side.  This database contains one table, namely Messages, that is used to record message histories for a particular client.  This release does not include any database cleanup components, and these may expected from later phases of development.\\ \\
+	\\The system makes use of one SQLite database on the client side.  This database contains one table, namely Messages, that is used to record message histories for a particular client.  This release does not include any database cleanup components, and these may expected from later phases of development.
+	\\ \\
 	
 	\begin{figure*}
 		\centering
-		\\ \includegraphics[width=3.0in, height=3.0in]{./erd.png}
+		\\ \includegraphics[width=4.5in, height=2.0in]{./erd.png}
 		\\\caption{[Figure 6] ERD}\\
 	\end{figure*}
 	
@@ -218,10 +242,10 @@
 			As soon as the user’s credentials has been authenticated he/she is logged into the application.\\
 			
 		\noindent \textbf{Authirozation}\\
-		At this point there is no authorization yet.
+		The authorization is in progress and will be completed by the next iteration.
 		
 		\noindent \textbf{Scalability}\\
-		At this point in time the system is developed to handle only 2 users at a time. It will later be scaled upwards to handle a larger amount of concurrent users.\\
+		At this point in time the system is developed to handle only 2 users at a time. It will later be scaled upwards to handle a larger amount of concurrent users. A solution to the scalability is by using an online server that will handle more than two clients concurrently\\
 		
 		
 		\noindent \textbf{Audit-ability}\\
@@ -232,7 +256,7 @@
 		\begin{itemize}
 			\item Android
 		\end{itemize}
-		Will use both Java and C. C will be used as native code.
+		Will use both Java and C/C++. C/C++ will be used as native code.
 		Is developed to communicate with a local server
 		The database is handled with SQLite.\\
 		
@@ -240,10 +264,8 @@
 	\section*{\textbf{6. Open Issues}}
 	\vspace{4mm}
 		\begin{itemize}
-			\item Understanding the MimeTeX library.
-			\item Understanding how to render the LaTeX code using the MimeTeX library.
-			\item Rendering the image inline (with the normal message text before it).
-			
+			\item Online server functionality
+			\item Visual elements and styling
 		\end{itemize}
 	\vspace{5mm}
 
