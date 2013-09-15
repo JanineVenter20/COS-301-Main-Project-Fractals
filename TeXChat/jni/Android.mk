@@ -7,3 +7,5 @@ LOCAL_SRC_FILES := chatTex.c mimetex.c
 LOCAL_CFLAGS += -DTEXFONTS -lm
 
 include $(BUILD_SHARED_LIBRARY)
+
+	

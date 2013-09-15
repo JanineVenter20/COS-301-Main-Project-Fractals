@@ -1,5 +1,6 @@
 package fractals.texchat;
 
+import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 
 import org.jivesoftware.smack.packet.Message;
@@ -9,16 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class messageAdapter extends BaseAdapter {
 	
+	Mimetex mt = new Mimetex();
 	Context context;
 	ArrayList<Message> messages;
 	LayoutInflater layoutinflater;
-	
-	
+	SplitString splitter = new SplitString();
 	
 	public messageAdapter(Context mcontext, ArrayList<Message> mess) {
 		messages = mess;
@@ -45,25 +47,37 @@ public class messageAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LinearLayout messageView;
 		
-		if (convertView == null) {
-        	messageView = (LinearLayout)layoutinflater.inflate(R.layout.message_view, parent, false);
-        } else {
-           messageView = (LinearLayout) convertView;
-        }
+		messageView = (LinearLayout)layoutinflater.inflate(R.layout.message_view, parent, false);
+       
+		if (messages.get(position).getFrom().contains(MainActivity.username))
+				messageView.setBackgroundResource(R.drawable.blue9patch);
+		else {
+			messageView.setBackgroundResource(R.drawable.green9patch);
+		}
 		
-		TextView from = (TextView) messageView.findViewById(R.id.fromBox);
-		TextView body = (TextView) messageView.findViewById(R.id.bodyBox);
-		String bodyS = "";
+		TextView from = new TextView(context);
+		messageView.addView(from);
+		TextView body = new TextView(context);
+		ImageView bodyI = new ImageView(context);
 		String fromS = messages.get(position).getFrom().toString();
 		if (messages.get(position).getBody() == null || messages.get(position).getBody().equals("")) {
-			 bodyS = "empty";
+			body.setText("Empty");
+			messageView.addView(body);
 		} else {
-			System.out.println(messages.get(position).getBody());
-			bodyS = messages.get(position).getBody();
+			ArrayList<String> s = splitter.split(messages.get(position).getBody());
+			for (String str : s) {
+				if (str.contains("$")) {
+					bodyI.setImageBitmap(mt.getLocalBitmap(str));
+					messageView.addView(bodyI);
+				} else {
+					body.setText(str);
+					messageView.addView(body);
+				}
+			}
+			
 		}
 		
 		from.setText(fromS);
-		body.setText(bodyS);
 		
 		return messageView;
 	}

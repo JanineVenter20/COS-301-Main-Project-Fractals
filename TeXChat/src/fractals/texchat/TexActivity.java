@@ -1,22 +1,21 @@
 package fractals.texchat;
 
-import java.io.ObjectOutputStream.PutField;
-
-import fractals.texchat.R.id;
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import fractals.texchat.R.id;
 
 public class TexActivity extends Activity {
 
 	static Mimetex mimet = new Mimetex();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,6 +26,7 @@ public class TexActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.tex, menu);
+		
 		Button viewb = (Button)findViewById(id.viewButton);
 		Button okButton = (Button)findViewById(id.okButton);
 		viewb.setOnClickListener(viewOnclick);

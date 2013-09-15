@@ -46,6 +46,6 @@
         android:layout_below="@+id/viewButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
-        android:text="OK" />
+        android:text=">>" />
 
 </RelativeLayout>

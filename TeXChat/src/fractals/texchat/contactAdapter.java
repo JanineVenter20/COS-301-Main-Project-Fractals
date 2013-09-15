@@ -3,11 +3,14 @@ package fractals.texchat;
 import java.util.ArrayList;
 
 import org.jivesoftware.smack.RosterEntry;
+import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smack.packet.RosterPacket.ItemStatus;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.graphics.Color;
+import android.graphics.NinePatch;
+import android.graphics.drawable.NinePatchDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -53,18 +56,21 @@ public class contactAdapter extends BaseAdapter {
         }
         TextView contact = (TextView) itemView.findViewById(R.id.contactView);  
         TextView status = (TextView) itemView.findViewById(R.id.statusView);
-               
+        
+        itemView.setBackgroundColor(Color.rgb(182, 230, 240));
+        itemView.setPadding(15, 15, 15, 15);
+        
         String contactS = entries.get(position).getName();
-        ItemStatus statusO = entries.get(position).getStatus();
         final String userS = entries.get(position).getUser();
+        Presence p = MainActivity.roster.getPresence(userS);
         
         String statusS;
         
         if (contactS == null || contactS.equals("")) 
         	contactS = "Anonymous";
-        if (statusO == null)
-        	statusS = "No status...";
-        else statusS = statusO.toString();
+        if (p == null)
+        	statusS = "offline";
+        else statusS = p.toString();
         
         contact.setText(contactS);
         status.setText(statusS);
@@ -73,10 +79,9 @@ public class contactAdapter extends BaseAdapter {
 			
 			@Override
 			public void onClick(View v) {
-				Bundle b = new Bundle();
-				b.putString("contact", userS);
 				Intent chatIntent = new Intent(context, ChatActivity.class);
-				chatIntent.putExtras(b);
+				chatIntent.putExtra("contact", userS);
+				MainActivity.activeChat = MainActivity.cm.createChat(userS, MainActivity.ml);
 				context.startActivity(chatIntent);
 			}
 		});

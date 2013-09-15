@@ -46,6 +46,10 @@
             android:name="fractals.texchat.TexActivity"
             android:label="@string/title_activity_tex" >
         </activity>
+        <activity
+            android:name="fractals.texchat.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
     </application>
 
 </manifest>
