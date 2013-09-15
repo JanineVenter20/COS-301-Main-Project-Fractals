@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.3)  15 SEP 2013 21:12
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.3)  15 SEP 2013 20:50
 entering extended mode
-**FunctionalRequirementsSpecification.tex
+**Test.tex
 
 (C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\4_Functional_Requirements\LaTeX\FunctionalRequireme
-ntsSpecification.tex
+ject\New_Documentation\V1.2\6_Test\LaTeX\Test.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -421,11 +420,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip67
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 21.
+Package hyperref Info: Option `breaklinks' set `true' on input line 22.
 
 
 Package hyperref Warning: Option `pdfpagelabels' has already been used,
-(hyperref)                setting the option has no effect on input line 21.
+(hyperref)                setting the option has no effect on input line 22.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -439,12 +438,12 @@ File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 21.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 22.
 
 ! Undefined control sequence.
 <argument> \@firstname 
                        {}~\@familyname {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -455,7 +454,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname {}~\@familyname 
                                        {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -466,7 +465,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname 
                        {}~\@familyname {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -477,7 +476,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname {}~\@familyname 
                                        {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -488,7 +487,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname 
                        {}~\@familyname {} -- \@title {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -499,7 +498,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname {}~\@familyname 
                                        {} -- \@title {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -510,7 +509,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname 
                        {}~\@familyname {} -- \@title {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -521,7 +520,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname {}~\@familyname 
                                        {} -- \@title {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -532,7 +531,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> Resum\'{e} of \@firstname 
                                      {}~\@familyname {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -543,7 +542,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...'{e} of \@firstname {}~\@familyname 
                                                   {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -554,7 +553,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> Resum\'{e} of \@firstname 
                                      {}~\@familyname {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -565,7 +564,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...'{e} of \@firstname {}~\@familyname 
                                                   {}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -576,7 +575,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname 
                        {}~\@familyname {}, curriculum vit\ae {}, resum\'{e}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -587,7 +586,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname {}~\@familyname 
                                        {}, curriculum vit\ae {}, resum\'{e}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -598,7 +597,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname 
                        {}~\@familyname {}, curriculum vit\ae {}, resum\'{e}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -609,7 +608,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \@firstname {}~\@familyname 
                                        {}, curriculum vit\ae {}, resum\'{e}
-l.21 \begin{document}
+l.22 \begin{document}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -619,26 +618,27 @@ and I'll forget about whatever was undefined.
 
 
 (C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\4_Functional_Requirements\LaTeX\FunctionalRequireme
-ntsSpecification.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Try loading font information for T1+qpl on input line 21.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\tex-gyre\t1qpl.fd"
+ject\New_Documentation\V1.2\6_Test\LaTeX\Test.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Try loading font information for T1+qpl on input line 22.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tex-gyre\t1qpl.fd"
 File: t1qpl.fd 2009/09/25 v1.2 font definition file for T1/qpl
-) ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+)
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
 \scratchdimen=\dimen119
@@ -652,7 +652,7 @@ File: t1qpl.fd 2009/09/25 v1.2 font definition file for T1/qpl
 \makeMPintoPDFobject=\count107
 \everyMPtoPDFconversion=\toks27
 )
-LaTeX Info: Redefining \microtypecontext on input line 21.
+LaTeX Info: Redefining \microtypecontext on input line 22.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -703,7 +703,7 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 22.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -712,16 +712,14 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count108
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
 
 (C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\4_Functional_Requirements\LaTeX\FunctionalRequireme
-ntsSpecification.out)
+ject\New_Documentation\V1.2\6_Test\LaTeX\Test.out)
 (C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\4_Functional_Requirements\LaTeX\FunctionalRequireme
-ntsSpecification.out)
+ject\New_Documentation\V1.2\6_Test\LaTeX\Test.out)
 \@outlinefile=\write3
 \pagenumberwidth=\skip68
 
@@ -734,39 +732,516 @@ File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-mvs.cfg"
 File: mt-mvs.cfg 2006/07/05 v1.1 microtype config. file: Marvosym Euro (RS)
 ) [3]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--133
+Underfull \hbox (badness 10000) in paragraph at lines 102--106
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 112--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 	\begin{figure*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 				\\ \centering
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 				\\
+             \includegraphics[width=6.0in, height=5.0in]{./databasecreate.png}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./databasecreate.png, id=57, 436.63126pt x 332.74312pt>
+File: ./databasecreate.png Graphic file (type png)
+
+<use ./databasecreate.png>
+Package pdftex.def Info: ./databasecreate.png used on input line 120.
+(pdftex.def)             Requested size: 433.61876pt x 361.37286pt.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 				\\
+            \caption{[Figure 1] Database Create Test}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 				\\\caption
+                    {[Figure 1] Database Create Test}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 	\end{figure*}
+                    \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
 
+[5 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
+Project/New_Documentation/V1.2/6_Test/LaTeX/databasecreate.png>]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\data\uni-32.def"
 File: uni-32.def 2012/04/20 UCS: Unicode data U+2000..U+20FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 	\begin{figure*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 				\\
+             \includegraphics[width=6.0in, height=5.0in]{./messagesave.png}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./messagesave.png, id=65, 434.37282pt x 349.305pt>
+File: ./messagesave.png Graphic file (type png)
+ <use ./messagesave.png>
+Package pdftex.def Info: ./messagesave.png used on input line 129.
+(pdftex.def)             Requested size: 433.64267pt x 361.37115pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 				\\\caption
+                    {[Figure 2] Message Save Unit Test}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 	\end{figure*}
+                    \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 	\begin{figure*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.137 				\\
+             \includegraphics[width=6.0in, height=5.0in]{./deletechat.png}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./deletechat.png, id=66, 433.62pt x 348.55219pt>
+File: ./deletechat.png Graphic file (type png)
+ <use ./deletechat.png>
+Package pdftex.def Info: ./deletechat.png used on input line 137.
+(pdftex.def)             Requested size: 433.63878pt x 361.36882pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 				\\\caption
+                    {[Figure 3] Deleting Message Unit Test}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[6 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
+Project/New_Documentation/V1.2/6_Test/LaTeX/messagesave.png>]
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 	\end{figure*}
+                    \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
+
+ []
+
+[7 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
+Project/New_Documentation/V1.2/6_Test/LaTeX/deletechat.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.143 	\begin{figure*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 				\\
+             \includegraphics[width=6.0in, height=5.0in]{./success.png}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./success.png, id=79, 434.37282pt x 306.39468pt>
+File: ./success.png Graphic file (type png)
+ <use ./success.png>
+Package pdftex.def Info: ./success.png used on input line 145.
+(pdftex.def)             Requested size: 433.64267pt x 361.36961pt.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 				\\ \\
+                \caption{[Figure 4] All Tests Successful}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 				\\ \\ \caption
+                        {[Figure 4] All Tests Successful}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.147 	\end{figure*}
+                    \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+
+ []
+
+[8 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
+Project/New_Documentation/V1.2/6_Test/LaTeX/success.png>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 	\textbf
+              {Main Activity Unit Test}\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 	\begin{figure*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.158 					\\ \includegraphics
+                              [width=6.0in, height=3.0in]{./loginUnsucc.png}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./loginUnsucc.png, id=85, 627.09282pt x 289.83281pt>
+File: ./loginUnsucc.png Graphic file (type png)
+ <use ./loginUnsucc.png>
+Package pdftex.def Info: ./loginUnsucc.png used on input line 158.
+(pdftex.def)             Requested size: 433.63225pt x 216.81241pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.159 					\\ \caption
+                      {[Figure 5] Logging in to server, Unsuccessful, gettin...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 	\end{figure*}
+                    \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--161
+
+ []
+
+[9 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
+Project/New_Documentation/V1.2/6_Test/LaTeX/loginUnsucc.png>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 	\\T
+          he diagram below depicts the assertNotNull test which succeeds whe...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 	\begin{figure*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.167 					\\ \includegraphics
+                              [width=6.0in, height=3.0in]{./loginTestsuccess...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./loginTestsuccess.png, id=91, 680.5425pt x 275.52937pt>
+File: ./loginTestsuccess.png Graphic file (type png)
+
+<use ./loginTestsuccess.png>
+Package pdftex.def Info: ./loginTestsuccess.png used on input line 167.
+(pdftex.def)             Requested size: 433.62463pt x 216.81654pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 					\\\caption
+                     {[Figure 6] Logging in to server, Succcessful, get name...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.169 	\end{figure*}
+                    \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--170
 
  []
 
@@ -775,772 +1250,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--175
 
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.177 	\noindent \left
-                      \textbf{3.2 Use Cases}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.177 	\noindent \left\textbf{3.2 Use Cases}
-                                            \\
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.179 		\noindent \left\textbf{Login}
-                                     \\
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-
-! LaTeX Error: Environment figure* undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.180 		\\ \begin{figure*}
-                          
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.182 					\\
-              \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.182 					\\
-              \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.182 					\\
-              \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.182 					\\
-              \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.182 					\\
-              \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<./loginCase.png, id=65, 520.19344pt x 100.12407pt>
-File: ./loginCase.png Graphic file (type png)
- <use ./loginCase.png>
-Package pdftex.def Info: ./loginCase.png used on input line 182.
-(pdftex.def)             Requested size: 433.61781pt x 86.72833pt.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.183 					\\\caption
-                     {[Figure 1] Login Use Case}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{document} ended by \end{figure*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.184 			\end{figure*}
-                      \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.184 			\end{figure*}
-                      \\
-Things are pretty mixed up, but I think the worst is over.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-
- []
-
-[5 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/4_Functional_Requirements/LaTeX/loginCase.png>]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.186 		\noindent \left
-                       \textbf{View Contact List}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.186 		\noindent \left\textbf{View Contact List}
-                                                 \\
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-
-! LaTeX Error: Environment figure* undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.187 		\begin{figure*}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.189 					\\
-              \includegraphics[width=6.0in, height=2.5in]{./viewContactsCase...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.189 					\\
-              \includegraphics[width=6.0in, height=2.5in]{./viewContactsCase...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.189 					\\
-              \includegraphics[width=6.0in, height=2.5in]{./viewContactsCase...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.189 					\\
-              \includegraphics[width=6.0in, height=2.5in]{./viewContactsCase...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<./viewContactsCase.png, id=71, 464.4853pt x 207.02344pt>
-File: ./viewContactsCase.png Graphic file (type png)
-
-<use ./viewContactsCase.png>
-Package pdftex.def Info: ./viewContactsCase.png used on input line 189.
-(pdftex.def)             Requested size: 433.63243pt x 180.68068pt.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.190 					\\\caption
-                     {[Figure 2] View Contact List Use Case} \\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{document} ended by \end{figure*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.191 		\end{figure*}
-                     \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.191 		\end{figure*}
-                     \\
-Things are pretty mixed up, but I think the worst is over.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--192
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--192
-
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.193 		\noindent \left
-                       \textbf{Messaging}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.193 		\noindent \left\textbf{Messaging}
-                                         \\
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-
-! LaTeX Error: Environment figure* undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.194 		\begin{figure*}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.196 			\\
-            \includegraphics[width=6.0in, height=3.5in]{./messagingUseCase.jpg}
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.196 			\\
-            \includegraphics[width=6.0in, height=3.5in]{./messagingUseCase.jpg}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.196 			\\
-            \includegraphics[width=6.0in, height=3.5in]{./messagingUseCase.jpg}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.196 			\\
-            \includegraphics[width=6.0in, height=3.5in]{./messagingUseCase.jpg}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<./messagingUseCase.jpg, id=72, 613.54219pt x 331.99031pt>
-File: ./messagingUseCase.jpg Graphic file (type jpg)
-
-<use ./messagingUseCase.jpg>
-Package pdftex.def Info: ./messagingUseCase.jpg used on input line 196.
-(pdftex.def)             Requested size: 433.62392pt x 252.94847pt.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.197 			\\\caption
-                   {[Figure 3] Messaging Use Case}\\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{document} ended by \end{figure*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.198 		\end{figure*}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.198 		\end{figure*}
-                     
-Things are pretty mixed up, but I think the worst is over.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--199
-
- []
-
-[6 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/4_Functional_Requirements/LaTeX/viewContactsCase
-.png> <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Fin
-al_Project/New_Documentation/V1.2/4_Functional_Requirements/LaTeX/messagingUseC
-ase.jpg>]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.200 		\noindent \left
-                       \textbf{Exit}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.200 		\noindent \left\textbf{Exit}
-                                    \\
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-
-! LaTeX Error: Environment figure* undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.201 		\begin{figure*}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.203 			\\
-            \includegraphics[width=6.0in, height=1.5in]{./exitCase.png}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.203 			\\
-            \includegraphics[width=6.0in, height=1.5in]{./exitCase.png}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.203 			\\
-            \includegraphics[width=6.0in, height=1.5in]{./exitCase.png}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.203 			\\
-            \includegraphics[width=6.0in, height=1.5in]{./exitCase.png}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<./exitCase.png, id=78, 371.13657pt x 110.66344pt>
-File: ./exitCase.png Graphic file (type png)
- <use ./exitCase.png>
-Package pdftex.def Info: ./exitCase.png used on input line 203.
-(pdftex.def)             Requested size: 433.62773pt x 108.41057pt.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.204 			\\\caption
-                   {[Figure 4] Exit Use Case}\\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{document} ended by \end{figure*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.205 		\end{figure*}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.205 		\end{figure*}
-                     
-Things are pretty mixed up, but I think the worst is over.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--206
-
- []
-
-[7 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/4_Functional_Requirements/LaTeX/exitCase.png>]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.208 		\noindent \left
-                       \textbf{MimeTeX}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.208 		\noindent \left\textbf{MimeTeX}
-                                       \\
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-
-! LaTeX Error: Environment figure* undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 		\begin{figure*}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.211 			\\
-            \includegraphics[width=6.0in, height=3.0in]{./MimeTeXUseCase.png}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.211 			\\
-            \includegraphics[width=6.0in, height=3.0in]{./MimeTeXUseCase.png}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.211 			\\
-            \includegraphics[width=6.0in, height=3.0in]{./MimeTeXUseCase.png}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.211 			\\
-            \includegraphics[width=6.0in, height=3.0in]{./MimeTeXUseCase.png}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<./MimeTeXUseCase.png, id=85, 554.82281pt x 356.83313pt>
-File: ./MimeTeXUseCase.png Graphic file (type png)
-
-<use ./MimeTeXUseCase.png>
-Package pdftex.def Info: ./MimeTeXUseCase.png used on input line 211.
-(pdftex.def)             Requested size: 433.62358pt x 216.8076pt.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.212 			\\\caption
-                   {[Figure 4] MimeTeX Use Case}\\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{document} ended by \end{figure*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.213 		\end{figure*}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.213 		\end{figure*}
-                     
-Things are pretty mixed up, but I think the worst is over.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
-
- []
-
-[8 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/4_Functional_Requirements/LaTeX/MimeTeXUseCase.p
-ng>]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.216 	\noindent \\ \left
-                         \textbf{3.3 Class Diagram}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.216 ...indent \\ \left\textbf{3.3 Class Diagram}
-                                                  \\
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-
-! LaTeX Error: Environment figure* undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.217 			\begin{figure*}
-                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.219 				\\
-             \includegraphics[width=7.0in, height=8.5in]{./Class_Diagram.jpg}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.219 				\\
-             \includegraphics[width=7.0in, height=8.5in]{./Class_Diagram.jpg}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.219 				\\
-             \includegraphics[width=7.0in, height=8.5in]{./Class_Diagram.jpg}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.219 				\\
-             \includegraphics[width=7.0in, height=8.5in]{./Class_Diagram.jpg}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<./Class_Diagram.jpg, id=91, 934.99312pt x 746.79pt>
-File: ./Class_Diagram.jpg Graphic file (type jpg)
- <use ./Class_Diagram.jpg>
-Package pdftex.def Info: ./Class_Diagram.jpg used on input line 219.
-(pdftex.def)             Requested size: 505.9017pt x 614.32031pt.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.220 				\\\caption
-                    {[Figure 5] Class Diagram}\\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{document} ended by \end{figure*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.221 			\end{figure*}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.221 			\end{figure*}
-                      
-Things are pretty mixed up, but I think the worst is over.
-
-
-Overfull \hbox (42.11995pt too wide) in paragraph at lines 219--222
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--222
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
@@ -1551,164 +1267,45 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.223 	\\ \noindent
-                    \textbf{3.4 Entity Relationship Diagram}
+l.183 
+      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--226
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--226
-
- []
-
-[9 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/4_Functional_Requirements/LaTeX/Class_Diagram.jp
-g>]
-
-! LaTeX Error: Environment figure* undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.227 	\begin{figure*}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.229 		\\
-           \includegraphics[width=4.5in, height=2.0in]{./erd.png}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<./erd.png, id=97, 297.36093pt x 137.7647pt>
-File: ./erd.png Graphic file (type png)
- <use ./erd.png>
-Package pdftex.def Info: ./erd.png used on input line 229.
-(pdftex.def)             Requested size: 325.22864pt x 144.55417pt.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.230 		\\\caption
-                  {[Figure 6] ERD}\\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{document} ended by \end{figure*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 	\end{figure*}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
 
 Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 10/[]14[] 
+[]|\T1/qpl/m/it/10 (-20) 10/[]10[] 
  []
 
 [10 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final
-_Project/New_Documentation/V1.2/4_Functional_Requirements/LaTeX/erd.png>]
-Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 11/[]14[] 
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--252
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--262
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 268--271
-
- []
-
-
-Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 12/[]14[] 
- []
-
-[12]
-Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 13/[]14[] 
- []
-
-[13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
-
-Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 14/[]14[] 
- []
-
-[14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
+_Project/New_Documentation/V1.2/6_Test/LaTeX/loginTestsuccess.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
 
 (C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\4_Functional_Requirements\LaTeX\FunctionalRequireme
-ntsSpecification.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 300.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
-Package rerunfilecheck Info: File `FunctionalRequirementsSpecification.out' has
- not changed.
-(rerunfilecheck)             Checksum: 610174CDA92329992EBF2ABB82FBB0D4;520.
+ject\New_Documentation\V1.2\6_Test\LaTeX\Test.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 190.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
+Package rerunfilecheck Info: File `Test.out' has not changed.
+(rerunfilecheck)             Checksum: 1AC96BBE8BF38C594C34E355D5ECBAC1;364.
  ) 
 Here is how much of TeX's memory you used:
- 9742 strings out of 494045
- 146778 string characters out of 3148385
- 276234 words of memory out of 3000000
- 12781 multiletter control sequences out of 15000+200000
- 44941 words of font info for 58 fonts, out of 3000000 for 9000
+ 9736 strings out of 494045
+ 146034 string characters out of 3148385
+ 275203 words of memory out of 3000000
+ 12775 multiletter control sequences out of 15000+200000
+ 45473 words of font info for 62 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 44i,12n,67p,801b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,13n,67p,770b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc}<C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/marvosym/marvosym.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/tex-gyre/qplb.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/tex-gyre/qplr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/t
 ex-gyre/qplri.pfb>
-Output written on FunctionalRequirementsSpecification.pdf (14 pages, 472040 byt
-es).
+Output written on Test.pdf (10 pages, 199631 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 11372 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 118 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 11351 words of extra memory for PDF output out of 12000 (max. 10000000)
 
