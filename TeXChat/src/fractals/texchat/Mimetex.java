@@ -52,12 +52,13 @@ public class Mimetex {
 	public Bitmap getLocalBitmap(String exp) {
 		int[] j = mime(exp);
 		Bitmap bmp = Bitmap.createBitmap(j[0], j[1], Bitmap.Config.ARGB_8888);
-		
 		for(int i =0; i < j[1]; i++)
 		{
 			for(int k = 0; k < j[0]; k++)
 			{
-			  bmp.setPixel(k, i, Color.argb(255, j[(i)*j[0] + k +2 ], j[(i)*j[0] + k +2], j[(i)*j[0] + k +2]));
+				if ((j[(i)*j[0] + k +2]) == 0)
+					bmp.setPixel(k, i, Color.argb(255, j[(i)*j[0] + k +2], j[(i)*j[0] + k +2], j[(i)*j[0] + k +2]));
+				else bmp.setPixel(k, i, Color.argb(0, j[(i)*j[0] + k +2], j[(i)*j[0] + k +2], j[(i)*j[0] + k +2]));
 			  //returnMe += j[(i)*j[0] + k +2 ] + " " + j[(i)*j[0] + k +2] + " " + j[(i)*j[0] + k +2] + " ";
 			}
 		}

@@ -39,6 +39,8 @@ public class MainActivity extends Activity {
 	static String service = "fractals.texchat";
 	static int port = 5222;
 	
+	public static String me = "You", // local alias saved in pref..
+			them;
 	
 	public static ConnectionConfiguration ccf;
 	public static XMPPConnection conn;

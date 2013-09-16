@@ -35,6 +35,7 @@ public class ChatActivity extends Activity {
         Bundle extras = this.getIntent().getExtras();
         
         contact = extras.getString("contact");
+     	MainActivity.them = extras.getString("name");
         ArrayList<MessageDetail> messagesGotFromDB = MainActivity.dbHandler.selectMessages(contact, 10);
         Message mess;
         for (int i = messagesGotFromDB.size()-1; i >= 0 ; i--) {
@@ -47,6 +48,7 @@ public class ChatActivity extends Activity {
         	}
         	MainActivity.messages.add(mess);
         }
+        
         
        
         messageLV = (ListView) findViewById(R.id.messageView);

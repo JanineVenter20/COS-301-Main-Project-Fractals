@@ -67,10 +67,12 @@ public class contactAdapter extends BaseAdapter {
         String statusS;
         
         if (contactS == null || contactS.equals("")) 
-        	contactS = "Anonymous";
+        	contactS = userS;
         if (p == null)
         	statusS = "offline";
         else statusS = p.toString();
+        
+        final String namae = contactS;
         
         contact.setText(contactS);
         status.setText(statusS);
@@ -80,6 +82,7 @@ public class contactAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View v) {
 				Intent chatIntent = new Intent(context, ChatActivity.class);
+				chatIntent.putExtra("name", namae);
 				chatIntent.putExtra("contact", userS);
 				MainActivity.activeChat = MainActivity.cm.createChat(userS, MainActivity.ml);
 				context.startActivity(chatIntent);
