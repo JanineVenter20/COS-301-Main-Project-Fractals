@@ -252,8 +252,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				ArrayList<MessageDetail> messages = new ArrayList<MessageDetail>();
 			
 				Cursor c;
-				String query = "SELECT * FROM " + tbMESSAGES + " WHERE User like '" + u + "%' ORDER BY messageStamp DESC LIMIT 10;" ;
-				//String query = "SELECT * FROM " + tbMESSAGES + ";" ;
+				String query = "SELECT * FROM " + tbMESSAGES + " WHERE User like '" + u + "%' ORDER BY messageStamp DESC LIMIT '"+limit +"';" ;
 				this.db.beginTransaction();
 				try
 				{

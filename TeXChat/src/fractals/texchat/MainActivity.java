@@ -35,11 +35,11 @@ public class MainActivity extends Activity {
 	
 	public static String username = "";
 	public static String password = "";
-	static String hostName = "192.168.137.1";
+	static String hostName = "41.15.245.99";
 	static String service = "fractals.texchat";
 	static int port = 5222;
 	
-	public static String me = "You", // local alias saved in pref..
+	public static String me = "You", // local alias going to be saved in pref..
 			them;
 	
 	public static ConnectionConfiguration ccf;
@@ -68,6 +68,9 @@ public class MainActivity extends Activity {
 		@Override
 			protected String doInBackground(String... params) {
 				if (!conn.isConnected()) login();
+				else {
+					Toast.makeText(context, "Could not connect", Toast.LENGTH_LONG).show();
+				}
 				return null;
 		}
 		
@@ -141,16 +144,25 @@ public class MainActivity extends Activity {
 			@Override
 			public void processMessage(Chat chat, Message mess) {
 				if (mess.getBody() == null) return;
-				messages.add(mess);			
+				//messages.add(mess);			
 				String s = mess.getBody().replace("'", "''");
-				System.out.println(chat.getParticipant());
-				dbHandler.addToMessages(new Packet(chat.getParticipant(),s, false));
-				c.runOnUiThread(new Runnable() {
-					@Override
-					public void run() {
-						mad.notifyDataSetChanged();
-					}
-				});
+				boolean known = false;
+				for (RosterEntry entry : roster.getEntries())
+					if(chat.getParticipant().contains(entry.getUser()))
+						known = true;
+				if (known) {
+					System.out.println(chat.getParticipant());
+					System.out.println(mess.toXML());
+					dbHandler.addToMessages(new Packet(chat.getParticipant(),s, false));
+					c.runOnUiThread(new Runnable() {
+						@Override
+						public void run() {
+							mad.notifyDataSetChanged();
+						}
+					});
+				} else {
+					System.out.println("Someone wants to talk to you");
+				}
 			}
 		};
 	}
@@ -204,7 +216,7 @@ public class MainActivity extends Activity {
 			conn.login(username, password );
 			
 		} catch (XMPPException e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
         done = true;
     }
@@ -220,7 +232,7 @@ public class MainActivity extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (resultCode == 1) {
 			new LoginTask().execute("useless text");
-			Toast.makeText(context, "presence set to \"online\"", Toast.LENGTH_SHORT).show();
+			//Toast.makeText(context, "presence set to \"online\"", Toast.LENGTH_SHORT).show();
 			while(!done) {}
 				getNames();
 		}

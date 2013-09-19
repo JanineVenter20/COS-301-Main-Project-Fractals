@@ -15,5 +15,6 @@
     <string name="cancel">Cancel</string>
     <string name="menu_settings">settings</string>
     <string name="title_activity_tex">TexActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
 
 </resources>

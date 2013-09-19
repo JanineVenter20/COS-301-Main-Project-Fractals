@@ -9,8 +9,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import fractals.texchat.R.id;
+import android.content.Context;
+import android.content.Intent;
 
 public class LoginPage extends Activity {
+	
+	Context c = this;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -19,8 +23,11 @@ public class LoginPage extends Activity {
         
         Button Login = (Button)findViewById(id.loginButton);
         Button Cancel = (Button)findViewById(id.cancelButton);
+        Button Register = (Button)findViewById(id.register_button);
         Login.setOnClickListener(ocl);
         Cancel.setOnClickListener(ocl2);
+        Register.setOnClickListener(ocl3);
+        
     }
     
     OnClickListener ocl = new OnClickListener() {
@@ -40,9 +47,21 @@ OnClickListener ocl2 = new OnClickListener() {
 		
 		public void onClick(View v) {
 			setResult(0);
-			 finish();
+			finish();
 		}
 	};
+	
+
+OnClickListener ocl3 = new OnClickListener() {
+	
+	public void onClick(View v) {
+		
+		System.out.println("helloooo whooohhoooo");
+		Intent intent = new Intent(c, RegisterActivity.class);
+		startActivity(intent);
+		
+	}
+};
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
