@@ -90,7 +90,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					String createRememberMeTable = "CREATE TABLE " + tbREMEMBERME + "(" +
 							"PKUserLoggedIn INTEGER PRIMARY KEY, " +
 							"User TEXT, " +
-							"Password TEXT);";
+							"Password TEXT, " +
+							"Remembered BOOLEAN);";
 					
 					db.execSQL(createRememberMeTable);					
 					
@@ -109,8 +110,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			}
 	
 			
+			public boolean clearRememberMe()
+			{
+				//REFRESH THE TABLE
+				String deleteAll = "DELETE FROM " + tbREMEMBERME + ";";
+				db.execSQL(deleteAll);
+				return true;
+			}
+			
 			//ADD LOGGED IN USER INFORMATION
-			public boolean addRememberMe(String user, String pass)
+			public boolean addRememberMe(String user, String pass, boolean remember)
 			{
 				
 				boolean success = false;
@@ -119,13 +128,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				this.db.beginTransaction();
 				try
 				{
-					//REFRESH THE TABLE
-					String deleteAll = "DELETE FROM " + tbREMEMBERME + ";";
-					db.execSQL(deleteAll);
+					boolean clear = clearRememberMe();
+					if(clear)
+					{
+						System.out.println("Table cleared");
+					}
 					
-					// |_ PKUserLoggedIn _|_ User _|_ Password _| //
-					
-					String query = "INSERT INTO " + tbREMEMBERME + " (User, Password) VALUES ('"+ user +"', '"+ pass +"');"; 
+					// |_ PKUserLoggedIn _|_ User _|_ Password _|_ Remembered _|//
+					String query = "INSERT INTO " + tbREMEMBERME + " (User, Password, Remembered) VALUES ('"+ user +"', '"+ pass +"', '"+remember+"');"; 
 					db.execSQL(query);
 					
 					//CHECK IF THE LINE IS INDEED IN THE DB AFTER THE INSERT - IF YOU CAN SELECT IT ITS THERE, OTHERWISE IT FAILED
@@ -152,7 +162,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				
 				if(success == true)
 				{
-					Log.i("INFORMATION", "Sent and in database!");
+					Log.i("INFORMATION", "Sent and in the rememberme table!");
 					return true;
 				}
 				else
@@ -178,8 +188,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				{
 					do
 					{
-						loggedUser.add(result.getString(1)); 
-						loggedUser.add(result.getString(2));
+						loggedUser.add(result.getString(1)); //	user
+						loggedUser.add(result.getString(2)); //	password
+						loggedUser.add(result.getString(3)); //	remembered
 						
 					}while(result.moveToNext());
 				}
@@ -226,7 +237,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					
 					if(success == true)
 					{
-						Log.i("INFORMATION", "Sent and in database!");
+						Log.i("INFORMATION", "Sent and in the messages table!");
 						return true;
 					}
 					else

@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 	
 	public static String username = "";
 	public static String password = "";
-	static String hostName = "41.15.245.99";
+	static String hostName = "41.15.200.34";
 	static String service = "fractals.texchat";
 	static int port = 5222;
 	
@@ -54,7 +54,6 @@ public class MainActivity extends Activity {
 	public static DatabaseHandler dbHandler;
 	public static MessageListener ml;
 		
-	//oorgedra 
 	String contact;
 	public static ArrayList<Message> messages= new ArrayList<Message>();
 	public static messageAdapter mad;
