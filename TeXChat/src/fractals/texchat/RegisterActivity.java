@@ -6,17 +6,17 @@ import java.util.Map;
 import org.jivesoftware.smack.AccountManager;
 import org.jivesoftware.smack.XMPPException;
 
-import fractals.texchat.R.id;
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import fractals.texchat.R.id;
 
 public class RegisterActivity extends Activity {
 
@@ -92,7 +92,10 @@ public class RegisterActivity extends Activity {
     		{
     	        try 
     	        {
-    	        	MainActivity.conn.connect();
+    	        	if (!MainActivity.conn.isConnected());
+    	        		new MainActivity.ConnTask();
+    	        	
+    	        	while (!MainActivity.conn.isConnected()) {}
     	        	
     	        	Map<String, String> attributes = new HashMap<String, String>();
     	        	attributes.put("username", getDisplayName.trim());
@@ -120,6 +123,8 @@ public class RegisterActivity extends Activity {
     		}
     		if(registered)
     		{
+        		finish();
+    			
     			//go to contacts page
         		Intent intent = new Intent(c, MainActivity.class);
         		startActivity(intent);
@@ -128,15 +133,19 @@ public class RegisterActivity extends Activity {
     		{
     			//do nothing
     		}
+    		
     	}
     };
     
     OnClickListener onc2 = new OnClickListener() {
     	public void onClick(View v)
     	{
+    		finish();
+    		
     		//go back to the login page
     		Intent intent = new Intent(c, LoginPage.class);
     		startActivity(intent);
+    
     	}
     };
     

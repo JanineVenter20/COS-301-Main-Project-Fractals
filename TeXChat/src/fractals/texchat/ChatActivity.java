@@ -8,14 +8,15 @@ import org.jivesoftware.smack.packet.Message;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import fractals.texchat.DatabaseHandler.MessageDetail;
 import fractals.texchat.R.id;
@@ -25,6 +26,9 @@ public class ChatActivity extends Activity {
 	String contact;
 	ListView messageLV;
 	Activity c = this;
+    /************************************************************/
+	TextView nc;
+    /************************************************************/
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,19 @@ public class ChatActivity extends Activity {
         contact = extras.getString("contact");
      	MainActivity.them = extras.getString("name");
         ArrayList<MessageDetail> messagesGotFromDB = MainActivity.dbHandler.selectMessages(contact, 10);
+    	
+        /************************************************************/
+        
+        nc = (TextView)findViewById(R.id.no_messages);
+        nc.setVisibility(View.GONE);
+        
+        if(messagesGotFromDB.isEmpty()) {
+        	nc.setVisibility(View.VISIBLE); } 
+        else { 
+        	nc.setVisibility(View.GONE); }
+        
+    	/************************************************************/
+        
         Message mess;
         for (int i = messagesGotFromDB.size()-1; i >= 0 ; i--) {
         	mess = new Message();
@@ -49,13 +66,9 @@ public class ChatActivity extends Activity {
         	MainActivity.messages.add(mess);
         }
         
-        
-       
         messageLV = (ListView) findViewById(R.id.messageView);
         MainActivity.mad = new messageAdapter(this, MainActivity.messages);
         messageLV.setAdapter(MainActivity.mad);
-        
-		//System.out.println(" !!!! "+contact);
         
         final Chat chat = MainActivity.activeChat;
         
@@ -63,6 +76,13 @@ public class ChatActivity extends Activity {
         
         OnClickListener ocl = new OnClickListener() {
 			public void onClick(View v) {
+				
+				/************************************************************/
+				//if its the first message sent take the hidden field away
+				ArrayList<MessageDetail> tmp = MainActivity.dbHandler.selectMessages(contact, 10);
+				if(tmp.isEmpty()){nc.setVisibility(View.GONE);}
+				/************************************************************/
+				
 				try {
 					EditText et = (EditText)findViewById(id.messageInput);
 					Message ms = new Message();
@@ -79,7 +99,6 @@ public class ChatActivity extends Activity {
 				}
 			}
 		};
-		
         
         Button sendButton = (Button)findViewById(R.id.sendButton);
         
@@ -90,19 +109,10 @@ public class ChatActivity extends Activity {
 			public void onClick(View v) {
 				Intent fxIntent = new Intent(c, TexActivity.class);
 				c.startActivityForResult(fxIntent, 1);
-				
 			}
 		});
         sendButton.setOnClickListener(ocl);
-        
     }
-
-    
-    @Override
-	public void onConfigurationChanged(Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-		
-	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,6 +127,34 @@ public class ChatActivity extends Activity {
     		EditText ed = (EditText)findViewById(id.messageInput);
         	ed.append("$"+data.getExtras().getString("expression")+"$");
     	}
+    }
+    
+    @Override
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+    	switch (item.getItemId()) { 
+    	case R.id.action_exit :
+    		finish();
+    		break;
+    	case R.id.action_settings :
+    		startActivity(new Intent(this, SettingsActivity.class));
+    		break;
+    		
+		/************************************************************/
+		case R.id.action_delete_all:
+			//delete all info from the database for a specific user - contact
+			boolean result = MainActivity.dbHandler.deleteMessages(contact);
+			if(result == true) {
+				finish();
+				startActivity(getIntent());			
+			}
+			break;
+	    default:
+			break;
+		/************************************************************/
+			
+    	}
+    	return true;
+    	
     }
 
 

@@ -3,19 +3,18 @@ package fractals.texchat;
 import java.util.ArrayList;
 
 import org.jivesoftware.smack.RosterEntry;
+import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Presence;
-import org.jivesoftware.smack.packet.RosterPacket.ItemStatus;
-
+import org.jivesoftware.smack.packet.Presence.Type;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.NinePatch;
-import android.graphics.drawable.NinePatchDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -47,20 +46,12 @@ public class contactAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		LinearLayout itemView;
-        if (convertView == null) {
-        	itemView = (LinearLayout)layoutInflater.inflate(R.layout.contactlayout, parent, false);
-        } else {
-           itemView = (LinearLayout) convertView;
-        }
-        TextView contact = (TextView) itemView.findViewById(R.id.contactView);  
-        TextView status = (TextView) itemView.findViewById(R.id.statusView);
+	public View getView(final int position, View convertView, ViewGroup parent) {
+		LinearLayout itemView = null;
         
-        itemView.setBackgroundColor(Color.rgb(182, 230, 240));
-        itemView.setPadding(15, 15, 15, 15);
-        
-        String contactS = entries.get(position).getName();
+		itemView = (LinearLayout)layoutInflater.inflate(R.layout.contactlayout, parent, false);
+
+		String contactS = entries.get(position).getName();
         final String userS = entries.get(position).getUser();
         Presence p = MainActivity.roster.getPresence(userS);
         
@@ -73,9 +64,52 @@ public class contactAdapter extends BaseAdapter {
         else statusS = p.toString();
         
         final String namae = contactS;
+        itemView.setBackgroundColor(Color.rgb(182, 230, 240));
+        itemView.setPadding(5, 5, 5, 5);
         
+        if (entries.get(position).getType().toString().equals("none")) {
+        	LinearLayout ll = new LinearLayout(context);
+        	TextView name = new TextView(context);
+        	name.setText(contactS);
+        	itemView.addView(name);
+        	Button b = new Button(context);
+        	b.setText("Accept");
+        	b.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Presence p = new Presence(Type.subscribed);
+					p.setTo(userS);
+					MainActivity.conn.sendPacket(p);
+				}
+			});
+        	ll.addView(b);
+        	Button b2 = new Button(context);
+        	b2.setText("Reject");
+        	b2.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					try {
+						MainActivity.roster.removeEntry(entries.get(position));
+					} catch (XMPPException e) {
+						System.out.println(e.getMessage());
+						e.printStackTrace();
+					}
+				}
+			});
+        	ll.addView(b2);
+        	itemView.addView(ll);
+        	return itemView;
+        } else {
+
+        TextView contact = new TextView(context);
+        TextView status = new TextView(context);
+         
         contact.setText(contactS);
         status.setText(statusS);
+        itemView.addView(contact);
+        itemView.addView(status);
 
         itemView.setOnClickListener(new OnClickListener() {
 			
@@ -88,8 +122,8 @@ public class contactAdapter extends BaseAdapter {
 				context.startActivity(chatIntent);
 			}
 		});
-        
         return itemView;
+        }
 	}
 
 }

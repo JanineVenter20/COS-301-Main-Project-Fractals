@@ -15,8 +15,7 @@ import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Presence;
-import org.jivesoftware.smackx.ChatState;
-import org.jivesoftware.smackx.ChatStateListener;
+import org.jivesoftware.smack.packet.Presence.Type;
 
 import android.app.Activity;
 import android.content.Context;
@@ -28,18 +27,19 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
 	public static String username = "";
 	public static String password = "";
-	static String hostName = "41.15.200.34";
+	static String hostName = "10.177.33.235";
 	static String service = "fractals.texchat";
 	static int port = 5222;
 	
-	public static String me = "You", // local alias going to be saved in pref..
+	public static String me = "You",
 			them;
 	
 	public static ConnectionConfiguration ccf;
@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
 	boolean done = false;
 	public static DatabaseHandler dbHandler;
 	public static MessageListener ml;
-		
+		 
 	String contact;
 	public static ArrayList<Message> messages= new ArrayList<Message>();
 	public static messageAdapter mad;
@@ -61,18 +61,36 @@ public class MainActivity extends Activity {
 	public static contactAdapter cad;
 	
 	public static ChatManager cm;
+	
+	/************************************************************/
+	private static boolean emptyList = false;
+	TextView nc;
+	/************************************************************/
 		
 	class LoginTask extends AsyncTask<String, String, String> {
 		
 		@Override
-			protected String doInBackground(String... params) {
-				if (!conn.isConnected()) login();
-				else {
-					Toast.makeText(context, "Could not connect", Toast.LENGTH_LONG).show();
-				}
-				return null;
+		protected String doInBackground(String... params) {
+			login();
+			return null;
 		}
+	}
+	
+    static class ConnTask extends AsyncTask<String, String, String> {
 		
+		@Override
+		protected String doInBackground(String... params) {
+			if (!conn.isConnected())
+				try {
+					conn.connect();
+				} catch (XMPPException e) {
+					System.out.println(e.getMessage());
+				}
+			else {
+				//Toast.makeText(context, "Could not connect", Toast.LENGTH_LONG).show();
+			}
+			return null;
+		}
 	}
 	
 	@Override
@@ -83,7 +101,11 @@ public class MainActivity extends Activity {
 		if (dbHandler == null)
 			dbHandler = new DatabaseHandler(this);
 		
-		
+		/************************************************************/
+		nc = (TextView)findViewById(R.id.no_contacts_message);
+		nc.setVisibility(View.GONE);
+		/************************************************************/
+
 		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
 		hostName = pref.getString("hostName", "undefined");
 		service = pref.getString("serverName", "undefined");
@@ -95,7 +117,6 @@ public class MainActivity extends Activity {
 			cm = conn.getChatManager();
 			cm.addChatListener(new ChatManagerListener() {
 				public void chatCreated(Chat chat, boolean locally) {
-					System.out.println(chat.getParticipant());
 					if (!locally) {
 						activeChat = cm.createChat(chat.getParticipant(), ml);
 						mad = new messageAdapter(c, messages);
@@ -106,6 +127,8 @@ public class MainActivity extends Activity {
 			});
 		}
 		
+		new ConnTask().execute("some string");
+		
 		contactLV = (ListView)findViewById(R.id.ContactListView);
 	   	cad = new contactAdapter(this, entryList);
 	   	contactLV.setAdapter(cad) ;
@@ -114,19 +137,15 @@ public class MainActivity extends Activity {
 			roster = conn.getRoster();
 			roster.addRosterListener(new RosterListener() {
 				@Override
-				public void presenceChanged(Presence pres) {  
-					getNames();
-				}
+				public void presenceChanged(Presence pres) { getNames(); }
 				@Override
-				public void entriesUpdated(Collection<String> arg0) {  getNames(); }
+				public void entriesUpdated(Collection<String> arg0) { getNames(); }
 				@Override
-				public void entriesDeleted(Collection<String> arg0) {  getNames(); }
+				public void entriesDeleted(Collection<String> arg0) { getNames(); }
 				@Override
 				public void entriesAdded(Collection<String> arg0) { getNames(); }
 			});
 		}
-		
-		//System.out.println(hostName+"\n"+ service+"\n"+port );
 		
 		if (!filledIn()) {
 			startActivityForResult(new Intent(this, LoginPage.class), 1);
@@ -134,41 +153,44 @@ public class MainActivity extends Activity {
 			getNames();
 		}
 		
-		messages = new ArrayList<Message>();
+		messages = null;
 	
-	
-		ml = new ChatStateListener() {
-			@Override
-			public void stateChanged(Chat arg0, ChatState arg1) { }
+		ml = new MessageListener() {
+			
 			@Override
 			public void processMessage(Chat chat, Message mess) {
-				if (mess.getBody() == null) return;
-				//messages.add(mess);			
+				if (mess.getBody() == null) return;	
 				String s = mess.getBody().replace("'", "''");
 				boolean known = false;
 				for (RosterEntry entry : roster.getEntries())
 					if(chat.getParticipant().contains(entry.getUser()))
 						known = true;
+				if (them.equals(activeChat.getParticipant()))
+					messages.add(mess);
 				if (known) {
-					System.out.println(chat.getParticipant());
-					System.out.println(mess.toXML());
 					dbHandler.addToMessages(new Packet(chat.getParticipant(),s, false));
-					c.runOnUiThread(new Runnable() {
-						@Override
-						public void run() {
-							mad.notifyDataSetChanged();
-						}
-					});
 				} else {
-					System.out.println("Someone wants to talk to you");
+					try {
+						roster.createEntry(chat.getParticipant(), chat.getParticipant(), null);
+					} catch (XMPPException e) {
+						e.printStackTrace();
+					}
 				}
+				
+				c.runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						mad.notifyDataSetChanged();
+						System.out.println("notified!");
+					}
+				});
 			}
-		};
+		};	
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
+			getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 	
@@ -176,12 +198,28 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.action_exit:
-			System.exit(0);
+			finish();
 			break;
 		case R.id.action_settings:
 			startActivity(new Intent(this, SettingsActivity.class));
 			break;
-		default:
+		case R.id.add_contact :
+			startActivity(new Intent(this, AddContactActivity.class));
+			break;
+		case R.id.action_login: 
+			startActivity(new Intent(this, LoginPage.class));
+			break;
+		case R.id.action_logout:
+			conn.sendPacket(new Presence(Type.unavailable));
+			conn.disconnect();
+			//startActivity(new Intent(this, LoginPage.class));
+			break;
+		/************************************************************/
+		case R.id.action_delete_all:
+			item.setEnabled(false);
+			break;
+		/************************************************************/
+	    default:
 			break;
 		}
 		return true;
@@ -195,13 +233,18 @@ public class MainActivity extends Activity {
 	
 	public void getNames() {
 		entryList.clear();
+		roster = conn.getRoster();
 		entryList.addAll(roster.getEntries());
+		
+		/************************************************************/
+		checkContactList();
+		/************************************************************/
+		
 		c.runOnUiThread(new Runnable() {
 			
 			@Override
 			public void run() {
 				cad.notifyDataSetChanged();
-				
 			}
 		});	
 	}
@@ -211,14 +254,45 @@ public class MainActivity extends Activity {
         ccf.setSASLAuthenticationEnabled(false);
         	
         try {
-			conn.connect();
-			conn.login(username, password );
-			
+        	if(!conn.isConnected())
+        		conn.connect();
+				conn.login(username, password );
 		} catch (XMPPException e) {
 			System.out.println(e.getMessage());
 		}
         done = true;
-    }
+        
+    	/************************************************************/
+        //check if contact list is empty, right after login succeeds
+        checkContactList();
+        runOnUiThread(new Runnable() {
+            public void run() {
+            	showHide();
+            }
+        });
+    	/************************************************************/
+        
+	} 
+
+	/************************************************************/
+	public void showHide() {
+		if(emptyList) {
+			//no contacts to display
+			//System.out.println("NO CONTACTS TO DISPLAY");
+			nc.setVisibility(View.VISIBLE);
+		} else {
+			//display contacts
+			//System.out.println("DISPLAY CONTACTS");
+			nc.setVisibility(View.GONE);
+		}
+	}
+	
+	public void checkContactList() {
+		if(roster.getEntries().isEmpty()) {	emptyList = true; }
+		else { emptyList = false; }
+	}
+	
+	/************************************************************/
 	
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
@@ -231,12 +305,23 @@ public class MainActivity extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (resultCode == 1) {
 			new LoginTask().execute("useless text");
-			//Toast.makeText(context, "presence set to \"online\"", Toast.LENGTH_SHORT).show();
-			while(!done) {}
-				getNames();
 		}
 	}
 	
-	
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		try  {
+			if (conn.isAuthenticated()) {
+				menu.findItem(R.id.action_login).setEnabled(false);
+				menu.findItem(R.id.action_logout).setEnabled(true);
+			} else {
+				menu.findItem(R.id.action_login).setEnabled(true);
+				menu.findItem(R.id.action_logout).setEnabled(false);
+			}
+		} catch (IndexOutOfBoundsException ind) {
+			return false;
+		}
+		return true;
+	}
 	
 }

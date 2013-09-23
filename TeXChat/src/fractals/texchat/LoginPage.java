@@ -39,6 +39,7 @@ public class LoginPage extends Activity {
         
         //check if user should be remembered
 		ArrayList<String> loggedIn = new ArrayList<String>(); 
+		System.out.println(MainActivity.dbHandler);
 		loggedIn = MainActivity.dbHandler.getLoggedInUser();
 		
 		if(loggedIn.isEmpty()){ System.out.println("No rememberme information available"); }

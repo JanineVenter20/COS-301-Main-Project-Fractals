@@ -41,7 +41,7 @@ public class TexActivity extends Activity {
 			EditText ed= (EditText)findViewById(id.expEdit);
 			Bitmap bmp = null;
 			bmp = mimet.getLocalBitmap(ed.getText().toString());
-			ImageView iv = (ImageView)findViewById(id.profile_picture);
+			ImageView iv = (ImageView)findViewById(id.imageView1);
 			iv.setImageBitmap(bmp);
 		}
 	};

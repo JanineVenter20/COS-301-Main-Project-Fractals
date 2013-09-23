@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text=" >> " />
+        android:text="@string/send" />
 
     <EditText
         android:id="@+id/messageInput"
@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/sendButton"
-        android:ems="10" >
+        android:ems="10"
+        android:inputType="text" >
 
         <requestFocus />
     </EditText>
@@ -31,7 +32,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignTop="@+id/sendButton"
         android:layout_toLeftOf="@+id/messageInput"
-        android:text="fx" />
+        android:text="@string/function" />
 
     <ListView
         android:id="@+id/messageView"
@@ -40,7 +41,15 @@
         android:layout_above="@+id/sendButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" >
-
     </ListView>
+
+    <TextView
+        android:id="@+id/no_messages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="21dp"
+        android:text="@string/no_messages" />
 
 </RelativeLayout>
