@@ -1,0 +1,292 @@
+\documentclass[29pt,a4paper]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[green]{banking}                % idem
+
+\usepackage[T1]{fontenc}
+% character encoding
+\usepackage[utf8x]{inputenc}               	% replace by the encoding you are using
+\usepackage[italian]{babel}
+\usepackage{color}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths                          	% required when changes are made to page layout lengths
+
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L,RO]{\thepage}           		% page number in "outer" position of footer line
+\fancyfoot[R,LO]{\footnotesize} 			% other info in 
+
+
+6\begin{document}
+
+\section{\textbf{Change History:}}
+\begin{tabbing}
+\\\textbf{Date:} ~~~~~~~~~~~~~~~~~\= \textbf{Version Update:}~~~~~~~ \= \textbf{Member:}~~~~~~~~~~~~~~\= \textbf{Description:}\\
+2013/08/22\> 1.0 \> fractals \> Document created.\\
+2013/08/24 \> 1.1 \> fractals \> References Updated\\
+2013/08/24 \> 1.2 \> fractals \> Outstanding Risks/Challenges added\\
+2013/08/24 \> 1.3 \> fractals \> Support for Latex and Mimetex Libraries updated\\
+2013/08/24 \> 1.4 \> fractals \> System Description updated\\
+2013/08/24 \> 1.5 \> fractals \> Team Portfolio added. \\
+2013/08/24 \> 1.6 \> fractals \> Responsibilities added for: Michelle Peens\\
+2013/08/24 \> 1.7 \> fractals \> Responsibilities added for: Stephan Botha\\	
+2013/08/24 \> 1.8 \> fractals \> Responsibilities added for: Janine Venter\\
+2013/08/24 \> 1.9 \> fractals \> Issue Management Plan updated\\
+2013/08/24 \> 2.0 \> fractals \> Software Development Process updated\\
+2013/08/24 \> 2.1 \> fractals \> Project Progress updated\\
+2013/08/24 \> 2.2 \> fractals \> Software Development Process updated\\
+2013/08/24 \> 2.3 \> fractals \> Project Progress updated\\
+2013/09/15 \> 2.4 \> Michelle Peens \> Kanban board created.\\
+2013/09/15 \> 2.5 \>  Michelle Peens \> Kanban board updated\\
+2013/09/15 \> 2.6 \> Stephan Botha \> Kanban board updated\\
+2013/09/15 \> 2.7 \> Janine Venter \> Kanban board updated\\
+2013/09/15 \> 2.8 \> Janine Venter \> Outstanding Risks/Challenges updated\\
+2013/09/15 \> 2.9 \> Janine Venter \> Team Profiles updated\\
+2013/09/15 \> 3.0 \>  Janine Venter \> Project Scope updated\\
+2013/09/15 \> 3.1 \> Janine Venter \> System Description updated\\
+2013/09/15 \> 3.2 \> Janine Venter \> Support for Latex and Mimetex Libraries updated\\
+2013/09/15 \> 3.3 \>  Janine Venter \> Messaging updated\\
+
+\end{tabbing}
+
+\newpage
+\section{\textbf{Table of Contents:}}
+\begin{tabbing}
+\\\textbf{Subject}: ~~~~~\= ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\= \textbf{Page}:
+\\\newline
+1. Introduction \> \> 3\\							
+\> 1.1 Purpose 	\> 3\\							
+\> 1.2 Document Conventions\> 3 					\\
+\> 1.3 Project Scope \> 3							\\
+\> 1.4 References \> 3							\\
+2. System Description \> \> 4					\\
+3. Software Development Process \> \> 5				\\
+4. Team Profile\> \> 6 				\\
+5. Issue Management Plan \> \> 7 	\\
+6. Project Progress \> \> 8 	\\
+\> 6.1 Kanban Board \> \\
+\> 6.2 Burndown Chart \> \\
+7. Outstanding Risks/Challenges \> \> 9 	\\
+8. Open Issues \> \> 10 	\\
+9. Glossary \> \> 11 	\\
+\end{tabbing}
+
+\newpage
+	%\maketitle
+	%\vspace{-10mm}
+	%Section
+	\section*{\textbf{1. Introduction}}
+	\vspace{4mm}
+	
+		\textbf{1.1 Purpose}
+			\\The purpose of this document is to provide our client with a high level overview of the architectural strategies or tactics and patterns that will form a basis for the development of the Latex Chat Application. The overall outline of these concepts and how they are implemented will provide our team with a means to achieve the given set of requirements as previously agreed upon in the Requirements and Design document.\\
+		\vspace{1mm}
+		
+		\noindent \textbf{1.2 Document Conventions}
+			\begin{itemize}
+				\item Document Formatting: LaTeX
+			\end{itemize}
+		\vspace{5mm}
+		%Section
+		
+		\noindent \textbf{1.3 Project Scope}
+			\\The aim of the project is to develop an open source android XMPP chat client which supports the embedded LaTeX base equations which are rendered as images. LaTeX based equations will be rendered on the handset to produce mathematical equations. Our system will also provide the ability to view, edit and correct equations before sending.
+			\parindent 5mm The application will provide a similar functionality to yaxim. Exchange of images and mathematical expressions will be possible through our software solution. The TeXchat application will have the ability to show a preview of the entered text send the equation as LaTeX code and then render it on the receiving end on the client handset.
+		\vspace{5mm}
+		
+	\noindent \textbf{1.4 References}
+		\begin{itemize}
+		\item Mr. Will van Heerden.
+		\end{itemize}
+		\vspace{5mm}
+		
+	%Section
+\newpage
+	\section*{\textbf{2. System Description}}
+	\vspace{4mm}
+		\noindent The goal of our software application is to provide a chat service that will allow users to exchange messages and also to send mathematical equations in a rendered image format.  The application is intended to provide a service to users that require the ability and support for a chat client that allows them to communicate more efficiently and effortlessly in a scientific, and mathematical context.  It will provide a more usable mobile version of a Latex chat application.\\ 
+		
+		\noindent\textbf{Support for LaTeX and MimeTeX Libraries}
+		\\The final application will have to make use of a Latex based library for the rendering of equations as images on the mobile device. For this reason we have implemented support for the MimeTeX library, through the use of the Android NDK (Native Development Kit), which allows us to embed the native C/C++ code of the MimeTeX library, in the source code of this release. The library is compiled through Eclipse using a special makefile that sets specific compiler flags to indicate that it is in math mode and not text mode.\\
+		
+		
+		\noindent\textbf{Messaging}
+		\\Our final goal is for messaging to be possible between multiple clients, and the support for sending Latex based equations, rendered on the client side and displayed as images on the handheld device. In this release however, our server supports two initial users, and have capabilities for them to send plain text messages and display these in a easy to understand manner.  
+		\parindent 5mm The ability to create, render, view and send mathematical equations have been implemented and is currently working. It is now possible to send and receive these equations in image format between the two clients.
+		These messages should be stored statically on the device for later retrieval.  For this purpose a SQLite database was implemented.\\
+		
+		\noindent\textbf{Login}
+		\\A user should be authenticated by some type of login component.  This has been implemented during the initial phases of development of this application.  The server that our application uses provides the basic functionality for this authentication component, and uses a username and password based authentication method.
+		
+\newpage
+	\section*{3. Software Development Process}
+	\vspace{4mm}
+	\\The process/methodology we are using throughout the development of our software solution for the Latex Chat Application will be a scaled down version of RUP, to accommodate our smaller group size, in conjunction with agile approaches, to accommodate the initial assumptions that the clients requirements for the application will change during the development of the application.
+	
+	This approach of combining the structured methods of RUP software development with agile approaches will allow us a structure for developing our software solution in an iterative manner, which will allow for changes, while still being able to design, code and test each version of its release in a controlled manner against the requirements set out for that specific release.
+	
+	Each release will have requirements, design, implementation, testing and integration phases, which are in line with the RUP process, and since this approach is based on regular and consistent user or client involvement, it will allow for changes in the requirements by the client during each release, which is in line with our agile approach.
+	
+	\vspace{5mm}
+
+\newpage
+	\section*{4. Team Profile}
+	\noindent\textbf{Michelle Peens}
+		\begin{itemize}
+			\item Documentation
+			\item Designing of the database
+			\item Development of the system.
+			\item Testing
+			\item Project management
+			\item Problem solving\\
+		\end{itemize}
+	
+	\noindent\textbf{Stephan Botha}
+		\begin{itemize}
+			\item Documentation
+			\item Development of the system
+			\item Testing
+			\item Project management
+			\item Problem solving\\
+		\end{itemize}
+	
+	\noindent\textbf{Janine Venter}
+		\begin{itemize}
+			\item Setting up meetings with the client and daily group meetings
+			\item Documentation and converting documentation to LaTeX documentation.
+			\item Testing
+			\item Development of the system.
+			\item Project management
+			\item Problem solving
+		\end{itemize}
+\newpage
+		\section*{Issue Management Plan}
+		\begin{itemize}
+			\item Issues are handled by discussing them with our client, as well as trying to resolve the issues by either working on it together or by doing research on the internet.
+			\item All issues are resolved as quickly as possible except when it is a big hurdle. 
+			\item All issues are discussed openly.
+		\end{itemize}
+		
+\newpage
+		\section*{6. Project Progress}
+		During this release of our software solution we aimed to create the basis for further development phases.  This release is still in the initial phases of the overall development, and therefore only includes basic functionality as required for this release, namely:
+		
+		\begin{itemize}
+			\item The application supports user login, and status update to ‘online’ on the server side.
+			\item It allows the user to view messages that was previously sent, through making use of an SQLite database on the client side.
+			\item The application has basic client chat support, in that it allows for sending basic text messages between clients on the server through the XMPP protocol.
+			\item The Android NDK has also been included, so as to support the use of native code in the application.  This feature will be further developed in the next release to support the Mimetex libraries.	\\
+		\end{itemize} \\
+		
+		\\ \noindent\textbf{6.1 Kanban Board} \\
+  		\\	\begin{tabular}{| p{7cm} | p{7cm} | p{7cm} |}
+				\hline
+		    		\textbf{Tasks(To Do)} & \textbf{In Progress} & \textbf{Completed} \\ 
+   				\hline
+   				\hline
+		    		Visual Aspects
+		    		\begin{itemize}
+			    		\item Display Of Messages.
+			    		\item Display Of Various Pages.
+		    		\end{itemize}
+		    	 	& User Authentication. & User Login Component. \\ 
+   				\hline
+   				\hline
+	   				User Profile Functionality:
+	   				\begin{itemize}
+	   					\item Profile Picture.
+	   					\item Status Update.
+	   					\item Online / Offline.
+	   					\item General Information.
+	   				\end{itemize}	
+	   				& Unit Testing
+	   				\begin{itemize}
+	   					\item UI testing
+		   				\item Services testing 
+	   				\end {itemize}
+	   				& SQLite Database\\
+   				
+				Logo/Icon Design. & Integration Testing. & Android NDK\\
+				
+				\\Predefined Expression Image Selections & Documentation & Including Mimetex Lib\\
+				
+				\\Adding/Deleting Contacts & Exception Handling & Image Rendering\\
+				
+				\\Security Features (Encryption) & Settings Page & Expr. String Handling\\
+				
+				\\Integration Testing & Stability of Application & 
+				Unit Testing
+				\begin{itemize}
+					\item Services Testing
+					\item Database Testing
+				\end{itemize}
+   				
+   				\\Test Usability & Online Server & Documentation\\
+   				
+   				\\Documentation & Visual Aspects & Exception Handling\\
+   				
+   				\\Exception Handling & & \\
+   				
+ 			\end{tabular} \\
+\newpage
+		\noindent\textbf{6.2 Burndown Chart}
+		\noindent\textbf{Progress Chart}
+		\begin{figure*}
+			\centering
+			\\ \includegraphics[width=6.0in, height=5.0in]{./chart.png}
+			\\\caption{[Figure 1] Burndown Chart}
+		\end{figure*}\\
+		
+\newpage
+\begin{tabbing}
+\\\textbf{Task:} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\= \textbf{Task List:}\\
+User Login Component \> 1\\
+View Contact List	 \> 2\\
+Message Sending Component	 \> 3\\
+Exit Component	 \> 4\\
+SQLite Database	 \> 5\\
+Android NDK	 \> 6\\
+Mimetex Library	 \> 7\\
+Image Rendering	 \> 8\\
+String Handling \> 9\\
+Unit Testing	 \> 10\\
+Integration Testing	 \> 11\\
+Exception Handling \> 12\\
+Database Cleanup	 \> 13\\
+User Registration	 \> 14\\
+User Authentication	 \> 15\\
+Security Features	\> 16\\
+Settings Page	 \> 17\\
+Visual Aspects	 \> 18\\
+User Profile Functionality \> 19\\
+Logo / Icon Design	 \> 20\\
+Predefined Expression Images \> 21\\
+Adding / Deleting Contacts \> 22\\
+Unit Testing	 \> 23\\
+Integration Testing	 \> 24\\
+Exception Handling	 \> 25\\
+\end{tabbing}
+
+\newpage
+		\section*{7. Outstanding Risks/Challenges}
+		\begin{itemize}
+			\item The aesthetics of the application is less of a challenge, but making it usable and user friendly is more challenging.
+			
+		\end{itemize}
+\newpage		
+		\section*{8. Open Issues}
+		Open Issues are only relevant towards the Android application itself, there are no open issues in terms of project management.\\
+		Open Issues in the development of the application:
+				\begin{itemize}
+					\item Aesthetics of the application
+					\item Usability
+				\end{itemize}	
+\newpage
+		\section*{9. Glossary}
+		\begin{itemize}
+			\item Agile - Development methodology
+			\item NDK - Native Development Kit
+		\end{itemize}
+\end{document}
