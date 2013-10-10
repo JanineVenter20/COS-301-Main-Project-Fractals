@@ -84,28 +84,34 @@ public class TexActivity extends Activity {
 	private ImageButton eq32;
 	private ImageButton eq33;
 	
-/*END-----------------------------------------------------------------------------------*/
-
-	
-	
-	
-	
-/*Janine -------------------------------------------------------------------------------*/
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tex);
 		
-		//moves preview image, where preview of equation will be shown
-		preview = (ImageView) this.findViewById(id.imageView1);
+		ed = (EditText)findViewById(id.expEdit);
+		viewb = (Button)findViewById(id.viewButton);
+		okButton = (Button)findViewById(id.okButton);
 		
-		preview.setY(120);
+		viewb.setOnClickListener(viewOnclick);
+		okButton.setOnClickListener(okOnclick);	
+		
+		ed.setSelection(ed.getText().length());
 		
 		equationDrawer = (SlidingDrawer) this.findViewById(R.id.slidingDrawer1);
 		slideButton = (Button) this.findViewById(R.id.handle);
+		preview = (ImageView) this.findViewById(id.imageView1);
 		
-		ed = (EditText)findViewById(id.expEdit);
-		ed.setSelection(ed.getText().length());
+		//Getting the translation of the buttons at the start of the activity, before the drawer is opened
+		//so that it can go back to it's original positions
+
+		
+		
+		
+		//moves preview image, where preview of equation will be shown
+		preview.setY(120);
+		
+		
 		
 		equationDrawer.setOnDrawerOpenListener(new OnDrawerOpenListener() {
 			@Override
@@ -113,20 +119,20 @@ public class TexActivity extends Activity {
 					slideButton.setText("v");
 					
 					//set ed text field position
-					ed.setX(edTransX);
-					ed.setY(170);
+					ed.setX(120);
+					ed.setY(180);
 					
 					//set add button position
-					okButton.setX(okBTransX);
-					okButton.setY(170);
+					okButton.setX(360);
+					okButton.setY(180);
 					
 					//set view button position
-					viewb.setX(viewBTransX);
-					viewb.setY(170);
+					viewb.setX(24);
+					viewb.setY(180);
 					
 					preview.setY(80);
 				}
-			});
+		});
 			
 		equationDrawer.setOnDrawerCloseListener(new OnDrawerCloseListener() {
 			@Override
@@ -137,55 +143,20 @@ public class TexActivity extends Activity {
 				preview.setY(300);
 				
 				//set ed text field position
-				ed.setX(edTransX);
-				ed.setY(edTransY);
+				ed.setX(120);
+				ed.setY(540);
 				
 				//set add button position
-				okButton.setX(okBTransX);
-				okButton.setY(okBTransY);
+				okButton.setX(360);
+				okButton.setY(531);
 				
 				//set view button position
-				viewb.setX(viewBTransX);
-				viewb.setY(viewBTransY);
+				viewb.setX(24);
+				viewb.setY(531);
 				
 			}
 		});
-	}
-	
-/*END-----------------------------------------------------------------------------------*/
-
-	
-	
-	
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tex, menu);
 		
-		
-		viewb = (Button)findViewById(id.viewButton);
-		okButton = (Button)findViewById(id.okButton);
-		
-		viewb.setOnClickListener(viewOnclick);
-		okButton.setOnClickListener(okOnclick);	
-		
-		//Getting the translation of the buttons at the start of the activity, before the drawer is opened
-				//so that it can go back to it's original positions
-				okBTransX = okButton.getX();
-				okBTransY = okButton.getY();
-				
-				viewBTransX = viewb.getX();
-				viewBTransY = viewb.getY();
-				
-				edTransX = ed.getX();
-				edTransY = ed.getY();
-		
-				
-		
-		
-		
-/*Janine -------------------------------------------------------------------------------------------*/		
 		eq1 = (ImageButton) findViewById(id.button1);
 		eq2 = (ImageButton) findViewById(id.button2);
 		eq3 = (ImageButton) findViewById(id.button3);
@@ -254,18 +225,17 @@ public class TexActivity extends Activity {
 		eq31.setOnClickListener(equationSliderOnClick);
 		eq32.setOnClickListener(equationSliderOnClick);
 		eq33.setOnClickListener(equationSliderOnClick);
-		
-/*END----------------------------------------------------------------------------------------*/
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.tex, menu);	
 
-		
-		
-		
-		
 		return true;
 	}
 	
 	OnClickListener viewOnclick = new OnClickListener() {
-		
 		@Override
 		public void onClick(View v) {
 			ed= (EditText)findViewById(id.expEdit);
@@ -283,22 +253,16 @@ public class TexActivity extends Activity {
 			ed= (EditText)findViewById(id.expEdit);
 			i.putExtra("expression", ed.getText().toString());
 			setResult(RESULT_OK, i);
-			
-			//testing why 2.2 is not working
-			//Toast.makeText(v.getContext(), "Hello World", Toast.LENGTH_LONG).show();
+
 			finish();
 		}
 	};
 
-	
-	
-	
-	
-//Janine *******************************************************************************************************//	
+
 	OnClickListener equationSliderOnClick = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			ed = (EditText) findViewById(id.expEdit);
+			//ed = (EditText) findViewById(id.expEdit);
 			
 			switch(v.getId()) {
 				case R.id.button1: {
@@ -505,9 +469,6 @@ public class TexActivity extends Activity {
 			}
 		}
 	};
-//END *******************************************************************************************************//
-	
-	
 	
 	protected void onDestroy() {
 		super.onDestroy();
