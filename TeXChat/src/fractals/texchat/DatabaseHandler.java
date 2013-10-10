@@ -19,6 +19,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     	private static final String tbREMEMBERME = "rememberme";
     	Context context;
     	private SQLiteDatabase db;
+		private static final SecureCrypto sc = new SecureCrypto();
     
     	//INNER CLASSES
     	class MessageDetail
@@ -90,7 +91,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					String createRememberMeTable = "CREATE TABLE " + tbREMEMBERME + "(" +
 							"PKUserLoggedIn INTEGER PRIMARY KEY, " +
 							"User TEXT, " +
-							"Password TEXT);";
+							"Password TEXT, " +
+							"Remembered BOOLEAN);";
 					
 					db.execSQL(createRememberMeTable);					
 					
@@ -109,41 +111,69 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			}
 	
 			
+			public boolean clearRememberMe()
+			{
+				//REFRESH THE TABLE
+				String deleteAll = "DELETE FROM " + tbREMEMBERME + ";";
+				db.execSQL(deleteAll);
+				return true;
+			}
+			
 			//ADD LOGGED IN USER INFORMATION
-			public boolean addRememberMe(String user, String pass)
+			public boolean addRememberMe(String user, String pass, boolean remember)
 			{
 				
+				
+				System.out.println("[ENCRYPTED] === " + pass);
+				
+				
+				//SECURITY FEATURE - ENCRYPT SENSITIVE USER DATA
+				String enc_pass = "none";
+				boolean encrypted = false;
+				try
+				{
+					enc_pass = SecureCrypto.bytesToHex(sc.encrypt(pass.trim()));
+					encrypted = true;
+				}
+				catch(Exception e)
+				{
+					System.out.println("ENCRYPTION FAILED");
+				}
+				System.out.println("[ENCRYPTED] === " + enc_pass);
 				boolean success = false;
 				
 				//PUT VALUES IN THE DB
 				this.db.beginTransaction();
 				try
 				{
-					//REFRESH THE TABLE
-					String deleteAll = "DELETE FROM " + tbREMEMBERME + ";";
-					db.execSQL(deleteAll);
-					
-					// |_ PKUserLoggedIn _|_ User _|_ Password _| //
-					
-					String query = "INSERT INTO " + tbREMEMBERME + " (User, Password) VALUES ('"+ user +"', '"+ pass +"');"; 
-					db.execSQL(query);
-					
-					//CHECK IF THE LINE IS INDEED IN THE DB AFTER THE INSERT - IF YOU CAN SELECT IT ITS THERE, OTHERWISE IT FAILED
-					Cursor result;
-					String check = "SELECT * FROM " + tbREMEMBERME + " WHERE User = '" + user + "' AND Password = '" + pass + "';";
-					result = db.rawQuery(check, null);
-					
-					if(result.moveToFirst())
+					boolean clear = clearRememberMe();
+					if(clear)
 					{
-						success = true;
+						System.out.println("Table cleared");
 					}
-					else
+					if(encrypted)
 					{
-						success = false;
-					}	
-					result.close();
+						// |_ PKUserLoggedIn _|_ User _|_ Password _|_ Remembered _|//
+						String query = "INSERT INTO " + tbREMEMBERME + " (User, Password, Remembered) VALUES ('"+ user +"', '"+ enc_pass +"', '"+remember+"');"; 
+						db.execSQL(query);
+						
+						//CHECK IF THE LINE IS INDEED IN THE DB AFTER THE INSERT - IF YOU CAN SELECT IT ITS THERE, OTHERWISE IT FAILED
+						Cursor result;
+						String check = "SELECT * FROM " + tbREMEMBERME + " WHERE User = '" + user + "' AND Password = '" + enc_pass + "';";
+						result = db.rawQuery(check, null);
+						
+						if(result.moveToFirst())
+						{
+							success = true;
+						}
+						else
+						{
+							success = false;
+						}	
+						result.close();
 					
-					db.setTransactionSuccessful();		
+						db.setTransactionSuccessful();	
+					}
 				}
 				finally
 				{
@@ -152,7 +182,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				
 				if(success == true)
 				{
-					Log.i("INFORMATION", "Sent and in database!");
+					Log.i("INFORMATION", "Sent and in the rememberme table!");
 					return true;
 				}
 				else
@@ -178,9 +208,27 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				{
 					do
 					{
-						loggedUser.add(result.getString(1)); 
-						loggedUser.add(result.getString(2));
+						//DECRYPT SENSITIVE USER DATA FOR USE
+						String enc_pass = result.getString(2).trim();
+						String dec_pass = "none";
+						boolean decrypted = false;
 						
+						try
+						{
+							dec_pass = new String(sc.decrypt(enc_pass));
+							decrypted = true;
+						}
+						catch(Exception e)
+						{
+							System.out.println("DECRYPTION FAILED");
+						}
+						System.out.println("[DECRYPTED] === " + dec_pass);
+						if(decrypted)
+						{
+							loggedUser.add(result.getString(1)); 	//	user
+							loggedUser.add(dec_pass); 				//	password 
+							loggedUser.add(result.getString(3)); 	//	remembered
+						}
 					}while(result.moveToNext());
 				}
 				result.close();
@@ -226,7 +274,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					
 					if(success == true)
 					{
-						Log.i("INFORMATION", "Sent and in database!");
+						Log.i("INFORMATION", "Sent and in the messages table!");
 						return true;
 					}
 					else
@@ -252,8 +300,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				ArrayList<MessageDetail> messages = new ArrayList<MessageDetail>();
 			
 				Cursor c;
-				String query = "SELECT * FROM " + tbMESSAGES + " WHERE User like '" + u + "%' ORDER BY messageStamp DESC LIMIT 10;" ;
-				//String query = "SELECT * FROM " + tbMESSAGES + ";" ;
+				String query = "SELECT * FROM " + tbMESSAGES + " WHERE User like '" + u + "%' ORDER BY messageStamp DESC LIMIT '"+limit +"';" ;
 				this.db.beginTransaction();
 				try
 				{

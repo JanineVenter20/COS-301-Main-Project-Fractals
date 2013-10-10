@@ -10,9 +10,9 @@
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
     <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
     <string name="pref_title_host_name">Host name</string>
-    <string name="pref_default_host_name">192.168.137.1</string>
+    <string name="pref_default_host_name">jabber.iitsp.com</string>
     <string name="pref_title_server_name">Server name</string>
-    <string name="pref_default_server_name">fractals.texchat</string>
+    <string name="pref_default_server_name">jabber-0-1.virt.iitsp.net</string>
     <string name="pref_title_port_number">Port number</string>
     <string name="pref_default_port_number">5222</string>
     <string name="pref_title_add_friends_to_messages">Add friends to messages</string>

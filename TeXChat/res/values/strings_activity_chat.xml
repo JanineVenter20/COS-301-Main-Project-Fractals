@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_messages">You currently have no messages with this contact.</string>
+    <string name="function">fx</string>
+    <string name="send"> &gt;&gt; </string>
+    
+</resources>
