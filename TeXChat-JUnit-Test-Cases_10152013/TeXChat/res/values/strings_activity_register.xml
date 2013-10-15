@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_text">Welcome to the TexChat community</string>
+    <string name="name_text">Display Name</string>
+    <string name="user_display_name_text">Username</string>
+    <string name="pass_text">Password</string>
+    <string name="pass_confirm_text">Confirm Password</string>
+    <string name="picture_text">Profile Picture</string>
+    <string name="register_button_text">Register</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="image_description">User default image</string>
+    <string name="fractals_note">\@fractals.net</string>
+    
+</resources>

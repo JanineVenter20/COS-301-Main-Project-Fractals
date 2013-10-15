@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    >
+
+    <TextView
+        android:id="@+id/fractals_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username" />
+
+    <EditText
+        android:id="@+id/usernameEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fractals_note"
+        android:ems="10"
+        android:inputType="none"
+        android:text="@string/defaultUser" >
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameEdit"
+        android:text="@string/password" />
+
+    <EditText
+        android:id="@+id/passwordEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_text"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="@string/defaultPass" >
+
+    </EditText>
+
+   
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel" 
+		android:layout_below="@+id/rememberBox"/>
+    	
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rememberBox"
+        android:layout_toRightOf="@+id/cancelButton"
+        android:text="@string/Login" />
+
+    <CheckBox
+        android:id="@+id/rememberBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/passwordEdit"
+        android:text="@string/rememberMe" />
+
+    <Button
+        android:id="@+id/register_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cancelButton"
+        android:layout_alignRight="@+id/rememberBox"
+        android:layout_below="@+id/cancelButton"
+        android:layout_marginTop="49dp"
+        android:text="@string/register_button" />
+
+    <TextView
+        android:id="@+id/register_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/register_button"
+        android:layout_alignRight="@+id/usernameEdit"
+        android:layout_below="@+id/cancelButton"
+        android:layout_marginTop="18dp"
+        android:text="@string/register_text" />
+
+</RelativeLayout>
