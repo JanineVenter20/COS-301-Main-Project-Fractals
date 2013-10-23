@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="200dp"
         android:src="@drawable/ic_action_search" />
 
     <Button
@@ -50,8 +50,8 @@
 
         <SlidingDrawer
         android:id="@+id/slidingDrawer1"
-        android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_width="fill_parent"
+        android:layout_height="190dp"
         android:layout_alignLeft="@+id/viewButton"
         android:layout_alignParentBottom="true"
         android:content="@+id/content"
@@ -212,7 +212,7 @@
 	                android:layout_alignRight="@+id/button10"
 	                android:layout_alignTop="@+id/button14"
 	                android:background="@drawable/but16"
-	                android:contentDescription="\\cos" />
+	                android:contentDescription="\\cos{x}" />
 
 	            <ImageButton
 	                android:id="@+id/button15"
@@ -221,7 +221,7 @@
 	                android:layout_alignRight="@+id/button9"
 	                android:layout_alignTop="@+id/button16"
 	                android:background="@drawable/but15"
-	                android:contentDescription="\\sin" />
+	                android:contentDescription="\\sin{x}" />
 
 	            <ImageButton
 	                android:id="@+id/button17"
@@ -230,7 +230,7 @@
 	                android:layout_alignRight="@+id/button11"
 	                android:layout_alignTop="@+id/button16"
 	                android:background="@drawable/but17"
-	                android:contentDescription="\\tan" />
+	                android:contentDescription="\\tan{x}" />
 
 	            <ImageButton
 	                android:id="@+id/button18"
@@ -239,7 +239,7 @@
 	                android:layout_alignParentRight="true"
 	                android:layout_alignTop="@+id/button17"
 	                android:background="@drawable/but18"
-	                android:contentDescription="\\arcsin" />
+	                android:contentDescription="\\arcsin{x}" />
 
 	            <ImageButton
 	                android:id="@+id/button19"
@@ -249,7 +249,7 @@
 	                android:layout_marginTop="16dp"
 	                android:layout_toLeftOf="@+id/button14"
 	                android:background="@drawable/but19"
-	                android:contentDescription="\\arccos" />
+	                android:contentDescription="\\arccos{x}" />
 
 	            <ImageButton
 	                android:id="@+id/button20"
@@ -258,7 +258,7 @@
 	                android:layout_alignTop="@+id/button19"
 	                android:layout_toLeftOf="@+id/button9"
 	                android:background="@drawable/but20"
-	                android:contentDescription="\\arctan" />
+	                android:contentDescription="\\arctan{x}" />
 
 	            <ImageButton
 	                android:id="@+id/button21"
@@ -389,10 +389,68 @@
 	                android:layout_marginTop="14dp"
 	                android:background="@drawable/but33"
 	                android:contentDescription="\\prod" />
+	            
+	            <ImageButton
+	                android:id="@+id/button34"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/button33"
+	                android:layout_below="@+id/button28"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="15dp"
+	                android:background="@drawable/but34"
+	                android:contentDescription="\\bar{a}" />
+	            
+	            <ImageButton
+	                android:id="@+id/button35"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/button34"
+	                android:layout_below="@+id/button29"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="15dp"
+	                android:background="@drawable/but35"
+	                android:contentDescription="\\vec{a}" />
+	            
+	           <!-- NEW --> 
+	            <ImageButton
+	                android:id="@+id/button36"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/button35"
+	                android:layout_below="@+id/button30"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="15dp"
+	                android:background="@drawable/but36"
+	                android:contentDescription="\\oint" />
+	            
+	            <ImageButton
+	                android:id="@+id/button37"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/button36"
+	                android:layout_below="@+id/button31"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="15dp"
+	                android:background="@drawable/but37"
+	                android:contentDescription="\\int\\int_{x}^{y}" />
+	            
+	            <ImageButton
+	                android:id="@+id/button38"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/button37"
+	                android:layout_below="@+id/button32"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="15dp"
+	                android:background="@drawable/but38"
+	                android:contentDescription="\\lim_{x \\to 0}" />
 	        </RelativeLayout>
 
 	        <!-- \sum_{i = 1}^{10} t_i 
+	        \iint_{x}^{y}
 	            {x_{a}}^{b}
+	            \lim_{x \to 0}
 	            x\tfrac{a}{b}
 	            \bigcap
 	            \bigcup

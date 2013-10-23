@@ -5,15 +5,21 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.view.ViewGroup;
+import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
+import android.widget.RelativeLayout;
 import android.widget.SlidingDrawer;
 import android.widget.SlidingDrawer.OnDrawerCloseListener;
 import android.widget.SlidingDrawer.OnDrawerOpenListener;
@@ -34,19 +40,20 @@ public class TexActivity extends Activity {
 	
 	private Button viewb;
 	private Button okButton;
-	
+
+//Janine ********************************************************************************//
 	//getting the current position of text field and buttons
-	private float edTransX;
+	/*private float edTransX;
 	private float edTransY;
 	
 	private float viewBTransX;
 	private float viewBTransY;
 	
 	private float okBTransX;
-	private float okBTransY;
-	
+	private float okBTransY;*/	
+
 	private ImageView preview;
-	
+//END ********************************************************************************//
 	
 /*Janine ----------------------------------------------------------------------------*/	
 	private Button slideButton;
@@ -83,7 +90,21 @@ public class TexActivity extends Activity {
 	private ImageButton eq31;
 	private ImageButton eq32;
 	private ImageButton eq33;
+	private ImageButton eq34;
+	private ImageButton eq35;
 	
+	//New after last email-------------------------------------------------------------------------
+	private ImageButton eq36;
+	private ImageButton eq37;
+	private ImageButton eq38;
+	
+	
+	private RelativeLayout.LayoutParams edCurrentParams;
+	private RelativeLayout.LayoutParams okBCurrentParams;
+	private RelativeLayout.LayoutParams viewBCurrentParams;
+	private RelativeLayout.LayoutParams previewParams;
+	
+//Janine **********************************************************************************//
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -92,6 +113,11 @@ public class TexActivity extends Activity {
 		ed = (EditText)findViewById(id.expEdit);
 		viewb = (Button)findViewById(id.viewButton);
 		okButton = (Button)findViewById(id.okButton);
+		
+		edCurrentParams = (RelativeLayout.LayoutParams) ed.getLayoutParams();
+		okBCurrentParams = (RelativeLayout.LayoutParams) okButton.getLayoutParams();
+		viewBCurrentParams = (RelativeLayout.LayoutParams) viewb.getLayoutParams();
+		
 		
 		viewb.setOnClickListener(viewOnclick);
 		okButton.setOnClickListener(okOnclick);	
@@ -102,16 +128,19 @@ public class TexActivity extends Activity {
 		slideButton = (Button) this.findViewById(R.id.handle);
 		preview = (ImageView) this.findViewById(id.imageView1);
 		
+		RelativeLayout.LayoutParams equationDrawerParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 270);
+		equationDrawerParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+		equationDrawer.setLayoutParams(equationDrawerParams);
+		
+		previewParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+		previewParams.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
+		previewParams.addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE);
+		previewParams.setMargins(RelativeLayout.CENTER_HORIZONTAL, 200, 0, 0);
+		
 		//Getting the translation of the buttons at the start of the activity, before the drawer is opened
 		//so that it can go back to it's original positions
-
-		
-		
-		
 		//moves preview image, where preview of equation will be shown
-		preview.setY(120);
-		
-		
+		//preview.setY(120);
 		
 		equationDrawer.setOnDrawerOpenListener(new OnDrawerOpenListener() {
 			@Override
@@ -119,18 +148,39 @@ public class TexActivity extends Activity {
 					slideButton.setText("v");
 					
 					//set ed text field position
-					ed.setX(120);
-					ed.setY(180);
+					//ed.setX(120);
+					//ed.setY(180);
 					
+					RelativeLayout.LayoutParams edParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+					edParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+					edParams.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
+					ed.setLayoutParams(edParams);
+					
+					preview.setLayoutParams(previewParams);
+					
+					RelativeLayout.LayoutParams okParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+					okParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+					okParams.addRule(RelativeLayout.RIGHT_OF, R.id.expEdit);
+					okButton.setLayoutParams(okParams);
+					
+					RelativeLayout.LayoutParams viewBParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+					viewBParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+					viewBParams.addRule(RelativeLayout.LEFT_OF, R.id.expEdit);
+					viewb.setLayoutParams(viewBParams);
+
 					//set add button position
-					okButton.setX(360);
-					okButton.setY(180);
+					//okButton.setX(360);
+					//okButton.setY(180);
+			        /*LinearLayout.LayoutParams params2 = (LayoutParams)  okButton.getLayoutParams();
+			        params2.leftMargin = 360;
+			        params2.topMargin = 180;
+			        ed.setLayoutParams(params2);*/
 					
 					//set view button position
-					viewb.setX(24);
-					viewb.setY(180);
+					//viewb.setX(24);
+					//viewb.setY(180);
 					
-					preview.setY(80);
+					//preview.setY(80);
 				}
 		});
 			
@@ -139,23 +189,30 @@ public class TexActivity extends Activity {
 			public void onDrawerClosed() {
 				slideButton.setText("^");
 				
+				//When drawer closed
+				ed.setLayoutParams(edCurrentParams);
+				okButton.setLayoutParams(okBCurrentParams);
+				viewb.setLayoutParams(viewBCurrentParams);
+				preview.setLayoutParams(previewParams);
+				
 				//move down preview image poosition
-				preview.setY(300);
+				//preview.setY(300);
 				
 				//set ed text field position
-				ed.setX(120);
-				ed.setY(540);
+				//ed.setX(120);
+				//ed.setY(540);
 				
 				//set add button position
-				okButton.setX(360);
-				okButton.setY(531);
+				//okButton.setX(360);
+				//okButton.setY(531);
 				
 				//set view button position
-				viewb.setX(24);
-				viewb.setY(531);
+				//viewb.setX(24);
+				//viewb.setY(531);
 				
 			}
 		});
+//END ********************************************************************************************//
 		
 		eq1 = (ImageButton) findViewById(id.button1);
 		eq2 = (ImageButton) findViewById(id.button2);
@@ -190,7 +247,13 @@ public class TexActivity extends Activity {
 		eq31 = (ImageButton) findViewById(id.button31);
 		eq32 = (ImageButton) findViewById(id.button32);
 		eq33 = (ImageButton) findViewById(id.button33);
-
+		eq34 = (ImageButton) findViewById(id.button34);
+		eq35 = (ImageButton) findViewById(id.button35);
+		
+		//new after last email ------------------------------------------------------
+		eq36 = (ImageButton) findViewById(id.button36);
+		eq37 = (ImageButton) findViewById(id.button37);
+		eq38 = (ImageButton) findViewById(id.button38);
 		
 		eq1.setOnClickListener(equationSliderOnClick);
 		eq2.setOnClickListener(equationSliderOnClick);
@@ -225,6 +288,15 @@ public class TexActivity extends Activity {
 		eq31.setOnClickListener(equationSliderOnClick);
 		eq32.setOnClickListener(equationSliderOnClick);
 		eq33.setOnClickListener(equationSliderOnClick);
+		eq34.setOnClickListener(equationSliderOnClick);
+		eq35.setOnClickListener(equationSliderOnClick);
+		
+		//new after last email -----------------------------------------------------------
+		eq36.setOnClickListener(equationSliderOnClick);
+		eq37.setOnClickListener(equationSliderOnClick);
+		eq38.setOnClickListener(equationSliderOnClick);
+		
+		ed.setOnClickListener(editBoxOnClick);
 	}
 	
 	@Override
@@ -257,7 +329,45 @@ public class TexActivity extends Activity {
 			finish();
 		}
 	};
-
+	
+//Janine *********************************************************************************//
+	OnClickListener editBoxOnClick = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			equationDrawer.close();
+			//set ed text field position
+			/*ed.setX(120);
+			ed.setY(180);
+			
+			//set add button position
+			okButton.setX(360);
+			okButton.setY(180);
+			
+			//set view button position
+			viewb.setX(24);
+			viewb.setY(180);
+			
+			preview.setY(80);*/
+			
+			RelativeLayout.LayoutParams edParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+			edParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+			edParams.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
+			ed.setLayoutParams(edParams);
+			
+			preview.setLayoutParams(previewParams);
+			
+			RelativeLayout.LayoutParams okParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+			okParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+			okParams.addRule(RelativeLayout.RIGHT_OF, R.id.expEdit);
+			okButton.setLayoutParams(okParams);
+			
+			RelativeLayout.LayoutParams viewBParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+			viewBParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+			viewBParams.addRule(RelativeLayout.LEFT_OF, R.id.expEdit);
+			viewb.setLayoutParams(viewBParams);
+		}
+	};
+//END *************************************************************************************//
 
 	OnClickListener equationSliderOnClick = new OnClickListener() {
 		@Override
@@ -459,6 +569,38 @@ public class TexActivity extends Activity {
 				}
 				case R.id.button33: {
 					String equationFinal = "{" + eq33.getContentDescription().toString() + "}";
+					ed.setText(ed.getText().toString() + equationFinal);
+					ed.setSelection(ed.getText().length());
+					break;	
+				}
+				case R.id.button34: {
+					String equationFinal = "{" + eq34.getContentDescription().toString() + "}";
+					ed.setText(ed.getText().toString() + equationFinal);
+					ed.setSelection(ed.getText().length());
+					break;	
+				}
+				case R.id.button35: {
+					String equationFinal = "{" + eq35.getContentDescription().toString() + "}";
+					ed.setText(ed.getText().toString() + equationFinal);
+					ed.setSelection(ed.getText().length());
+					break;	
+				}
+				
+				//new after last email---------------------------------------------------------------------
+				case R.id.button36: {
+					String equationFinal = "{" + eq36.getContentDescription().toString() + "}";
+					ed.setText(ed.getText().toString() + equationFinal);
+					ed.setSelection(ed.getText().length());
+					break;	
+				}
+				case R.id.button37: {
+					String equationFinal = "{" + eq37.getContentDescription().toString() + "}";
+					ed.setText(ed.getText().toString() + equationFinal);
+					ed.setSelection(ed.getText().length());
+					break;	
+				}
+				case R.id.button38: {
+					String equationFinal = "{" + eq38.getContentDescription().toString() + "}";
 					ed.setText(ed.getText().toString() + equationFinal);
 					ed.setSelection(ed.getText().length());
 					break;	

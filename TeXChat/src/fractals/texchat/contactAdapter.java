@@ -16,6 +16,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -49,7 +51,6 @@ public class contactAdapter extends BaseAdapter {
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		LinearLayout itemView = null;
-        
 		itemView = (LinearLayout)layoutInflater.inflate(R.layout.contactlayout, parent, false);
 		itemView.setBackgroundResource(R.drawable.user);
 		if (entries.get(position) != null) {
@@ -73,7 +74,7 @@ public class contactAdapter extends BaseAdapter {
 	        final String namae = contactS;
 	        //itemView.setBackgroundColor(Color.rgb(182, 230, 240));
 	        //itemView.setPadding(5, 5, 5, 5);
-	        
+	        try {
 	        if (entries.get(position).getType().toString().equals("none") ||
 	        		entries.get(position).getType().toString().equals("from")) {
 	        	LinearLayout ll = new LinearLayout(context);
@@ -119,6 +120,7 @@ public class contactAdapter extends BaseAdapter {
 	        contact.setText(contactS);
 	        status.setText(statusS);
 	        itemView.addView(contact);
+	        
 	        itemView.addView(status);
 	        
 	       
@@ -140,7 +142,7 @@ public class contactAdapter extends BaseAdapter {
 	        	status.setGravity(Gravity.CENTER);
 	        }
         }
-        
+		}catch(IndexOutOfBoundsException e){}
         }
 		return itemView;
 	}

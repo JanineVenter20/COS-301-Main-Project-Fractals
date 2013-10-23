@@ -31,5 +31,7 @@
     <string name="fx">fx</string>
     <string name="action_delete_all">Delete Chat</string>
     <string name="no_contacts_message">You currently do not have any contacts. Select the menu option to add a contact.</string>
+    <string name="title_activity_notifications">NotificationsActivity</string>
+    <string name="title_activity_notifications_receiver">NotificationsReceiverActivity</string>
 
 </resources>

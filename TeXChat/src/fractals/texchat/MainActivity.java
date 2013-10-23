@@ -17,12 +17,14 @@ import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Presence;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -68,7 +70,33 @@ public class MainActivity extends Activity {
 	
 	PopupMenu pop;
 	
+	//Janine ***********************************************//
+	protected ProgressDialog progressDialog;				//
+	//END **************************************************//
+	
 	class LoginTask extends AsyncTask<String, String, String> {
+	
+//Janine ***********************************************************************//
+		@Override
+		protected void onPreExecute(){ 
+		   super.onPreExecute();
+		   progressDialog = new ProgressDialog(context);
+		   progressDialog.setMessage("Logging In...");
+		   progressDialog.show();
+		   
+		}
+
+		@Override
+		protected void onPostExecute(String result){
+		   super.onPostExecute(result);
+		   //progressDialog.dismiss();
+		   Handler handler = new Handler();
+		   handler.postDelayed(new Runnable() {
+		       public void run() {
+		    	   progressDialog.dismiss();
+		       }}, 3000);  // 3000 milliseconds
+		}
+//END ************************************************************************//
 		
 		@Override
 		protected String doInBackground(String... params) {
@@ -86,7 +114,28 @@ public class MainActivity extends Activity {
 	}
 	
 	class logoutTask extends AsyncTask<String, String, String> {
+//Janine *************************************************************************//
+		@Override
+		protected void onPreExecute(){ 
+		   super.onPreExecute();
+		   progressDialog = new ProgressDialog(context);
+		   progressDialog.setMessage("Logging Out...");
+		   progressDialog.show();
+		   
+		}
 
+		@Override
+		protected void onPostExecute(String result){
+		   super.onPostExecute(result);
+		   //progressDialog.dismiss();
+		   Handler handler = new Handler();
+		   handler.postDelayed(new Runnable() {
+		       public void run() {
+		    	   progressDialog.dismiss();
+		       }}, 3000);  // 3000 milliseconds
+		}
+//END ************************************************************************//
+		
 		@Override
 		protected String doInBackground(String... params) {
 			if (conn.isConnected())
@@ -275,15 +324,21 @@ public class MainActivity extends Activity {
 	public void login()  {
         ccf.setCompressionEnabled(false);
         ccf.setSASLAuthenticationEnabled(false);
-        	
+        //ProgressDialog progressBar = new ProgressDialog(this);
+        
         try {
-        	if(!conn.isConnected())
+        	if(!conn.isConnected()){
         		conn.connect();
-        	if (!conn.isAuthenticated())
+        		//ProgressDialog.show(MainActivity.this, "Please wait", "Logging in, please wait..", true);
+        	}
+        	if (!conn.isAuthenticated()) {
         		conn.login(username, password );
+        		//ProgressDialog.show(MainActivity.this, "Please wait", "Logging in, please wait..", true);
+        	}
 		} catch (XMPPException e) {
 			System.out.println(e.getMessage());
 		}
+        //progressBar.dismiss();
         done = true;
         
         checkContactList();
@@ -359,5 +414,4 @@ public class MainActivity extends Activity {
 		}
 		return true;
 	}
-	
 }
