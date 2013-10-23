@@ -174,6 +174,7 @@
 2013/10/13 \> 16.0 \> Janine Venter \> Diagram: Logout added\\
 2013/10/13 \> 16.1 \> Janine Venter \> Functional Requirements: \\ \> \> \> Logout Updated\\
 2013/10/23 \> 16.2 \> Janine Venter \> Added all Services Contracts \\
+2013/10/23 \> 16.3 \> Janine Venter \> Updated Index \\
 
 
 \end{tabbing}
@@ -194,40 +195,39 @@
 \> 3.1 Architectural Pattern \> 9 				\\
 \> 3.2 Architectural Strategies/Tactics \> 11					\\
 \> 3.3 Reference Architecture \> 13			\\
-\> 3.4 Technology and Framework Selection \> 14 		\\
-\> 3.5 Build Tools \> 14							\\
-4. System Diagrams \> \> 15\\
-4.1 Login Use Case \> \>  15\\
+\> 3.4 Technology and Framework Selection \> 13		\\
+\> 3.5 Build Tools \> 13							\\
+4. System Diagrams \> \> 14\\
+4.1 Login Use Case \> \>  14\\
 \> 4.1.1 Services Contract \> 15\\
-\> 4.1.2. Functional Requirements \> 15\\
+\> 4.1.2 Functional Requirements \> 15\\
 \> 4.1.3 Sequence Diagram \> 16\\
 \> 4.1.4 Activity Diagram \> 17\\
 4.2 View Contact List Use Case \> \> 18\\
-\> 4.2.1 Services Contract \> 18\\
-\> 4.2.2. Functional Requirements \> 18\\
-\> 4.2.3 Sequence Diagram \> 19\\
-\> 4.1.4 Activity Diagram \> 20\\
-4.3 Messaging Use Case \> \> 21\\
-\> 4.3.1 Services Contract \> 21\\
-\> 4.3.2. Functional Requirements \> 21\\
-\> 4.3.3 Sequence Diagram \> 22\\
-\> 4.1.4 Activity Diagram \> 23\\
-4.4 Exit Use Case \> \> 24\\
-\> 4.4.1 Services Contract \> 24\\
-\> 4.4.2. Functional Requirements \> 24\\
-\> 4.4.3 Sequence Diagram \> 25\\
-\> 4.1.4 Activity Diagram \> 26\\
+\> 4.2.1 Services Contract \> 19\\
+\> 4.2.2 Functional Requirements \> 19\\
+\> 4.2.3 Sequence Diagram \> 20\\
+\> 4.1.4 Activity Diagram \> 21\\
+4.3 Messaging Use Case \> \> 22\\
+\> 4.3.1 Services Contract \> 23\\
+\> 4.3.2 Functional Requirements \> 23\\
+\> 4.3.3 Sequence Diagram \> 24\\
+\> 4.1.4 Activity Diagram \> 25\\
+4.4 Exit Use Case \> \> 26\\
+\> 4.4.1 Functional Requirements \> 26\\
+\> 4.4.2 Sequence Diagram \> 26\\
+\> 4.1.3 Activity Diagram \> 26\\
 4.5 Logout Use Case \> \> 27\\
-\> 4.5.1 Services Contract\> 27 \\
-\> 4.5.2 Functional Requirements \> 27 \\
-\> 4.5.3 Activity Diagram \> 28\\
-4.6 MimeTeX Use Case \> \> 29\\
-\> 4.6.1 Services Contract\> 29 \\
-\> 4.6.2 Functional Requirements \> 29 \\
-\> 4.6.3 Activity Diagram \> 30\\
-5. Policies \> \> 31			\\					
-6. Open Issues \> \> 32			\\				
-7. Glossary \> \> 33			\\				
+\> 4.5.1 Services Contract\> 28 \\
+\> 4.5.2 Functional Requirements \> 28 \\
+\> 4.5.3 Activity Diagram \> 29\\
+4.6 MimeTeX Use Case \> \> 30\\
+\> 4.6.1 Services Contract\> 31 \\
+\> 4.6.2 Functional Requirements \> 31\\
+\> 4.6.3 Activity Diagram \> 32\\
+5. Policies \> \> 33			\\					
+6. Open Issues \> \> 34			\\				
+7. Glossary \> \> 35			\\				
 
 \end{tabbing}
 \newpage
@@ -346,7 +346,7 @@
 			\noindent\textbf{Modifiability}\\
 			The agile methodology that we are following throughout this project (RUP) will assume changes in the requirements and the design will have to be modifiable to compensate for these future changes.
 			
-			For instance we will need the system to eventually be able to support more than the initial amount of users (which at this point in time is two), thus supporting multiple clients participating in separate chat instances.  In this release of the application we will only be supporting the one chat instance between two users, but the system’s design at this point is relatively modifiable, and support for multiple chat instances may be easily implemented. Integrating and developing the system to support more than two clients will be realtively easy, especially if an online server such as Jabber.org is used (in this case we are using a local server and will later upgrade to an online server) If the online server is used it will also solve the scalability issue ofm supporting more than two concurrent users.
+			For instance we will need the system to eventually be able to support more than the initial amount of users (which at this point in time is two), thus supporting multiple clients participating in separate chat instances.  In this release of the application we will only be supporting the one chat instance between two users, but the system’s design at this point is relatively modifiable, and support for multiple chat instances may be easily implemented. Integrating and developing the system to support more than two clients will be relatively easy, especially if an online server such as Jabber.org is used (in this case we are using a local server and will later upgrade to an online server) If the online server is used it will also solve the scalability issue ofm supporting more than two concurrent users.
 			
 			Users may want other features such as changing background colours to suite their profile or their personal preference to the display of the chat client. Thus the application has to be modifiable to later include such user specific features and also extra options and features.  This component may only be expected in a later version of the design.  The current iteration phase will only display necessary information, and not provide any additional design and presentation semantics.
 			\\  			
@@ -361,7 +361,7 @@
 			\noindent\textbf{Usability}
 				\\Our final goal for this project is to develop an application that is intuitive and easy to use.  Therefore we need our design to be as simple as possible while still providing the needed or required functionality as provided by our client.  This version of the project is not as user friendly as we intend for the final product to be.  At this point it works on a basic Android device.  
 				
-				\\User friendliness will be analyzed once the core functionality, as requested by our client, has been included, and user testing will be done at a later stage of development.
+				\\User friendliness will be analysed once the core functionality, as requested by our client, has been included, and user testing will be done at a later stage of development.
 				\begin{itemize}
 					\item The application should be intuitive.
 					\item It should be easy to use.
@@ -389,7 +389,7 @@
 			\noindent\textbf{Constraints}
 				\\The constraints of the physical device might be an issue, designing the application in such a manner that it is still intuitive and user friendly with regard to issues such as a person being able to see the rendered image clearly even if their device has a small or limited screen display.
 				
-				Another issue will be whether the libraries such as the Mimetex library will be reliable enough for the application’s needs will be analysed in the next iteration of development.
+				Another issue will be whether the libraries such as the Mimetex library will be reliable enough for the application's needs will be analysed in the next iteration of development.
 		\vspace{5mm}
 		
 		\noindent \textbf{3.3 Reference Architecture}
@@ -429,9 +429,13 @@
 			\\ \includegraphics[width=5.8in, height=1.1in]{./loginCase.png}
 			\\\caption{[Figure 2]Login Use Case}
 		\end{figure*}\\
-	
-		\\ \noindent\textbf{4.1.1 Services Contract}\\
-		To be added.\\
+	\newpage
+		\\ \noindent\left\textbf{4.1.1 Services Contract}\\
+		\\ \begin{figure*}
+							\centering
+							\\ \includegraphics[width=6.6in, height=7.1in]{./1_LoginSC.jpg}
+							\\\caption{[Figure 3]Login Services Contract}
+						\end{figure*}\\
 		
 		\noindent\textbf{4.1.2 Functional Requirements}
 			\begin{itemize}
@@ -447,14 +451,14 @@
 			\\ \begin{figure*}
 				\centering
 			\\	\includegraphics[width=5.5in, height=5.0in]{./loginActivity1.png}
-				\\\caption{[Figure 3]Login Sequence Diagram}
+				\\\caption{[Figure 4]Login Sequence Diagram}
 			\end{figure*}	\\
 \newpage
 			\left\textbf{4.1.4 Activity Diagram}\\
 						\\ \begin{figure*}
 							\centering
 						\\	\includegraphics[width=5.5in, height=2.0in]{./acLogin.png}
-							\\\caption{[Figure 3]Login Activity Diagram}
+							\\\caption{[Figure 5]Login Activity Diagram}
 						\end{figure*}	\\
 
 \newpage
@@ -462,11 +466,15 @@
 		\begin{figure*}
 			\centering
 			\\ \includegraphics[width=6.0in, height=2.5in]{./viewContactsCase.png} \\
-			\\\caption{[Figure 4]View Contact List Use Case}
+			\\\caption{[Figure 6]View Contact List Use Case}
 		\end{figure*}\\
-		
-		\\ \noindent\textbf{4.2.1 Services Contract}\\
-		To be added.\\
+\newpage		
+		\\ \noindent\left\textbf{4.2.1 Services Contract}\\
+		\begin{figure*}
+		\centering
+			\\ \includegraphics[width=7in, height=7.1in]{./3_ViewContactSC.jpg}
+			\\\caption{[Figure 7]View Contact List Services Contract}
+		\end{figure*}\\
 		
 		\noindent\textbf{4.2.2 Functional Requirements}
 			\begin{itemize}
@@ -480,25 +488,31 @@
 			\begin{figure*}
 				\centering
 				 \\ \includegraphics[width=5.5in, height=5.0in]{./viewContactsActivity.png}
-				\\\caption{[Figure 5]View Contact List Sequence Diagram}
+				\\\caption{[Figure 8]View Contact List Sequence Diagram}
 			\end{figure*}	
 			\newpage
 			\\ \left\textbf{4.2.4 Activity Diagram} \\
 						\begin{figure*}
 							\centering
 							 \\ \includegraphics[width=5.5in, height=2.0in]{./acContactList.png}
-							\\\caption{[Figure 5]View Contact List Activity Diagram}
+							\\\caption{[Figure 9]View Contact List Activity Diagram}
 						\end{figure*}	
 \newpage
 	\\ \left\textbf{4.3 Messaging Use Case} \\
 		\begin{figure*}
 			\centering
 			\\ \includegraphics[width=6.0in, height=3.5in]{./messagingUseCase.jpg}
-			\\\caption{[Figure 6]Messaging Use Case}\\
+			\\\caption{[Figure 10]Messaging Use Case}\\
 		\end{figure*}
-
+		
+		\newpage
+		
 		\noindent\textbf{4.3.1 Services Contract}\\
-		To be added.\\
+				\begin{figure*}
+				\centering
+					\\ \includegraphics[width=7in, height=7.1in]{./4_MessagingSC.jpg}
+					\\\caption{[Figure 11]Messaging Services Contract}
+				\end{figure*}\\
 		
 		\noindent\textbf{4.3.2 Functional Requirements}
 			\begin{itemize}
@@ -512,7 +526,7 @@
 			\begin{figure*}
 				\centering
 				\\ \includegraphics[width=5.5in, height=5.0in]{./mesActivity.png}
-				\\\caption{[Figure 7]Messaging Sequence Diagram}\\
+				\\\caption{[Figure 12]Messaging Sequence Diagram}\\
 			\end{figure*}	
 \newpage
 \\
@@ -520,7 +534,7 @@
 			\begin{figure*}
 				\centering
 				\\ \includegraphics[width=5.5in, height=3.0in]{./acMessaging.png}
-				\\\caption{[Figure 7]Messaging Activity Diagram}\\
+				\\\caption{[Figure 13]Messaging Activity Diagram}\\
 			\end{figure*}
 		
 \newpage		
@@ -528,41 +542,43 @@
 		\begin{figure*}
 			\centering
 			\\ \includegraphics[width=6.0in, height=1.5in]{./exitCase.png}
-			\\\caption{[Figure 8]Exit Use Case}\\
+			\\\caption{[Figure 14]Exit Use Case}\\
 		\end{figure*}
 		
-		\noindent\textbf{4.4.1 Services Contract}\\ 
-		To be added.\\
-		\textbf{4.4.2 Functional Requirements}
+		\textbf{4.4.1 Functional Requirements}
 			\begin{itemize}
 				\item Ends the application on the device.\\
 			\end{itemize}
-			\newpage
-		\left\textbf{4.4.3 Sequence Diagram}
+	
+		\left\textbf{4.4.2 Sequence Diagram}
 		\begin{figure*}
 			\centering
 			\\ \includegraphics[width=4.0in, height=3.0in]{./exitActivity.png}
-			\\\caption{[Figure 9]Exit Sequence Diagram}
+			\\\caption{[Figure 14]Exit Sequence Diagram}\\
 		\end{figure*}
-		
-		\newpage
-		\left\textbf{4.4.4 Activity Diagram}
+
+		\left\textbf{4.4.3 Activity Diagram}
 				\begin{figure*}
 					\centering
 					\\ \includegraphics[width=5.0in, height=1.5in]{./acExit.png}
-					\\\caption{[Figure 9]Exit Activity Diagram}
+					\\\caption{[Figure 15]Exit Activity Diagram}
 				\end{figure*}
 				
 \newpage
 	\left\textbf{4.5 Logout Use Case}
 		\begin{figure*}
 			\centering
-			\\ \includegraphics[width=6.0in, height=1.5in]{./ucLogout.png}
-			\\\caption{[Figure 8]Logout Use Case}\\
+			\\ \includegraphics[width=5.5in, height=1.1in]{./ucLogout.png}
+			\\\caption{[Figure 16]Logout Use Case}\\
 		\end{figure*}
-		
-		\noindent\textbf{4.5.1 Services Contract}\\ 
-		To be added.\\
+		\newpage
+		\noindent\left\textbf{4.5.1 Services Contract}\\ 
+		\begin{figure*}
+							\centering
+							\\ \includegraphics[width=7in, height=7.1in]{./2_LogoutSC.jpg}
+							\\\caption{[Figure 17]Logout Services Contract} \\
+						\end{figure*}
+						
 		\textbf{4.5.2 Functional Requirements}
 			\begin{itemize}
 				\item Logs the user out of the application.\\
@@ -573,22 +589,28 @@
 				\begin{figure*}
 					\centering
 					\\ \includegraphics[width=5.0in, height=1.5in]{./acLogout.png}
-					\\\caption{[Figure 9]Exit Activity Diagram}
+					\\\caption{[Figure 18]Exit Activity Diagram}
 				\end{figure*}
 		
 \newpage		
 	\left\textbf{4.6 MimeTeX Use Case}
 		\begin{figure*}
 			\centering
-			\\ \includegraphics[width=6.0in, height=3.0in]{./MimeTeXUseCase.png}
-			\\\caption{[Figure 10]MimeTeX Use Case}\\
+			\\ \includegraphics[width=6.0in, height=4.0in]{./MimeTeXUseCase.png}
+			\\\caption{[Figure 19]MimeTeX Use Case}\\
 		\end{figure*}
+		\newpage
+		\noindent\left\textbf{4.6.1 Services Contract}\\ 
+		\begin{figure*}
+							\centering
+							\\ \includegraphics[width=7in, height=7.1in]{./5_MimetexSC.jpg}
+							\\\caption{[Figure 18]MimeTeX Activity Diagram} \\
+						\end{figure*}
 		
-		\noindent\textbf{4.6.1 Services Contract}\\ 
-		To be added.\\
+		
 		\textbf{4.6.2 Functional Requirements}
 			\begin{itemize}
-				\item Render LaTeX equations.\\
+				\item Render LaTeX equations.
 				\item Allows for preview of equations\\
 			\end{itemize}
 \newpage
@@ -596,7 +618,7 @@
 		\begin{figure*}
 			\centering
 			\\ \includegraphics[width=6.0in, height=8.0in]{./activityMimeTex.png}
-			\\\caption{[Figure 11]MimeTeX Activity Diagram}
+			\\\caption{[Figure 21]MimeTeX Activity Diagram}
 		\end{figure*}
 \newpage
 	\section*{\textbf{5. Policies}}
