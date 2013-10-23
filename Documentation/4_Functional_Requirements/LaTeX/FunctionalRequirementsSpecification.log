@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.3)  13 OCT 2013 07:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.3)  23 OCT 2013 16:14
 entering extended mode
 **FunctionalRequirementsSpecification.tex
 
@@ -732,86 +732,86 @@ File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-mvs.cfg"
 File: mt-mvs.cfg 2006/07/05 v1.1 microtype config. file: Marvosym Euro (RS)
 ) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--164
+Underfull \hbox (badness 10000) in paragraph at lines 162--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--170
+Underfull \hbox (badness 10000) in paragraph at lines 167--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\data\uni-32.def"
 File: uni-32.def 2012/04/20 UCS: Unicode data U+2000..U+20FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--207
+Underfull \hbox (badness 10000) in paragraph at lines 206--208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--217
+Underfull \hbox (badness 10000) in paragraph at lines 216--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--232
+Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 236--238
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--244
+Underfull \hbox (badness 10000) in paragraph at lines 243--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--250
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
+Underfull \hbox (badness 10000) in paragraph at lines 255--257
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.258 	\noindent \left
+l.259 	\noindent \left
                       \textbf{3.2 Use Cases: }\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -819,7 +819,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    {
-l.258 	\noindent \left\textbf{3.2 Use Cases: }
+l.259 	\noindent \left\textbf{3.2 Use Cases: }
                                               \\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -831,7 +831,7 @@ nonnegative, or you can use `\delimiter <delimiter code>'.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    {
-l.260 		\\ \noindent \left\textbf{Login}
+l.261 		\\ \noindent \left\textbf{Login}
                                         \\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -847,7 +847,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.261 		\\ \begin{figure*}
+l.262 		\\ \begin{figure*}
                           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -860,7 +860,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.263 					\\
+l.264 					\\
               \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -869,7 +869,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.263 					\\
+l.264 					\\
               \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -877,7 +877,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.263 					\\
+l.264 					\\
               \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -888,7 +888,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.263 					\\
+l.264 					\\
               \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -899,7 +899,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.263 					\\
+l.264 					\\
               \includegraphics[width=6.0in, height=1.2in]{./loginCase.png}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -910,7 +910,7 @@ my insertion and my current dilemma will both disappear.
 <./loginCase.png, id=75, 520.19344pt x 100.12407pt>
 File: ./loginCase.png Graphic file (type png)
  <use ./loginCase.png>
-Package pdftex.def Info: ./loginCase.png used on input line 263.
+Package pdftex.def Info: ./loginCase.png used on input line 264.
 (pdftex.def)             Requested size: 433.61781pt x 86.72833pt.
 
 
@@ -920,7 +920,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.264 					\\\caption
+l.265 					\\\caption
                      {[Figure 1] Login Use Case}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -932,7 +932,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.265 			\end{figure*}
+l.266 			\end{figure*}
                       \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -941,12 +941,12 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.265 			\end{figure*}
+l.266 			\end{figure*}
                       \\
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--266
+Underfull \hbox (badness 10000) in paragraph at lines 264--267
 
  []
 
@@ -957,7 +957,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.267 		\\ \noindent
+l.268 		\\ \noindent
                      \left\textbf{Logout}\\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -966,7 +966,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.267 		\\ \noindent \left
+l.268 		\\ \noindent \left
                           \textbf{Logout}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -974,7 +974,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    {
-l.267 		\\ \noindent \left\textbf{Logout}
+l.268 		\\ \noindent \left\textbf{Logout}
                                          \\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -990,7 +990,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.268 			\\ \begin{figure*}
+l.269 			\\ \begin{figure*}
                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1003,7 +1003,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.270 						\\
+l.271 						\\
                \includegraphics[width=6.0in, height=1.2in]{./ucLogout.png}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1012,7 +1012,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.270 						\\
+l.271 						\\
                \includegraphics[width=6.0in, height=1.2in]{./ucLogout.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1020,7 +1020,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.270 						\\
+l.271 						\\
                \includegraphics[width=6.0in, height=1.2in]{./ucLogout.png}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1031,7 +1031,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.270 						\\
+l.271 						\\
                \includegraphics[width=6.0in, height=1.2in]{./ucLogout.png}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1042,7 +1042,7 @@ my insertion and my current dilemma will both disappear.
 <./ucLogout.png, id=76, 368.1253pt x 92.59593pt>
 File: ./ucLogout.png Graphic file (type png)
  <use ./ucLogout.png>
-Package pdftex.def Info: ./ucLogout.png used on input line 270.
+Package pdftex.def Info: ./ucLogout.png used on input line 271.
 (pdftex.def)             Requested size: 433.65387pt x 86.72508pt.
 
 
@@ -1052,7 +1052,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.271 						\\\caption
+l.272 						\\\caption
                       {[Figure 2] Logout Use Case}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1064,7 +1064,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.272 				\end{figure*}
+l.273 				\end{figure*}
                        \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1073,12 +1073,12 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.272 				\end{figure*}
+l.273 				\end{figure*}
                        \\
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--273
+Underfull \hbox (badness 10000) in paragraph at lines 271--274
 
  []
 
@@ -1089,7 +1089,7 @@ Hub/COS-301-Main-Project-Fractals/Documentation/4_Functional_Requirements/LaTeX
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.274 		\noindent \left
+l.275 		\noindent \left
                        \textbf{View Contact List}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1097,7 +1097,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    {
-l.274 		\noindent \left\textbf{View Contact List}
+l.275 		\noindent \left\textbf{View Contact List}
                                                  \\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1113,7 +1113,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.275 		\begin{figure*}
+l.276 		\begin{figure*}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1126,7 +1126,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.277 					\\
+l.278 					\\
               \includegraphics[width=6.0in, height=3.2in]{./viewContactsCase...
 
 Your command was ignored.
@@ -1136,7 +1136,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.277 					\\
+l.278 					\\
               \includegraphics[width=6.0in, height=3.2in]{./viewContactsCase...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1144,7 +1144,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.277 					\\
+l.278 					\\
               \includegraphics[width=6.0in, height=3.2in]{./viewContactsCase...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1155,7 +1155,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.277 					\\
+l.278 					\\
               \includegraphics[width=6.0in, height=3.2in]{./viewContactsCase...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1167,7 +1167,7 @@ my insertion and my current dilemma will both disappear.
 File: ./viewContactsCase.png Graphic file (type png)
 
 <use ./viewContactsCase.png>
-Package pdftex.def Info: ./viewContactsCase.png used on input line 277.
+Package pdftex.def Info: ./viewContactsCase.png used on input line 278.
 (pdftex.def)             Requested size: 433.62813pt x 231.26955pt.
 
 
@@ -1177,7 +1177,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.278 					\\\caption
+l.279 					\\\caption
                      {[Figure 3] View Contact List Use Case} \\
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1189,7 +1189,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.279 		\end{figure*}
+l.280 		\end{figure*}
                      \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1198,29 +1198,29 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.279 		\end{figure*}
+l.280 		\end{figure*}
                      \\
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--280
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--280
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--280
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.281 		\noindent \left
+l.282 		\noindent \left
                        \textbf{Messaging}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1228,7 +1228,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    {
-l.281 		\noindent \left\textbf{Messaging}
+l.282 		\noindent \left\textbf{Messaging}
                                          \\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1244,7 +1244,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.282 		\begin{figure*}
+l.283 		\begin{figure*}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1257,7 +1257,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.284 			\\
+l.285 			\\
             \includegraphics[width=6.0in, height=3in]{./messagingUseCase.jpg}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1266,7 +1266,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.284 			\\
+l.285 			\\
             \includegraphics[width=6.0in, height=3in]{./messagingUseCase.jpg}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1274,7 +1274,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.284 			\\
+l.285 			\\
             \includegraphics[width=6.0in, height=3in]{./messagingUseCase.jpg}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1285,7 +1285,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.284 			\\
+l.285 			\\
             \includegraphics[width=6.0in, height=3in]{./messagingUseCase.jpg}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1297,7 +1297,7 @@ my insertion and my current dilemma will both disappear.
 File: ./messagingUseCase.jpg Graphic file (type jpg)
 
 <use ./messagingUseCase.jpg>
-Package pdftex.def Info: ./messagingUseCase.jpg used on input line 284.
+Package pdftex.def Info: ./messagingUseCase.jpg used on input line 285.
 (pdftex.def)             Requested size: 433.61856pt x 216.81506pt.
 
 
@@ -1307,7 +1307,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.285 			\\\caption
+l.286 			\\\caption
                    {[Figure 4] Messaging Use Case}\\
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1319,7 +1319,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.286 		\end{figure*}
+l.287 		\end{figure*}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1328,12 +1328,12 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.286 		\end{figure*}
+l.287 		\end{figure*}
                      
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--287
+Underfull \hbox (badness 10000) in paragraph at lines 285--288
 
  []
 
@@ -1344,7 +1344,7 @@ s/LaTeX/messagingUseCase.jpg>]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.288 		\noindent \left
+l.289 		\noindent \left
                        \textbf{Exit}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1352,7 +1352,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    {
-l.288 		\noindent \left\textbf{Exit}
+l.289 		\noindent \left\textbf{Exit}
                                     \\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1368,7 +1368,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.289 		\begin{figure*}
+l.290 		\begin{figure*}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1381,7 +1381,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.291 			\\
+l.292 			\\
             \includegraphics[width=6.0in, height=1.5in]{./exitCase.png}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1390,7 +1390,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.291 			\\
+l.292 			\\
             \includegraphics[width=6.0in, height=1.5in]{./exitCase.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1398,7 +1398,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.291 			\\
+l.292 			\\
             \includegraphics[width=6.0in, height=1.5in]{./exitCase.png}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1409,7 +1409,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.291 			\\
+l.292 			\\
             \includegraphics[width=6.0in, height=1.5in]{./exitCase.png}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1420,7 +1420,7 @@ my insertion and my current dilemma will both disappear.
 <./exitCase.png, id=90, 371.13657pt x 110.66344pt>
 File: ./exitCase.png Graphic file (type png)
  <use ./exitCase.png>
-Package pdftex.def Info: ./exitCase.png used on input line 291.
+Package pdftex.def Info: ./exitCase.png used on input line 292.
 (pdftex.def)             Requested size: 433.62773pt x 108.41057pt.
 
 
@@ -1430,7 +1430,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.292 			\\\caption
+l.293 			\\\caption
                    {[Figure 5] Exit Use Case}\\
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1442,7 +1442,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.293 		\end{figure*}
+l.294 		\end{figure*}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1451,19 +1451,19 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.293 		\end{figure*}
+l.294 		\end{figure*}
                      
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--294
+Underfull \hbox (badness 10000) in paragraph at lines 292--295
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.296 		\noindent \left
+l.297 		\noindent \left
                        \textbf{MimeTeX}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1471,7 +1471,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    {
-l.296 		\noindent \left\textbf{MimeTeX}
+l.297 		\noindent \left\textbf{MimeTeX}
                                        \\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1487,7 +1487,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.297 		\begin{figure*}
+l.298 		\begin{figure*}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1500,7 +1500,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.299 			\\
+l.300 			\\
             \includegraphics[width=6.0in, height=3.0in]{./MimeTeXUseCase.png}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1509,7 +1509,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.299 			\\
+l.300 			\\
             \includegraphics[width=6.0in, height=3.0in]{./MimeTeXUseCase.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1517,7 +1517,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.299 			\\
+l.300 			\\
             \includegraphics[width=6.0in, height=3.0in]{./MimeTeXUseCase.png}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1528,7 +1528,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.299 			\\
+l.300 			\\
             \includegraphics[width=6.0in, height=3.0in]{./MimeTeXUseCase.png}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1540,7 +1540,7 @@ my insertion and my current dilemma will both disappear.
 File: ./MimeTeXUseCase.png Graphic file (type png)
 
 <use ./MimeTeXUseCase.png>
-Package pdftex.def Info: ./MimeTeXUseCase.png used on input line 299.
+Package pdftex.def Info: ./MimeTeXUseCase.png used on input line 300.
 (pdftex.def)             Requested size: 433.62358pt x 216.8076pt.
 
 
@@ -1550,7 +1550,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.300 			\\\caption
+l.301 			\\\caption
                    {[Figure 5] MimeTeX Use Case}\\
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1562,7 +1562,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.301 		\end{figure*}
+l.302 		\end{figure*}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1571,12 +1571,12 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.301 		\end{figure*}
+l.302 		\end{figure*}
                      
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--302
+Underfull \hbox (badness 10000) in paragraph at lines 300--303
 
  []
 
@@ -1587,7 +1587,7 @@ MimeTeXUseCase.png>]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.304 	\noindent \\ \left
+l.305 	\noindent \\ \left
                          \textbf{3.3 Class Diagrams}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1595,7 +1595,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    {
-l.304 ...ndent \\ \left\textbf{3.3 Class Diagrams}
+l.305 ...ndent \\ \left\textbf{3.3 Class Diagrams}
                                                   \\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1611,7 +1611,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.305 			\begin{figure*}
+l.306 			\begin{figure*}
                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1624,8 +1624,9 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.307 				\\
-             \includegraphics[width=7.0in, height=8.5in]{./Class_Diagram.jpg}
+l.308 				\\
+             \includegraphics[width=6.7in, height=7.5in]{./classDiagram_part...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1633,16 +1634,16 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.307 				\\
-             \includegraphics[width=7.0in, height=8.5in]{./Class_Diagram.jpg}
+l.308 				\\
+             \includegraphics[width=6.7in, height=7.5in]{./classDiagram_part...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.307 				\\
-             \includegraphics[width=7.0in, height=8.5in]{./Class_Diagram.jpg}
+l.308 				\\
+             \includegraphics[width=6.7in, height=7.5in]{./classDiagram_part...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1652,19 +1653,20 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.307 				\\
-             \includegraphics[width=7.0in, height=8.5in]{./Class_Diagram.jpg}
+l.308 				\\
+             \includegraphics[width=6.7in, height=7.5in]{./classDiagram_part...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<./Class_Diagram.jpg, id=97, 934.99312pt x 746.79pt>
-File: ./Class_Diagram.jpg Graphic file (type jpg)
- <use ./Class_Diagram.jpg>
-Package pdftex.def Info: ./Class_Diagram.jpg used on input line 307.
-(pdftex.def)             Requested size: 505.9017pt x 614.32031pt.
+<./classDiagram_part1.jpg, id=97, 1067.99pt x 857.2025pt>
+File: ./classDiagram_part1.jpg Graphic file (type jpg)
+
+<use ./classDiagram_part1.jpg>
+Package pdftex.def Info: ./classDiagram_part1.jpg used on input line 308.
+(pdftex.def)             Requested size: 484.20882pt x 542.02856pt.
 
 
 ! LaTeX Error: \caption outside float.
@@ -1673,7 +1675,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 				\\\caption
+l.309 				\\\caption
                     {[Figure 6] Class Diagram}\\
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1685,7 +1687,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.309 			\end{figure*}
+l.310 			\end{figure*}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1694,50 +1696,20 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.309 			\end{figure*}
+l.310 			\end{figure*}
                       
 Things are pretty mixed up, but I think the worst is over.
 
 
-Overfull \hbox (42.11995pt too wide) in paragraph at lines 307--310
+Overfull \hbox (20.42706pt too wide) in paragraph at lines 308--311
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--310
+Underfull \hbox (badness 10000) in paragraph at lines 308--311
 
  []
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.311 	\\ \noindent
-                    \textbf{3.4 Entity Relationship Diagram}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--315
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--315
-
- []
-
-
-Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 10/[]15[] 
- []
-
-[10 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentati
-on/4_Functional_Requirements/LaTeX/Class_Diagram.jpg>]
 
 ! LaTeX Error: Environment figure* undefined.
 
@@ -1745,7 +1717,107 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.316 	\begin{figure*}
+l.313 \begin{figure*}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.315 				\\
+             \includegraphics[width=6.7in, height=8.6in]{./classDiagram_part...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./classDiagram_part2.jpg, id=98, 1082.0425pt x 1439.3775pt>
+File: ./classDiagram_part2.jpg Graphic file (type jpg)
+
+<use ./classDiagram_part2.jpg>
+Package pdftex.def Info: ./classDiagram_part2.jpg used on input line 315.
+(pdftex.def)             Requested size: 484.20688pt x 621.53387pt.
+
+Overfull \hbox (6.19876pt too wide) in paragraph at lines 315--316
+ [][] 
+ []
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.316 				\\\caption
+                    {[Figure 6] Class Diagram Continued}\\
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (4.54077pt too wide) has occurred while \output is active
+[]|\T1/qpl/m/it/10 (-20) 10/[]16[] 
+ []
+
+[10 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentati
+on/4_Functional_Requirements/LaTeX/classDiagram_part1.jpg>]
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.317 			\end{figure*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (4.54077pt too wide) has occurred while \output is active
+[]|\T1/qpl/m/it/10 (-20) 11/[]16[] 
+ []
+
+[11 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentati
+on/4_Functional_Requirements/LaTeX/classDiagram_part2.jpg>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.319 	\\ \noindent
+                    \textbf{3.4 Entity Relationship Diagram}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--323
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.324 	\begin{figure*}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1758,16 +1830,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.318 		\\
+l.326 		\\
            \includegraphics[width=4.5in, height=2.0in]{./erd.png}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<./erd.png, id=103, 297.36093pt x 137.7647pt>
+<./erd.png, id=109, 297.36093pt x 137.7647pt>
 File: ./erd.png Graphic file (type png)
  <use ./erd.png>
-Package pdftex.def Info: ./erd.png used on input line 318.
+Package pdftex.def Info: ./erd.png used on input line 326.
 (pdftex.def)             Requested size: 325.22864pt x 144.55417pt.
 
 
@@ -1777,7 +1849,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.319 		\\\caption
+l.327 		\\\caption
                   {[Figure 7] ERD}\\
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1789,7 +1861,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.320 	\end{figure*}
+l.328 	\end{figure*}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1797,100 +1869,100 @@ or  <return>  to continue without it.
 
 
 Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 11/[]15[] 
+[]|\T1/qpl/m/it/10 (-20) 12/[]16[] 
  []
 
-[11 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentati
+[12 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentati
 on/4_Functional_Requirements/LaTeX/erd.png>]
 Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 12/[]15[] 
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--343
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 344--347
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--356
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 358--361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 363--365
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 369--371
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 372--376
-
- []
-
-
-Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 13/[]15[] 
+[]|\T1/qpl/m/it/10 (-20) 13/[]16[] 
  []
 
 [13]
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--369
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--384
+
+ []
+
+
 Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 14/[]15[] 
+[]|\T1/qpl/m/it/10 (-20) 14/[]16[] 
  []
 
 [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
-
 Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 15/[]15[] 
+[]|\T1/qpl/m/it/10 (-20) 15/[]16[] 
  []
 
 [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
+
+Overfull \hbox (4.54077pt too wide) has occurred while \output is active
+[]|\T1/qpl/m/it/10 (-20) 16/[]16[] 
+ []
+
+[16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
 
 (C:\Users\Janine\Documents\GitHub\COS-301-Main-Project-Fractals\Documentation\4
 _Functional_Requirements\LaTeX\FunctionalRequirementsSpecification.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 404.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 412.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
 Package rerunfilecheck Info: File `FunctionalRequirementsSpecification.out' has
  not changed.
 (rerunfilecheck)             Checksum: 610174CDA92329992EBF2ABB82FBB0D4;520.
  ) 
 Here is how much of TeX's memory you used:
- 9778 strings out of 494045
- 146870 string characters out of 3148385
+ 9784 strings out of 494045
+ 147039 string characters out of 3148385
  281234 words of memory out of 3000000
- 12787 multiletter control sequences out of 15000+200000
+ 12791 multiletter control sequences out of 15000+200000
  49714 words of font info for 73 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 44i,12n,67p,801b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,13n,67p,801b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc}<C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/marvosym/marvosym.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/tex-gyre/qplb.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/tex-gyre/qplr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/t
 ex-gyre/qplri.pfb>
-Output written on FunctionalRequirementsSpecification.pdf (15 pages, 482766 byt
-es).
+Output written on FunctionalRequirementsSpecification.pdf (16 pages, 1577276 by
+tes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 13425 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 13430 words of extra memory for PDF output out of 14400 (max. 10000000)
 

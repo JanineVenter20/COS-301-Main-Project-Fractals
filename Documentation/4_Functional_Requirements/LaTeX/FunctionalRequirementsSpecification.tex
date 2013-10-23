@@ -91,6 +91,7 @@
 2013/10/12 \> 7.5 \> Janine Venter \> Open Issues Updated \\
 2013/10/12 \> 7.6 \> Janine Venter \> Added Diagram of each class\\
 2013/10/12 \> 7.7 \> Janine Venter \> Updated Class diagram\\
+2013/10/23 \> 7.8 \> Janine Venter \> Updated Class diagram\\
 
 \end{tabbing}
 
@@ -110,13 +111,13 @@
 \> 3.1 System Features \> 6\\
 \> 3.2 Use Cases \> 7\\
 \> 3.3 Class Diagram \> 10\\
-\> 3.4 Entity Relationship Diagram \> 11\\
-4. External Interface Requirements \> \> 12\\
-5. Technical Requirements (Non-Functional) \> \> 13\\
-\> 5.1 Non-Functional Requirements \> 13\\
-\> 5.2 Technical Requirements \> 13\\
-6. Open Issues \> \> 14			\\				
-7. Glossary \> \> 15 			\\				
+\> 3.4 Entity Relationship Diagram \> 12\\
+4. External Interface Requirements \> \> 13\\
+5. Technical Requirements (Non-Functional) \> \> 14\\
+\> 5.1 Non-Functional Requirements \> 14\\
+\> 5.2 Technical Requirements \> 14\\
+6. Open Issues \> \> 15			\\				
+7. Glossary \> \> 16 			\\				
 
 \end{tabbing}
 \newpage
@@ -304,10 +305,17 @@
 	\noindent \\ \left\textbf{3.3 Class Diagrams}\\
 			\begin{figure*}
 				\centering
-				\\ \includegraphics[width=7.0in, height=8.5in]{./Class_Diagram.jpg}
+				\\ \includegraphics[width=6.7in, height=7.5in]{./classDiagram_part1.jpg}
 				\\\caption{[Figure 6] Class Diagram}\\
 			\end{figure*}
-	
+			
+
+\begin{figure*}
+				\centering
+				\\ \includegraphics[width=6.7in, height=8.6in]{./classDiagram_part2.jpg}
+				\\\caption{[Figure 6] Class Diagram Continued}\\
+			\end{figure*}
+\newpage	
 	\\ \noindent \textbf{3.4 Entity Relationship Diagram}
 	\\The system makes use of an SQLite database on the client side. This database contains two tables, namely Messages and Rememberme that is used to record message histories for a particular client as well as to remember the logged in user if applicable. 
 	\parindent 5mm The database cleanup functionality is included and utilized at the user’s request through a delete message history option. When a user utilizes this option, all data with regard to a particular contact will be removed and cleared from the client side database.
