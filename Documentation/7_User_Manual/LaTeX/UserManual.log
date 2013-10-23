@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.3)  23 OCT 2013 09:32
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.3)  23 OCT 2013 21:11
 entering extended mode
 **UserManual.tex
 
@@ -723,52 +723,6 @@ _User_Manual\LaTeX\UserManual.out)
 \@outlinefile=\write3
 \pagenumberwidth=\skip68
 
-! Extra \endgroup.
-\color@endgroup ->\endgraf \endgroup 
-                                     
-l.24 \end{tabbing}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
-! Too many }'s.
-\@stopfield ->\color@endgroup \egroup 
-                                      
-l.24 \end{tabbing}
-                  
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-! Undefined control sequence.
-\@stopline ...\else \@addfield \hbox {\@itemfudge 
-                                                  \hskip \dimen \@curtabmar ...
-l.24 \end{tabbing}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: \begin{document} ended by \end{tabbing}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \end{tabbing}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.24 \end{tabbing}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
 (RS)
@@ -776,45 +730,19 @@ File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-! LaTeX Error: Undefined tab position.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 8. Delete Chat History \>
-                               \> 14 	\\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Undefined tab position.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 8. Delete Chat History \> \>
-                                  14 	\\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[2]
-
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 			\\T
+l.50 			\\T
            eXchat is an open source messaging application that is developed ...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[3]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -822,7 +750,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 		 \\T
+l.55 		 \\T
            eXchat works in a similar fashion to normal SMS services. SMS is ...
 
 Your command was ignored.
@@ -830,16 +758,15 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[4]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -847,7 +774,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 	\\O
+l.64 	\\O
          nce you have the application correctly installed and configured to ...
 
 Your command was ignored.
@@ -861,7 +788,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.70 	\\T
+l.66 	\\T
          his is the TeXchat icon that will be displayed on your device menu,...
 
 Your command was ignored.
@@ -875,14 +802,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.72 	\\F
+l.68 	\\F
          or more information on how to configure your device with an availab...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[5] [6]
+[2]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -890,8 +817,80 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83 		\\T
-          he login page is diplayed once the application is opened.
+l.74 	\\T
+         o access the Configuration/Settings page, open the application, aft...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 	\noindent\begin{figure*}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./Screenshot_2013-10-23-18-58-53.png, id=74, 481.8pt x 803.0pt>
+File: ./Screenshot_2013-10-23-18-58-53.png Graphic file (type png)
+
+<use ./Screenshot_2013-10-23-18-58-53.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-18-58-53.png used on input lin
+e 81.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82 					\centering \caption
+                             {[Figure 1] Configuration page}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 					\end{figure*}
+                       \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
+
+ []
+
+[3 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/7_User_Manual/LaTeX/Screenshot_2013-10-23-18-58-53.png>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 		\\T
+          he login page is displayed once the application is opened.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -903,7 +902,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.85 		\\A
+l.91 		\\A
            user that is already registered to use the TeXchat service may si...
 
 Your command was ignored.
@@ -911,22 +910,20 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-! LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90 		\\I
-          f you already have contacts added to your account, you will see a ...
+ []
 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\data\uni-32.def"
-File: uni-32.def 2012/04/20 UCS: Unicode data U+2000..U+20FF
-) [7]
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
+
+ []
+
 
 ! LaTeX Error: There's no line here to end.
 
@@ -935,13 +932,67 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.96 		\\I
-          f you are currently logged in to the TeXchat application and wish ...
+          f you already have contacts added to your account, you will see a ...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[8]
+("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\data\uni-32.def"
+File: uni-32.def 2012/04/20 UCS: Unicode data U+2000..U+20FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 		\noindent\begin{figure*}
+                               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./Screenshot_2013-10-23-18-59-04.png, id=80, 481.8pt x 803.0pt>
+File: ./Screenshot_2013-10-23-18-59-04.png Graphic file (type png)
+
+<use ./Screenshot_2013-10-23-18-59-04.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-18-59-04.png used on input lin
+e 100.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 							\centering \caption
+                                {[Figure 2] Login page}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102 							\end{figure*}
+                          \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[4 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/7_User_Manual/LaTeX/Screenshot_2013-10-23-18-59-04.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -949,7 +1000,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.102 		\\I
+l.108 		\\I
+           f you are currently logged in to the TeXchat application and wish...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 		\\I
            f you open the application, and see the login page appear after s...
 
 Your command was ignored.
@@ -957,33 +1022,9 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-! LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104 		\\T
-           his automatic sign in feature is provided for cases in which the ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[9]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.111 		\\I
-           f you are a first time user, and would like to use the TeXchat me...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
 
 ! LaTeX Error: There's no line here to end.
@@ -993,6 +1034,133 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.115 		\\T
+           his automatic sign in feature is provided for cases in which the ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 		\noindent\begin{figure*}
+                                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: ./Screenshot_2013-10-23-18-59-04.png Graphic file (type png)
+<use ./Screenshot_2013-10-23-18-59-04.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-18-59-04.png used on input lin
+e 119.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 									\centering \caption
+                                  {[Figure 3] Remember me option}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 									\end{figure*}
+                            \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[5]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 		\\I
+           f you are a first time user, and would like to use the TeXchat me...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 		\noindent\begin{figure*}
+                                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: ./Screenshot_2013-10-23-18-59-04.png Graphic file (type png)
+<use ./Screenshot_2013-10-23-18-59-04.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-18-59-04.png used on input lin
+e 132.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.133 		\centering \caption
+                           {[Figure 4] Login page with Register button}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 		\end{figure*}
+                     \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 		\\T
            he registration form has various required fields for you to fill ...
 
 Your command was ignored.
@@ -1000,13 +1168,18 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.117 		\\I
+l.138 		\\I
            f the message appears, \textit{"Registration failed"} you have no...
 
 Your command was ignored.
@@ -1014,13 +1187,18 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 		\\A
+l.140 		\\A
            lso ensure that all the input text fields are correctly completed...
 
 Your command was ignored.
@@ -1028,13 +1206,136 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142 		\noindent\begin{figure*}
+                                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./Screenshot_2013-10-23-19-59-51.png, id=91, 481.8pt x 803.0pt>
+File: ./Screenshot_2013-10-23-19-59-51.png Graphic file (type png)
+
+<use ./Screenshot_2013-10-23-19-59-51.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-19-59-51.png used on input lin
+e 144.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 		\centering \caption
+                           {[Figure 5] Register page}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[6]
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 		\end{figure*}
+                     \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
+
+ []
+
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132 				\\F
+l.148 ...able in V1.0 of the TeXchat application.]
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154 				\noindent\begin{figure*}
+                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./Screenshot_2013-10-23-20-00-25.png, id=97, 481.8pt x 803.0pt>
+File: ./Screenshot_2013-10-23-20-00-25.png Graphic file (type png)
+
+<use ./Screenshot_2013-10-23-20-00-25.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-20-00-25.png used on input lin
+e 156.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 				\centering \caption
+                             {[Figure 6] Add contact page}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[7 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/7_User_Manual/LaTeX/Screenshot_2013-10-23-19-59-51.png>]
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.158 				\end{figure*}
+                       \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 				\\F
              rom your contact list page, you can open an active chat with an...
 
 Your command was ignored.
@@ -1042,13 +1343,97 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 				\noindent\begin{figure*}
+                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./Screenshot_2013-10-23-18-59-23.png, id=104, 481.8pt x 803.0pt>
+File: ./Screenshot_2013-10-23-18-59-23.png Graphic file (type png)
+
+<use ./Screenshot_2013-10-23-18-59-23.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-18-59-23.png used on input lin
+e 168.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.169 								\centering \caption
+                                 {[Figure 7] Contact List}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[8 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/7_User_Manual/LaTeX/Screenshot_2013-10-23-20-00-25.png>]
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.170 								\end{figure*}
+                           \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--171
+
+ []
+
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.134 				\\I
+l.172 ...cts, grey contacts are offline contacts.]
+                                                  \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 				\\I
              f you have a message history with the contact you have selected...
 
 Your command was ignored.
@@ -1056,13 +1441,69 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+ []
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176 				\noindent\begin{figure*}
+                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./Screenshot_2013-10-23-20-00-45.png, id=110, 481.8pt x 803.0pt>
+File: ./Screenshot_2013-10-23-20-00-45.png Graphic file (type png)
+
+<use ./Screenshot_2013-10-23-20-00-45.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-20-00-45.png used on input lin
+e 178.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 				\centering \caption
+                             {[Figure 8] Chat History}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.180 				\end{figure*}
+                       \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
+
+ []
+
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.138 				\\I
+l.182 				\\I
              n the case that there is no previous messages recorded between ...
 
 Your command was ignored.
@@ -1070,13 +1511,22 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+[9 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/7_User_Manual/LaTeX/Screenshot_2013-10-23-18-59-23.png> <C:/Users/Janine/Docu
+ments/GitHub/COS-301-Main-Project-Fractals/Documentation/7_User_Manual/LaTeX/Sc
+reenshot_2013-10-23-20-00-45.png>]
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.142 			\\	\textbf
+l.184 			\\	\textbf
                    {To send a plain text message} you can type the body of y...
 
 Your command was ignored.
@@ -1084,13 +1534,18 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 				\\O
+l.186 				\\O
              nce you have clicked Send the page will be updated and include ...
 
 Your command was ignored.
@@ -1098,13 +1553,18 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
+
+ []
+
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.148 			\\	\textbf
+l.188 			\\	\textbf
                    {To send a message containing expressions} you can click ...
 
 Your command was ignored.
@@ -1112,11 +1572,54 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 10/[]11[] 
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 				\noindent\begin{figure*}
+                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: ./Screenshot_2013-10-23-20-00-45.png Graphic file (type png)
+<use ./Screenshot_2013-10-23-20-00-45.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-20-00-45.png used on input lin
+e 196.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.197 				\centering \caption
+                             {[Figure 8] Chat page}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.198 				\end{figure*}
+                       \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
+
  []
 
-[10]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1124,7 +1627,93 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.153 			\\T
+l.200 				\\T
+             his will open the expression page, in this page you can type th...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--205
+
+ []
+
+
+Overfull \hbox (4.54077pt too wide) has occurred while \output is active
+[]|\T1/qpl/m/it/10 (-20) 10/[]12[] 
+ []
+
+[10]
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.206 				\noindent\begin{figure*}
+                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./Screenshot_2013-10-23-21-10-16.png, id=121, 481.8pt x 803.0pt>
+File: ./Screenshot_2013-10-23-21-10-16.png Graphic file (type png)
+
+<use ./Screenshot_2013-10-23-21-10-16.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-21-10-16.png used on input lin
+e 208.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.209 								\centering \caption
+                                 {[Figure 9] Math Expression page}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.210 								\end{figure*}
+                           \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.216 			\\T
             o delete all the messages between you and a contact, you can sel...
 
 Your command was ignored.
@@ -1132,50 +1721,109 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.217 			\noindent\begin{figure*}
+                                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./Screenshot_2013-10-23-20-01-05.png, id=122, 481.8pt x 803.0pt>
+File: ./Screenshot_2013-10-23-20-01-05.png Graphic file (type png)
+
+<use ./Screenshot_2013-10-23-20-01-05.png>
+Package pdftex.def Info: ./Screenshot_2013-10-23-20-01-05.png used on input lin
+e 219.
+(pdftex.def)             Requested size: 180.67455pt x 289.07977pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 							\centering \caption
+                                {[Figure 10] Delete Chat}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (4.54077pt too wide) has occurred while \output is active
+[]|\T1/qpl/m/it/10 (-20) 11/[]12[] 
+ []
+
+[11 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentati
+on/7_User_Manual/LaTeX/Screenshot_2013-10-23-21-10-16.png>]
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.221 							\end{figure*}
+                          \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--222
+
+ []
+
+
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.160 				\\T
-             o close the application you can open the menu option on your de...
+l.227 				\\T
+             o close the application you can click on your device's home but...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
 
 Overfull \hbox (4.54077pt too wide) has occurred while \output is active
-[]|\T1/qpl/m/it/10 (-20) 11/[]11[] 
+[]|\T1/qpl/m/it/10 (-20) 12/[]12[] 
  []
 
-[11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+[12 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentati
+on/7_User_Manual/LaTeX/Screenshot_2013-10-23-20-01-05.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
 
 (C:\Users\Janine\Documents\GitHub\COS-301-Main-Project-Fractals\Documentation\7
 _User_Manual\LaTeX\UserManual.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 165.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 231.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
 Package rerunfilecheck Info: File `UserManual.out' has not changed.
-(rerunfilecheck)             Checksum: A21F255CAFBD542ECE6B8F41386FE7EF;720.
+(rerunfilecheck)             Checksum: 3B6E43F7C2F08C878AA05BA9142E25A4;780.
  ) 
 Here is how much of TeX's memory you used:
- 9710 strings out of 494045
- 144880 string characters out of 3148385
- 280209 words of memory out of 3000000
- 12734 multiletter control sequences out of 15000+200000
- 49581 words of font info for 72 fonts, out of 3000000 for 9000
+ 9762 strings out of 494045
+ 146558 string characters out of 3148385
+ 275209 words of memory out of 3000000
+ 12771 multiletter control sequences out of 15000+200000
+ 49847 words of font info for 74 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 44i,12n,67p,776b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,13n,67p,776b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc}<C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/tex-gyre/qplb.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/tex-gyre/qplr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/tex-gyre/qplri.pfb>
-Output written on UserManual.pdf (11 pages, 108494 bytes).
+Output written on UserManual.pdf (12 pages, 698639 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 13417 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 153 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 13465 words of extra memory for PDF output out of 14400 (max. 10000000)
 
