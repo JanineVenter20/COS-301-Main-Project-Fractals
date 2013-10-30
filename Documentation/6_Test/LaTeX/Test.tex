@@ -37,6 +37,14 @@
 2013/09/15 \> 2.0 \> Janine Venter \> Open issues added\\
 2013/09/15 \> 2.1 \> Janine Venter \> Glossary added\\
 2013/09/15 \> 2.2 \> Janine Venter \> Login Test added\\
+2013/10/11 \> 2.3 \> Michelle Peens \> System Description: Support for LaTeX \\ \> \> \> and MimeTeX Libraries Updated\\
+2013/10/11 \> 2.4 \> Michelle Peens \> System Description: Messaging Updated\\
+2013/10/11 \> 2.5 \> Michelle Peens \> System Description: Login Updated\\
+2013/10/11 \> 2.6 \> Michelle Peens \> System Description: Updated\\
+2013/10/12 \> 2.7 \> Janine Venter \> System Description Updated\\
+2013/10/12 \> 2.8 \> Janine Venter \> System Description: Support for LaTeX \\ \> \> \> and MimeTeX Libraries Updated\\
+2013/10/12 \> 2.9 \> Janine Venter \> System Description: Messaging Updated\\
+2013/10/12 \> 3.0 \> Janine Venter \> System Description: Login Updated\\
 
 
 \end{tabbing}
@@ -93,19 +101,24 @@
 \newpage
 	\section*{\textbf{2. System Description}}
 	\vspace{4mm}
-		\noindent The goal of our software application is to provide a chat service that will allow users to exchange messages and also to send mathematical equations in a rendered image format.  The application is intended to provide a service to users that require the ability and support for a chat client that allows them to communicate more efficiently and effortlessly in a scientific, and mathematical context.  It will provide a more usable mobile version of a Latex chat application.\\ 
-		
-		\noindent\textbf{Support for LaTeX and MimeTeX Libraries}
-		\\The final application will have to make use of a Latex based library for the rendering of equations as images on the mobile device. For this reason we have implemented support for the MimeTeX library, through the use of the Android NDK (Native Development Kit), which allows us to embed the native C/C++ code of the MimeTeX library, in the source code of this release. The library is compiled through Eclipse using a special makefile that sets specific compiler flags to indicate that it is in math mode and not text mode.\\
-		
-		
-		\noindent\textbf{Messaging}
-		\\Our final goal is for messaging to be possible between multiple clients, and the support for sending Latex based equations, rendered on the client side and displayed as images on the handheld device. In this release however, our server supports two initial users, and have capabilities for them to send plain text messages and display these in a easy to understand manner.  
-		\parindent 5mm The ability to create, render, view and send mathematical equations have been implemented and is currently working. It is now possible to send and receive these equations in image format between the two clients.
-		These messages should be stored statically on the device for later retrieval.  For this purpose a SQLite database was implemented.\\
-		
-		\noindent\textbf{Login}
-		\\A user should be authenticated by some type of login component.  This has been implemented during the initial phases of development of this application.  The server that our application uses provides the basic functionality for this authentication component, and uses a username and password based authentication method.
+	The goal of our software application is to provide a chat service that will allow users to exchange normal text messages and send mathematical equations displayed in a rendered image format.  The application is intended to provide a service to users that require the ability and support for a chat client that allows them to communicate more efficiently and effortlessly in a scientific, and mathematical context. It will provide a more usable mobile version of a Latex chat application.\\ 
+			
+			\noindent\textbf{Support for LaTeX and MimeTeX Libraries} \\
+			\parindent 5mm The application makes use of a Latex based library (MimeTeX) for the the rendering of equations as images on the mobile device.  For this reason we have implemented the support for the MimeTex library, through the use of the Android NDK (Native Development Kit), which allows us to embed the native C/C++ code of the MimeTeX library, in the source code. 
+			\parindent 5mm The NDK acts as a bridge between the C/C++ code and Java code. The library is compiled through Eclipse using a special makefile that sets the correct compiler flags to indicate that it is in math mode and not text mode. The compiler flags represent different capabilities of the MimeTeX library, in this case we set it to math mode to support the mathematical LaTeX equations.\\
+			
+			
+			\noindent\textbf{Messaging}
+			\\parindent 5mm The purpose of this application is for messaging to be possible between multiple clients on the server. The application now supports this feature as well as allowing a user to send both plain text messages and Latex based equations, which are rendered on the client side and displayed as an inline images.\\
+			The rendering of the Latex based equations on the client side is provided through the use of the Mimetex library. The messages sent between the various clients on the server is stored statically through making use of a client side SQLite database, which also provides the functionality for the retrieval of messages.
+			\\Unsent messages, such as messages sent while the user was offline, is stored on the server and as soon as the client is online these messages are fetched and displayed on the user's handset. The server uses a queue to store these messages.\\
+			
+			\noindent\textbf{Login}
+			\\The application allows a user to log in using an appropriate username and password combination. A user is authenticated by logging into the server.  If a username and password combination is invalid the server will automatically hinder the user from logging in. Our user authentication component is implemented by the functionality provided by the server. The user is informed by the application that his/her attempt to log in was unsuccessful.\\
+			
+			\noindent\textbf{Register}
+			\\The application allows someone to register to the TexChat service as a new user. Through the user registration form the user provides the necessary information and selects a username and password combination that is later used to authenticate the user on the server. After a user is successfully registered, he can immediately log in and start using the messaging functionality provided.
+			
 		
 \newpage
 	\section*{3. Project Testing}

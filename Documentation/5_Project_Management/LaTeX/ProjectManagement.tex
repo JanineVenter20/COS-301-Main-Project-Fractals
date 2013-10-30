@@ -19,7 +19,7 @@
 \fancyfoot[R,LO]{\footnotesize} 			% other info in 
 
 
-6\begin{document}
+\begin{document}
 
 \section{\textbf{Change History:}}
 \begin{tabbing}
@@ -46,8 +46,17 @@
 2013/09/15 \> 2.9 \> Janine Venter \> Team Profiles updated\\
 2013/09/15 \> 3.0 \>  Janine Venter \> Project Scope updated\\
 2013/09/15 \> 3.1 \> Janine Venter \> System Description updated\\
-2013/09/15 \> 3.2 \> Janine Venter \> Support for Latex and Mimetex Libraries updated\\
-2013/09/15 \> 3.3 \>  Janine Venter \> Messaging updated\\
+2013/09/15 \> 3.2 \> Janine Venter \> Support for Latex and \\ \> \> \> Mimetex Libraries updated\\
+2013/09/15 \> 3.3 \> Janine Venter \> Messaging updated\\
+2013/09/23 \> 3.4 \> Michelle Peens \> Updated the Kanban board\\
+2013/10/04 \> 3.5 \> Michelle Peens \> Updated Burndown Chart\\
+2013/10/04 \> 3.6 \> Michelle Peens \> Added remaining outstanding challenges\\
+2013/10/11 \> 3.7 \> Michelle Peens \> Updated the System Description\\
+2013/10/11 \> 3.8 \> Michelle Peens \> Updated Burndown Chart\\
+2013/10/12 \> 3.9 \> Janine Venter \> Updated the Kanban board\\
+2013/10/12 \> 4.0 \> Janine Venter \> Updated Open Issues\\
+2013/10/12 \> 4.1 \> Janine Venter \> Updated System Description\\
+
 
 \end{tabbing}
 
@@ -66,11 +75,11 @@
 4. Team Profile\> \> 6 				\\
 5. Issue Management Plan \> \> 7 	\\
 6. Project Progress \> \> 8 	\\
-\> 6.1 Kanban Board \> \\
-\> 6.2 Burndown Chart \> \\
-7. Outstanding Risks/Challenges \> \> 9 	\\
-8. Open Issues \> \> 10 	\\
-9. Glossary \> \> 11 	\\
+\> 6.1 Kanban Board \> 9\\
+\> 6.2 Burndown Chart \> 11\\
+7. Outstanding Risks/Challenges \> \> 13 	\\
+8. Open Issues \> \> 14 	\\
+9. Glossary \> \> 15 	\\
 \end{tabbing}
 
 \newpage
@@ -104,21 +113,27 @@
 		
 	%Section
 \newpage
-	\section*{\textbf{2. System Description}}
+\section*{\textbf{2. System Description}}
 	\vspace{4mm}
-		\noindent The goal of our software application is to provide a chat service that will allow users to exchange messages and also to send mathematical equations in a rendered image format.  The application is intended to provide a service to users that require the ability and support for a chat client that allows them to communicate more efficiently and effortlessly in a scientific, and mathematical context.  It will provide a more usable mobile version of a Latex chat application.\\ 
+		 The goal of our software application is to provide a chat service that will allow users to exchange normal text messages and send mathematical equations displayed in a rendered image format.  The application is intended to provide a service to users that require the ability and support for a chat client that allows them to communicate more efficiently and effortlessly in a scientific, and mathematical context. It will provide a more usable mobile version of a Latex chat application.\\ 
 		
-		\noindent\textbf{Support for LaTeX and MimeTeX Libraries}
-		\\The final application will have to make use of a Latex based library for the rendering of equations as images on the mobile device. For this reason we have implemented support for the MimeTeX library, through the use of the Android NDK (Native Development Kit), which allows us to embed the native C/C++ code of the MimeTeX library, in the source code of this release. The library is compiled through Eclipse using a special makefile that sets specific compiler flags to indicate that it is in math mode and not text mode.\\
+		\noindent\textbf{Support for LaTeX and MimeTeX Libraries} \\
+		\parindent 5mm The application makes use of a Latex based library (MimeTeX) for the the rendering of equations as images on the mobile device.  For this reason we have implemented the support for the MimeTex library, through the use of the Android NDK (Native Development Kit), which allows us to embed the native C/C++ code of the MimeTeX library, in the source code. 
+		\parindent 5mm The NDK acts as a bridge between the C/C++ code and Java code. The library is compiled through Eclipse using a special makefile that sets the correct compiler flags to indicate that it is in math mode and not text mode. The compiler flags represent different capabilities of the MimeTeX library, in this case we set it to math mode to support the mathematical LaTeX equations.\\
 		
 		
 		\noindent\textbf{Messaging}
-		\\Our final goal is for messaging to be possible between multiple clients, and the support for sending Latex based equations, rendered on the client side and displayed as images on the handheld device. In this release however, our server supports two initial users, and have capabilities for them to send plain text messages and display these in a easy to understand manner.  
-		\parindent 5mm The ability to create, render, view and send mathematical equations have been implemented and is currently working. It is now possible to send and receive these equations in image format between the two clients.
-		These messages should be stored statically on the device for later retrieval.  For this purpose a SQLite database was implemented.\\
+		\\parindent 5mm The purpose of this application is for messaging to be possible between multiple clients on the server. The application now supports this feature as well as allowing a user to send both plain text messages and Latex based equations, which are rendered on the client side and displayed as an inline images.\\
+		The rendering of the Latex based equations on the client side is provided through the use of the Mimetex library. The messages sent between the various clients on the server is stored statically through making use of a client side SQLite database, which also provides the functionality for the retrieval of messages.
+		\\Unsent messages, such as messages sent while the user was offline, is stored on the server and as soon as the client is online these messages are fetched and displayed on the user's handset. The server uses a queue to store these messages.\\
 		
 		\noindent\textbf{Login}
-		\\A user should be authenticated by some type of login component.  This has been implemented during the initial phases of development of this application.  The server that our application uses provides the basic functionality for this authentication component, and uses a username and password based authentication method.
+		\\The application allows a user to log in using an appropriate username and password combination. A user is authenticated by logging into the server.  If a username and password combination is invalid the server will automatically hinder the user from logging in. Our user authentication component is implemented by the functionality provided by the server. The user is informed by the application that his/her attempt to log in was unsuccessful.\\
+		
+		\noindent\textbf{Register}
+		\\The application allows someone to register to the TexChat service as a new user. Through the user registration form the user provides the necessary information and selects a username and password combination that is later used to authenticate the user on the server. After a user is successfully registered, he can immediately log in and start using the messaging functionality provided.
+		
+	\vspace{5mm}
 		
 \newpage
 	\section*{3. Software Development Process}
@@ -179,9 +194,9 @@
 			\item The application has basic client chat support, in that it allows for sending basic text messages between clients on the server through the XMPP protocol.
 			\item The Android NDK has also been included, so as to support the use of native code in the application.  This feature will be further developed in the next release to support the Mimetex libraries.	\\
 		\end{itemize} \\
-		
+\newpage		
 		\\ \noindent\textbf{6.1 Kanban Board} \\
-  		\\	\begin{tabular}{| p{7cm} | p{7cm} | p{7cm} |}
+  		\\	\begin{tabular}{| p{2.5in} | p{2.5in} | p{2.5in} |}
 				\hline
 		    		\textbf{Tasks(To Do)} & \textbf{In Progress} & \textbf{Completed} \\ 
    				\hline
@@ -208,26 +223,78 @@
 	   				\end {itemize}
 	   				& SQLite Database\\
    				
-				Logo/Icon Design. & Integration Testing. & Android NDK\\
+				 Integration Testing & Integration Testing. & Android NDK\\
 				
-				\\Predefined Expression Image Selections & Documentation & Including Mimetex Lib\\
+				\\ Exception Handling & Documentation & Including Mimetex Lib\\
 				
 				\\Adding/Deleting Contacts & Exception Handling & Image Rendering\\
-				
-				\\Security Features (Encryption) & Settings Page & Expr. String Handling\\
 				
 				\\Integration Testing & Stability of Application & 
 				Unit Testing
 				\begin{itemize}
-					\item Services Testing
 					\item Database Testing
 				\end{itemize}
+   				\\
    				
-   				\\Test Usability & Online Server & Documentation\\
+   				\\Test Usability &
+   				Unit Testing 
+   				\begin{itemize}
+	   				\item UI Testing
+	   				\item Services Testing 
+   				\end{itemize} 
+   				& Documentation\\
    				
    				\\Documentation & Visual Aspects & Exception Handling\\
    				
-   				\\Exception Handling & & \\
+   				\\ & & Predefined Expression \\ & & Image Selections\\
+				
+				\\ & & Logo/Icon Design\\
+				
+				\\ & & Security Features \\ & &(Encryption)\\
+				
+				\\ & & Expr. String Handling\\
+				
+				\\ & & Settings Page\\
+				
+				\\ & & User Login Component\\
+				
+				\\ & & Contact List\\
+				
+				\\ & & Message Sending\\
+				
+				\\ & & Exit Component\\
+			\end{tabular}
+			
+\newpage	
+			\\	\begin{tabular}{| p{7cm} | p{7cm} | p{7cm} |}
+				\hline
+		    		\textbf{Tasks(To Do)} & \textbf{In Progress} & \textbf{Completed} \\ 
+   				\hline			
+				\\ & & SQLite Database \\ & & for Message Saving \\ & & User Details\\
+				
+				\\ & & Image Rendering \\ & & on Android Client\\
+				
+				\\ & & Documentation\\
+				
+				\\ & & Exception Handling\\
+				
+				\\ & & Testing Application \\ & & with Online Server\\
+				
+				\\ & & User Registration\\
+				
+				\\ & & Remember me \\& & Component\\
+				
+				\\ & & User Authentication\\
+				
+				\\ & & User Authorization\\
+				
+				\\ & & Database Cleanup\\
+				
+				\\ & & Adding and Deleting\\& & Contacts Component\\
+				
+				\\ & & Visual Aspects\\
+				
+				\\ & & Queueing of Messages\\ & & When Offline\\
    				
  			\end{tabular} \\
 \newpage
@@ -242,38 +309,41 @@
 \newpage
 \begin{tabbing}
 \\\textbf{Task:} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\= \textbf{Task List:}\\
+
 User Login Component \> 1\\
-View Contact List	 \> 2\\
-Message Sending Component	 \> 3\\
-Exit Component	 \> 4\\
-SQLite Database	 \> 5\\
-Android NDK	 \> 6\\
-Mimetex Library	 \> 7\\
-Image Rendering	 \> 8\\
-String Handling \> 9\\
-Unit Testing	 \> 10\\
-Integration Testing	 \> 11\\
-Exception Handling \> 12\\
-Database Cleanup	 \> 13\\
-User Registration	 \> 14\\
-User Authentication	 \> 15\\
-Security Features	\> 16\\
-Settings Page	 \> 17\\
-Visual Aspects	 \> 18\\
-User Profile Functionality \> 19\\
-Logo / Icon Design	 \> 20\\
-Predefined Expression Images \> 21\\
-Adding / Deleting Contacts \> 22\\
-Unit Testing	 \> 23\\
-Integration Testing	 \> 24\\
-Exception Handling	 \> 25\\
+View Contact List	 \> 2 \\
+Message Sending Component \> 3\\
+Exit Component	\> 4 \\
+SQLite Database	\> 5 \\
+Android NDK	\> 6 \\
+Mimetex Library	\> 7 \\
+Image Rendering	\> 8 \\
+String Handling\> 9 \\
+Unit Testing	\> 10 \\
+Integration Testing	\> 11 \\
+Exception Handling\> 12 \\
+Database Cleanup	\> 13 \\
+User Registration	\> 14\\
+User Authentication	\> 15 \\
+Security Features	\> 16 \\
+Settings Page\> 17 \\
+Visual Aspects	\> 18 \\
+Predefined Expression Images\> 19 \\
+Adding / Deleting Contacts\> 20 \\
+User Profile Functionality\> 21 \\
+Logo / Icon Design\> 22 \\
+Queuing of Messages\> 23 \\
+Unit Testing	\> 24 \\
+Integration Testing	\> 25 \\
+Exception Handling	\> 26 \\
+
 \end{tabbing}
 
 \newpage
 		\section*{7. Outstanding Risks/Challenges}
 		\begin{itemize}
-			\item The aesthetics of the application is less of a challenge, but making it usable and user friendly is more challenging.
-			
+			\item The aesthetics of the application and overall user friendliness, although not the most important aspect, is still an outstanding challenge.
+			\item Unit testing and Integration testing is limited as well.
 		\end{itemize}
 \newpage		
 		\section*{8. Open Issues}

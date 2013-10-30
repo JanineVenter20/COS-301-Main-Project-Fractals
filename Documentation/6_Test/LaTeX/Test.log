@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.3)  15 SEP 2013 20:50
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.3)  13 OCT 2013 18:29
 entering extended mode
 **Test.tex
 
-(C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\6_Test\LaTeX\Test.tex
+(C:\Users\Janine\Documents\GitHub\COS-301-Main-Project-Fractals\Documentation\6
+_Test\LaTeX\Test.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -617,8 +617,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-(C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\6_Test\LaTeX\Test.aux)
+(C:\Users\Janine\Documents\GitHub\COS-301-Main-Project-Fractals\Documentation\6
+_Test\LaTeX\Test.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
@@ -634,11 +634,9 @@ LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Try loading font information for T1+qpl on input line 22.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\tex-gyre\t1qpl.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\tex-gyre\t1qpl.fd"
 File: t1qpl.fd 2009/09/25 v1.2 font definition file for T1/qpl
-)
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+) ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
 \scratchdimen=\dimen119
@@ -716,10 +714,10 @@ LaTeX Info: Redefining \ref on input line 22.
 LaTeX Info: Redefining \pageref on input line 22.
 LaTeX Info: Redefining \nameref on input line 22.
 
-(C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\6_Test\LaTeX\Test.out)
-(C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\6_Test\LaTeX\Test.out)
+(C:\Users\Janine\Documents\GitHub\COS-301-Main-Project-Fractals\Documentation\6
+_Test\LaTeX\Test.out)
+(C:\Users\Janine\Documents\GitHub\COS-301-Main-Project-Fractals\Documentation\6
+_Test\LaTeX\Test.out)
 \@outlinefile=\write3
 \pagenumberwidth=\skip68
 
@@ -732,22 +730,27 @@ File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-mvs.cfg"
 File: mt-mvs.cfg 2006/07/05 v1.1 microtype config. file: Marvosym Euro (RS)
 ) [3]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--106
+Underfull \hbox (badness 10000) in paragraph at lines 111--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 112--117
+Underfull \hbox (badness 10000) in paragraph at lines 125--130
 
  []
 
@@ -758,7 +761,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.118 	\begin{figure*}
+l.131 	\begin{figure*}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -771,7 +774,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 				\\ \centering
+l.132 				\\ \centering
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -784,7 +787,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.120 				\\
+l.133 				\\
              \includegraphics[width=6.0in, height=5.0in]{./databasecreate.png}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -794,7 +797,7 @@ or  <return>  to continue without it.
 File: ./databasecreate.png Graphic file (type png)
 
 <use ./databasecreate.png>
-Package pdftex.def Info: ./databasecreate.png used on input line 120.
+Package pdftex.def Info: ./databasecreate.png used on input line 133.
 (pdftex.def)             Requested size: 433.61876pt x 361.37286pt.
 
 
@@ -804,7 +807,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 				\\
+l.135 				\\
             \caption{[Figure 1] Database Create Test}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -817,7 +820,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 				\\\caption
+l.135 				\\\caption
                     {[Figure 1] Database Create Test}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -829,23 +832,23 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123 	\end{figure*}
+l.136 	\end{figure*}
                     \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
 
-[5 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/6_Test/LaTeX/databasecreate.png>]
+[5 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/6_Test/LaTeX/databasecreate.png>]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\data\uni-32.def"
 File: uni-32.def 2012/04/20 UCS: Unicode data U+2000..U+20FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
@@ -856,7 +859,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127 	\begin{figure*}
+l.140 	\begin{figure*}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -869,7 +872,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.129 				\\
+l.142 				\\
              \includegraphics[width=6.0in, height=5.0in]{./messagesave.png}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -878,7 +881,7 @@ or  <return>  to continue without it.
 <./messagesave.png, id=65, 434.37282pt x 349.305pt>
 File: ./messagesave.png Graphic file (type png)
  <use ./messagesave.png>
-Package pdftex.def Info: ./messagesave.png used on input line 129.
+Package pdftex.def Info: ./messagesave.png used on input line 142.
 (pdftex.def)             Requested size: 433.64267pt x 361.37115pt.
 
 
@@ -888,7 +891,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.130 				\\\caption
+l.143 				\\\caption
                     {[Figure 2] Message Save Unit Test}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -900,19 +903,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131 	\end{figure*}
+l.144 	\end{figure*}
                     \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
+Underfull \hbox (badness 10000) in paragraph at lines 143--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
@@ -923,7 +926,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.135 	\begin{figure*}
+l.148 	\begin{figure*}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -936,7 +939,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137 				\\
+l.150 				\\
              \includegraphics[width=6.0in, height=5.0in]{./deletechat.png}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -945,7 +948,7 @@ or  <return>  to continue without it.
 <./deletechat.png, id=66, 433.62pt x 348.55219pt>
 File: ./deletechat.png Graphic file (type png)
  <use ./deletechat.png>
-Package pdftex.def Info: ./deletechat.png used on input line 137.
+Package pdftex.def Info: ./deletechat.png used on input line 150.
 (pdftex.def)             Requested size: 433.63878pt x 361.36882pt.
 
 
@@ -955,13 +958,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.138 				\\\caption
+l.151 				\\\caption
                     {[Figure 3] Deleting Message Unit Test}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[6 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/6_Test/LaTeX/messagesave.png>]
+[6 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/6_Test/LaTeX/messagesave.png>]
 
 ! LaTeX Error: \begin{document} ended by \end{figure*}.
 
@@ -969,112 +972,22 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 	\end{figure*}
+l.152 	\end{figure*}
                     \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
+Underfull \hbox (badness 10000) in paragraph at lines 151--153
 
  []
 
-[7 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/6_Test/LaTeX/deletechat.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[7 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/6_Test/LaTeX/deletechat.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
-
-
-! LaTeX Error: Environment figure* undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.143 	\begin{figure*}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.145 				\\
-             \includegraphics[width=6.0in, height=5.0in]{./success.png}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<./success.png, id=79, 434.37282pt x 306.39468pt>
-File: ./success.png Graphic file (type png)
- <use ./success.png>
-Package pdftex.def Info: ./success.png used on input line 145.
-(pdftex.def)             Requested size: 433.64267pt x 361.36961pt.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.146 				\\ \\
-                \caption{[Figure 4] All Tests Successful}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.146 				\\ \\ \caption
-                        {[Figure 4] All Tests Successful}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{document} ended by \end{figure*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.147 	\end{figure*}
-                    \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--148
-
- []
-
-[8 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/6_Test/LaTeX/success.png>]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.151 	\textbf
-              {Main Activity Unit Test}\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 
 ! LaTeX Error: Environment figure* undefined.
@@ -1090,19 +1003,23 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--157
+! LaTeX Error: There's no line here to end.
 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.158 				\\
+             \includegraphics[width=6.0in, height=5.0in]{./success.png}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--157
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--157
-
- []
+<./success.png, id=79, 434.37282pt x 306.39468pt>
+File: ./success.png Graphic file (type png)
+ <use ./success.png>
+Package pdftex.def Info: ./success.png used on input line 158.
+(pdftex.def)             Requested size: 433.64267pt x 361.36961pt.
 
 
 ! LaTeX Error: There's no line here to end.
@@ -1111,17 +1028,11 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.158 					\\ \includegraphics
-                              [width=6.0in, height=3.0in]{./loginUnsucc.png}
+l.159 				\\ \\
+                \caption{[Figure 4] All Tests Successful}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-<./loginUnsucc.png, id=85, 627.09282pt x 289.83281pt>
-File: ./loginUnsucc.png Graphic file (type png)
- <use ./loginUnsucc.png>
-Package pdftex.def Info: ./loginUnsucc.png used on input line 158.
-(pdftex.def)             Requested size: 433.63225pt x 216.81241pt.
 
 
 ! LaTeX Error: \caption outside float.
@@ -1130,9 +1041,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.159 					\\ \caption
-                      {[Figure 5] Logging in to server, Unsuccessful, gettin...
-
+l.159 				\\ \\ \caption
+                        {[Figure 4] All Tests Successful}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1150,12 +1060,12 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 159--161
 
  []
 
-[9 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final_
-Project/New_Documentation/V1.2/6_Test/LaTeX/loginUnsucc.png>]
+[8 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/6_Test/LaTeX/success.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1163,7 +1073,100 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.163 	\\T
+l.164 	\textbf
+              {Main Activity Unit Test}\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment figure* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.169 	\begin{figure*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171 					\\ \includegraphics
+                              [width=6.0in, height=3.0in]{./loginUnsucc.png}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./loginUnsucc.png, id=85, 627.09282pt x 289.83281pt>
+File: ./loginUnsucc.png Graphic file (type png)
+ <use ./loginUnsucc.png>
+Package pdftex.def Info: ./loginUnsucc.png used on input line 171.
+(pdftex.def)             Requested size: 433.63225pt x 216.81241pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.172 					\\ \caption
+                      {[Figure 5] Logging in to server, Unsuccessful, gettin...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 	\end{figure*}
+                    \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--174
+
+ []
+
+[9 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentatio
+n/6_Test/LaTeX/loginUnsucc.png>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176 	\\T
           he diagram below depicts the assertNotNull test which succeeds whe...
 
 Your command was ignored.
@@ -1171,12 +1174,12 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
 
  []
 
@@ -1187,7 +1190,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.166 	\begin{figure*}
+l.179 	\begin{figure*}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1200,7 +1203,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.167 					\\ \includegraphics
+l.180 					\\ \includegraphics
                               [width=6.0in, height=3.0in]{./loginTestsuccess...
 
 Your command was ignored.
@@ -1211,7 +1214,7 @@ or  <return>  to continue without it.
 File: ./loginTestsuccess.png Graphic file (type png)
 
 <use ./loginTestsuccess.png>
-Package pdftex.def Info: ./loginTestsuccess.png used on input line 167.
+Package pdftex.def Info: ./loginTestsuccess.png used on input line 180.
 (pdftex.def)             Requested size: 433.62463pt x 216.81654pt.
 
 
@@ -1221,7 +1224,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.168 					\\\caption
+l.181 					\\\caption
                      {[Figure 6] Logging in to server, Succcessful, get name...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1234,29 +1237,29 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.169 	\end{figure*}
+l.182 	\end{figure*}
                     \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--170
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
@@ -1267,35 +1270,35 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.183 
+l.196 
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 203.
 
 Overfull \hbox (4.54077pt too wide) has occurred while \output is active
 []|\T1/qpl/m/it/10 (-20) 10/[]10[] 
  []
 
-[10 <C:/Users/Janine/Desktop/Universiteit/Studiejaar_4/Semester_2/COS_301/Final
-_Project/New_Documentation/V1.2/6_Test/LaTeX/loginTestsuccess.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+[10 <C:/Users/Janine/Documents/GitHub/COS-301-Main-Project-Fractals/Documentati
+on/6_Test/LaTeX/loginTestsuccess.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 203.
 
-(C:\Users\Janine\Desktop\Universiteit\Studiejaar_4\Semester_2\COS_301\Final_Pro
-ject\New_Documentation\V1.2\6_Test\LaTeX\Test.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 190.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
+(C:\Users\Janine\Documents\GitHub\COS-301-Main-Project-Fractals\Documentation\6
+_Test\LaTeX\Test.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 203.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 203.
 Package rerunfilecheck Info: File `Test.out' has not changed.
 (rerunfilecheck)             Checksum: 1AC96BBE8BF38C594C34E355D5ECBAC1;364.
  ) 
 Here is how much of TeX's memory you used:
- 9736 strings out of 494045
- 146034 string characters out of 3148385
- 275203 words of memory out of 3000000
+ 9746 strings out of 494045
+ 145809 string characters out of 3148385
+ 279203 words of memory out of 3000000
  12775 multiletter control sequences out of 15000+200000
- 45473 words of font info for 62 fonts, out of 3000000 for 9000
+ 46138 words of font info for 67 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  44i,13n,67p,770b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc}<C:/Program Fi
@@ -1303,7 +1306,7 @@ les/MiKTeX 2.9/fonts/type1/public/marvosym/marvosym.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/tex-gyre/qplb.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/tex-gyre/qplr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/t
 ex-gyre/qplri.pfb>
-Output written on Test.pdf (10 pages, 199631 bytes).
+Output written on Test.pdf (10 pages, 200543 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  18 named destinations out of 1000 (max. 500000)
