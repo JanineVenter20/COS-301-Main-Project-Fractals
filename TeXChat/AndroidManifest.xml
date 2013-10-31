@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fractals.texchat"
     android:versionCode="1"
-    android:versionName="0.3" >
+    android:versionName="1" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -38,9 +38,6 @@
         <activity
             android:name="fractals.texchat.LoginPage"
             android:label="@string/app_name" >
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
         <activity
             android:name="fractals.texchat.TexActivity"
@@ -50,6 +47,15 @@
             android:name="fractals.texchat.SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
+        <activity
+            android:name="fractals.texchat.AddContactActivity"
+            android:label="@string/title_activity_add_contact" >
+        </activity>
+        <activity
+            android:name="fractals.texchat.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        
     </application>
 
 </manifest>

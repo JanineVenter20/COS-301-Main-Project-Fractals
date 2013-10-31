@@ -9,11 +9,28 @@
     <string name="hello_world">Hello world!</string>
     <string name="contactView">contactView</string>
     <string name="Login">Login</string>
-    <string name="username">User name</string>
+    <string name="username">username</string>
     <string name="password">Password</string>
-    <string name="rememberMe">Remember me</string>
+    <string name="rememberMe">Sign me in automatically</string>
     <string name="cancel">Cancel</string>
     <string name="menu_settings">settings</string>
     <string name="title_activity_tex">TexActivity</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="inviteUsername">Reject</string>
+    <string name="title_activity_add_contact">New Contact</string>
+    <string name="done">Done</string>
+    <string name="jid_">Username:</string>
+    <string name="name_">Alias:</string>
+    <string name="action_Login">Log in</string>
+    <string name="action_Logout">Log out</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="theRest">\@fractals.texchat</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="_">&quot;Send &quot;</string>
+    <string name="fx">fx</string>
+    <string name="action_delete_all">Delete Chat</string>
+    <string name="no_contacts_message">You currently do not have any contacts. Select the menu option to add a contact.</string>
+    <string name="action_delete_contact">Delete Contact</string>
 
 </resources>

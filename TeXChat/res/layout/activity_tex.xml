@@ -6,7 +6,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".TexActivity" >
+    android:tag="x+y"
+    tools:context=".TexActivity" 
+    android:background="@drawable/background">
+    
 
     <ImageView
         android:id="@+id/imageView1"
@@ -14,38 +17,413 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="200dp"
         android:src="@drawable/ic_action_search" />
-
-    <EditText
-        android:id="@+id/expEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginRight="18dp"
-        android:layout_marginTop="47dp"
-        android:layout_toRightOf="@+id/viewButton"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="\\fbox{x^2 + \\int x}" />
-
-    <Button
-        android:id="@+id/viewButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/expEdit"
-        android:layout_alignBottom="@+id/expEdit"
-        android:layout_alignParentLeft="true"
-        android:text="View" />
 
     <Button
         android:id="@+id/okButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/viewButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:text=">>" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="42dp"
+        android:text="Add" />
 
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/okButton"
+        android:layout_alignBottom="@+id/okButton"
+        android:layout_alignParentLeft="true"
+        android:text="View" />
+
+    <EditText
+        android:id="@+id/expEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/okButton"
+        android:layout_alignBottom="@+id/okButton"
+        android:layout_toLeftOf="@+id/okButton"
+        android:layout_toRightOf="@+id/viewButton"
+        android:inputType="text"
+        android:text="\\fbox{" />
+
+        <SlidingDrawer
+        android:id="@+id/slidingDrawer1"
+        android:layout_width="fill_parent"
+        android:layout_height="190dp"
+        android:layout_alignLeft="@+id/viewButton"
+        android:layout_alignParentBottom="true"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="301dp"
+            android:layout_height="31dp"
+            android:text="^" />
+
+        <ScrollView
+	  		android:id="@+id/content"
+		 	android:layout_width="wrap_content"
+		 	android:layout_height="wrap_content">
+
+	        <RelativeLayout
+	            android:id="@+id/content2"
+	            android:layout_width="match_parent"
+	            android:layout_height="300dp"
+	            android:background="#FFF" >
+
+	            <ImageButton
+	                android:id="@+id/button1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:background="@drawable/but1"
+	                android:contentDescription="\\begin{matrix} a &amp; b &amp; c \\\ \\d &amp; e &amp; f \\\ \\\\end{matrix"/>
+
+	            <ImageButton
+	                android:id="@+id/button2"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_marginLeft="14dp"
+	                android:layout_toRightOf="@+id/button1"
+	                android:background="@drawable/but2"
+	                android:contentDescription="\\sqrt{\\frac{a}{b}}" />
+
+	            <ImageButton
+	                android:id="@+id/button3"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_marginLeft="14dp"
+	                android:layout_toRightOf="@+id/button2"
+	                android:background="@drawable/but3"
+	                android:contentDescription="\\sqrt{x}" />
+
+	            <ImageButton
+	                android:id="@+id/button4"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_marginLeft="14dp"
+	                android:layout_toRightOf="@+id/button3"
+	                android:background="@drawable/but4"
+	                android:contentDescription="\\frac{x}{y}" />
+
+	            <ImageButton
+	                android:id="@+id/button6"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignParentTop="true"
+	                android:background="@drawable/but6"
+	                android:contentDescription="\\sum_{n}^{i}" />
+
+	            <ImageButton
+	                android:id="@+id/button5"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_marginRight="15dp"
+	                android:layout_toLeftOf="@+id/button6"
+	                android:background="@drawable/but5"
+	                android:contentDescription="\\sqrt[n]{x}" />
+
+	            <ImageButton
+	                android:id="@+id/button10"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignLeft="@+id/button4"
+	                android:layout_below="@+id/button4"
+	                android:layout_marginTop="17dp"
+	                android:background="@drawable/but10"
+	                android:contentDescription="\\alpha" />
+
+	            <ImageButton
+	                android:id="@+id/button7"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignTop="@+id/button10"
+	                android:layout_toLeftOf="@+id/button2"
+	                android:background="@drawable/but7"
+	                android:contentDescription="\\int_{y}^{x}" />
+
+	            <ImageButton
+	                android:id="@+id/button8"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignLeft="@+id/button2"
+	                android:layout_alignTop="@+id/button7"
+	                android:background="@drawable/but8"
+	                android:contentDescription="\\int" />
+
+	            <ImageButton
+	                android:id="@+id/button11"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignLeft="@+id/button5"
+	                android:layout_alignTop="@+id/button10"
+	                android:background="@drawable/but11"
+	                android:contentDescription="\\beta" />
+
+	            <ImageButton
+	                android:id="@+id/button13"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/button7"
+	                android:layout_marginTop="22dp"
+	                android:layout_toLeftOf="@+id/button2"
+	                android:background="@drawable/but13"
+	                android:contentDescription="\\Delta" />
+
+	            <ImageButton
+	                android:id="@+id/button9"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignTop="@+id/button10"
+	                android:layout_toLeftOf="@+id/button4"
+	                android:background="@drawable/but9"
+	                android:contentDescription="\\pi" />
+
+	            <ImageButton
+	                android:id="@+id/button12"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_above="@+id/button13"
+	                android:layout_toRightOf="@+id/button5"
+	                android:background="@drawable/but12"
+	                android:contentDescription="\\theta" />
+
+	            <ImageButton
+	                android:id="@+id/button14"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignLeft="@+id/button8"
+	                android:layout_alignTop="@+id/button13"
+	                android:background="@drawable/but14"
+	                android:contentDescription="\\Sigma" />
+
+	            <ImageButton
+	                android:id="@+id/button16"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignRight="@+id/button10"
+	                android:layout_alignTop="@+id/button14"
+	                android:background="@drawable/but16"
+	                android:contentDescription="\\cos{x}" />
+
+	            <ImageButton
+	                android:id="@+id/button15"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignRight="@+id/button9"
+	                android:layout_alignTop="@+id/button16"
+	                android:background="@drawable/but15"
+	                android:contentDescription="\\sin{x}" />
+
+	            <ImageButton
+	                android:id="@+id/button17"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignRight="@+id/button11"
+	                android:layout_alignTop="@+id/button16"
+	                android:background="@drawable/but17"
+	                android:contentDescription="\\tan{x}" />
+
+	            <ImageButton
+	                android:id="@+id/button18"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignTop="@+id/button17"
+	                android:background="@drawable/but18"
+	                android:contentDescription="\\arcsin{x}" />
+
+	            <ImageButton
+	                android:id="@+id/button19"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/button13"
+	                android:layout_marginTop="16dp"
+	                android:layout_toLeftOf="@+id/button14"
+	                android:background="@drawable/but19"
+	                android:contentDescription="\\arccos{x}" />
+
+	            <ImageButton
+	                android:id="@+id/button20"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignTop="@+id/button19"
+	                android:layout_toLeftOf="@+id/button9"
+	                android:background="@drawable/but20"
+	                android:contentDescription="\\arctan{x}" />
+
+	            <ImageButton
+	                android:id="@+id/button21"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignTop="@+id/button20"
+	                android:layout_toLeftOf="@+id/button17"
+	                android:background="@drawable/but21"
+	                android:contentDescription="x = \\frac{-b\\pm \\sqrt{b^2 - 4ac}}{2a}" />
+	            
+	            
+
+	            <ImageButton
+	                android:id="@+id/button22"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignTop="@+id/button21"
+	                android:background="@drawable/but22"
+	                android:contentDescription="a^2 + b^2 = c^2" />
+
+	            <ImageButton
+	                android:id="@+id/button23"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignLeft="@+id/button19"
+	                android:layout_below="@+id/button19"
+	                android:layout_marginTop="14dp"
+	                android:background="@drawable/but23"
+	                android:contentDescription="\\lim_{x\\to\\infty}\\exp(-x)=0" />
+
+	            <ImageButton
+	                android:id="@+id/button24"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignTop="@+id/button23"
+	                android:layout_toRightOf="@+id/button14"
+	                android:background="@drawable/but24"
+	                android:contentDescription="\\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}" />
+
+	            <ImageButton
+	                android:id="@+id/button25"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignTop="@+id/button24"
+	                android:layout_toLeftOf="@+id/button22"
+	                android:background="@drawable/but25"
+	                android:contentDescription="\\sum_{i=1}^{10} t_i" />
+
+	            <ImageButton
+	                android:id="@+id/button26"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignTop="@+id/button25"
+	                android:layout_toRightOf="@+id/button5"
+	                android:background="@drawable/but26"
+	                android:contentDescription="{x_{a}}^{b}" />
+
+	            <ImageButton
+	                android:id="@+id/button27"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/button23"
+	                android:layout_marginTop="14dp"
+	                android:background="@drawable/but27"
+	                android:contentDescription="x\\frac{a}{b}" />
+	            
+	            <ImageButton
+	                android:id="@+id/button28"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/button23"
+	                android:layout_toRightOf="@+id/button27"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="16dp"
+	                android:background="@drawable/but28"
+	                android:contentDescription="\\bigcap" />
+	            
+	            <ImageButton
+	                android:id="@+id/button29"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/button24"
+	                android:layout_toRightOf="@+id/button28"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="16dp"
+	                android:background="@drawable/but29"
+	                android:contentDescription="\\bigcup" />
+	            
+	            <ImageButton
+	                android:id="@+id/button30"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/button24"
+	                android:layout_toRightOf="@+id/button29"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="16dp"
+	                android:background="@drawable/but30"
+	                android:contentDescription="\\prod_{x}^{y}" />
+	            
+	            <ImageButton
+	                android:id="@+id/button31"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/button24"
+	                android:layout_toRightOf="@+id/button30"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="16dp"
+	                android:background="@drawable/but31"
+	                android:contentDescription="\\coprod_{x}^{y}" />
+	            
+	            <ImageButton
+	                android:id="@+id/button32"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/button24"
+	                android:layout_toRightOf="@+id/button31"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="16dp"
+	                android:background="@drawable/but32"
+	                android:contentDescription="\\coprod" />
+	            
+	            <ImageButton
+	                android:id="@+id/button33"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/button27"
+	                android:layout_marginTop="14dp"
+	                android:background="@drawable/but33"
+	                android:contentDescription="\\prod" />
+	            
+	            <ImageButton
+	                android:id="@+id/button34"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/button33"
+	                android:layout_below="@+id/button28"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="15dp"
+	                android:background="@drawable/but34"
+	                android:contentDescription="\\bar{a}" />
+	            
+	            <ImageButton
+	                android:id="@+id/button35"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/button34"
+	                android:layout_below="@+id/button29"
+	                android:layout_marginTop="14dp"
+	                android:layout_marginLeft="15dp"
+	                android:background="@drawable/but35"
+	                android:contentDescription="\\vec{a}" />
+	        </RelativeLayout>
+
+	        <!-- \sum_{i = 1}^{10} t_i 
+	            {x_{a}}^{b}
+	            x\tfrac{a}{b}
+	            \bigcap
+	            \bigcup
+	            \prod
+	            \coprod
+	            \prod_{x}^{y}
+	            \coprod_{x}^{y}
+	            -->
+		</ScrollView>
+    </SlidingDrawer>
 </RelativeLayout>

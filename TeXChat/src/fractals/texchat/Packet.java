@@ -7,17 +7,21 @@ public class Packet {
 	
 	//PRIVATE MEMBERS
 		private String user;
+		private String contact;
 		private String message;
+		private boolean sent;
 		private Boolean sent_received;
 		private int uniqueKey;
 		private static int counter = 0;
 	
 	//METHODS
-		public Packet(String user, String message, Boolean sent)
+		public Packet(String user, String contact, String message, Boolean sent, Boolean sent_rec)
 		{
 			this.user = user;
+			this.contact = contact;
 			this.message = message;
-			this.sent_received = sent;
+			this.sent = sent;
+			this.sent_received = sent_rec;
 			this.uniqueKey = AssignUniqueKey();
 		}
 		
@@ -32,6 +36,11 @@ public class Packet {
 			return this.user;
 		}
 		
+		public String getContact() 
+		{
+			return this.contact;
+		}
+		
 		public String getMessage()
 		{
 			return this.message;
@@ -42,6 +51,10 @@ public class Packet {
 			return this.sent_received;
 		}
 		
+		public Boolean getSent () {
+			return this.sent;
+		}
+		
 		public String getTimeStamp()
 		{
 			Date date = new Date();
@@ -49,9 +62,9 @@ public class Packet {
 			String formatDate = sdf.format(date);
 			return formatDate;
 		}
+		
 		public Integer getUniqueKey()
 		{
 			return this.uniqueKey;
 		}
-
 }

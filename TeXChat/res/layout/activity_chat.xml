@@ -1,46 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent" >
+    
+ <LinearLayout 
+     android:id="@+id/linear"
+     android:layout_alignParentBottom="true"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" 
+     android:orientation="horizontal"
+     >
+    
+    <Button
+        android:id="@+id/fxButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fx" />
 
+    <EditText
+        android:id="@+id/messageInput"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:inputType="text">
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/sendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text=" >> " />
-
-    <EditText
-        android:id="@+id/messageInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/sendButton"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/fxButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/sendButton"
-        android:layout_toLeftOf="@+id/messageInput"
-        android:text="fx" />
-
-    <ListView
+        android:text="@string/_" />
+    
+    </LinearLayout>
+   
+     <ListView
         android:id="@+id/messageView"
+        android:layout_above="@id/linear"
+        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/sendButton"
+        android:divider="@null"
+        android:dividerHeight="5dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+        android:transcriptMode="alwaysScroll" 
+        >
 
     </ListView>
+    
+     <TextView
+        android:id="@+id/no_messages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="21dp"
+        android:text="@string/no_messages" />
 
 </RelativeLayout>

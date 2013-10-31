@@ -4,19 +4,21 @@
     android:layout_height="match_parent" 
     android:orientation="vertical"
     android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@drawable/background"
     >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:id="@+id/fractals_note"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/username" />
 
     <EditText
         android:id="@+id/usernameEdit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/fractals_note"
         android:ems="10"
         android:inputType="none"
         android:text="@string/defaultUser" >
@@ -25,17 +27,17 @@
     </EditText>
     
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/usernameEdit"
         android:text="@string/password" />
 
     <EditText
         android:id="@+id/passwordEdit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/welcome_text"
         android:ems="10"
         android:inputType="textPassword"
         android:text="@string/defaultPass" >
@@ -43,21 +45,30 @@
     </EditText>
 
    
+    <LinearLayout 
+        android:layout_below="@+id/rememberBox"
+        android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"
+       	
+        android:id="@+id/buttonsBox"
+        >
     <Button
         android:id="@+id/cancelButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="@string/cancel" 
-		android:layout_below="@+id/rememberBox"/>
+		/>
     	
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rememberBox"
-        android:layout_toRightOf="@+id/cancelButton"
         android:text="@string/Login" />
-
+	
+	</LinearLayout>
+    
     <CheckBox
         android:id="@+id/rememberBox"
         android:layout_width="wrap_content"
@@ -65,5 +76,24 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/passwordEdit"
         android:text="@string/rememberMe" />
+
+        <TextView
+        android:id="@+id/register_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/register_button"
+        android:layout_alignRight="@+id/usernameEdit"
+        android:layout_below="@+id/buttonsBox"
+        android:layout_marginTop="18dp"
+        android:text="@string/register_text" />
+    
+    	<Button
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/rememberBox"
+        android:layout_below="@+id/register_text"
+        android:text="@string/register_button" />
+
 
 </RelativeLayout>

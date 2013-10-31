@@ -10,20 +10,20 @@ public class SplitString {
 		message = message.trim();
 		String s;
 		while (!(message.length() == 0)) {
-			if (message.charAt(0) == '$') {
-				message = message.substring(1);
-				if (message.contains("$")) {
-					s = "$" + message.substring(0, message.indexOf("$")+1);
-					message = message.substring(message.indexOf("$")+1);
+			if (message.startsWith("$$")) {
+				message = message.substring(2);
+				if (message.contains("$$")) {
+					s = "$$" + message.substring(0, message.indexOf("$$")+2);
+					message = message.substring(message.indexOf("$$")+2);
 				} else { 
 					s = message;
 					ret.add(s);
 					break;
 				}
 			} else {
-				if (message.contains("$")) {
-					s = message.substring(0, message.indexOf("$"));
-					message = message.substring(message.indexOf("$"));
+				if (message.contains("$$")) {
+					s = message.substring(0, message.indexOf("$$"));
+					message = message.substring(message.indexOf("$$"));
 				} else  {
 					s = message;
 					ret.add(s);
